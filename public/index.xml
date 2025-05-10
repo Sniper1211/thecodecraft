@@ -6,8 +6,52 @@
     <description>Recent content on 小白开发助手</description>
     <generator>Hugo -- 0.146.7</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 06 May 2025 22:03:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 11 May 2025 01:02:04 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vercel免费替代方案：如何不花钱练习多个网站模板</title>
+      <link>http://localhost:1313/posts/vercel-free-alternatives-for-practice/</link>
+      <pubDate>Sun, 11 May 2025 01:02:04 +0800</pubDate>
+      <guid>http://localhost:1313/posts/vercel-free-alternatives-for-practice/</guid>
+      <description>&lt;h2 id=&#34;问题背景&#34;&gt;问题背景&lt;/h2&gt;
+&lt;p&gt;在Vercel上尝试部署网站时，很多人会遇到这样的问题：免费资源有限，特别是数据库等服务往往只能免费使用一次，之后就需要付费。对于想要练习多个网站模板的开发者来说，这是一个不小的障碍。本文将分享一些替代方案，帮助你在不花钱的情况下练习更多的网站模板。&lt;/p&gt;
+&lt;h2 id=&#34;免费托管平台比较&#34;&gt;免费托管平台比较&lt;/h2&gt;
+&lt;p&gt;除了Vercel，还有其他一些提供免费层级的托管平台：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Netlify&lt;/strong&gt; - 提供类似Vercel的免费托管服务，每月有100GB的带宽限制和300分钟的构建时间&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GitHub Pages&lt;/strong&gt; - 完全免费，适合静态网站&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cloudflare Pages&lt;/strong&gt; - 提供慷慨的免费层级，无带宽限制&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Render&lt;/strong&gt; - 有免费层级，但有使用限制&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Railway&lt;/strong&gt; - 提供$5的免费额度，足够运行小型项目&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;本地开发环境&#34;&gt;本地开发环境&lt;/h2&gt;
+&lt;p&gt;最经济实惠的方式是在本地搭建开发环境：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Docker&lt;/strong&gt; - 使用容器技术在本地模拟生产环境，可以同时运行多个项目而不互相干扰&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;XAMPP/MAMP&lt;/strong&gt; - 为PHP/MySQL项目提供简单的本地开发栈&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Node.js本地服务器&lt;/strong&gt; - 使用Express或其他框架在本地运行Node.js应用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LocalWP&lt;/strong&gt; - 专为WordPress开发者设计的本地环境&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;使用模拟数据进行前端开发&#34;&gt;使用模拟数据进行前端开发&lt;/h2&gt;
+&lt;p&gt;对于前端开发，你可以：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;JSON Server&lt;/strong&gt; - 创建一个完整的假REST API，无需实际数据库&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mock Service Worker&lt;/strong&gt; - 在浏览器中拦截网络请求并模拟响应&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;静态JSON文件&lt;/strong&gt; - 简单项目可以直接使用静态JSON文件模拟API响应&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LocalStorage/IndexedDB&lt;/strong&gt; - 利用浏览器存储功能模拟后端存储&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;不需要付费数据库的项目推荐&#34;&gt;不需要付费数据库的项目推荐&lt;/h2&gt;
+&lt;p&gt;以下是一些可以练习的项目类型，它们不需要复杂的后端数据库：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;静态博客&lt;/strong&gt; - 使用Hugo、Jekyll或Gatsby构建&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;单页应用(SPA)&lt;/strong&gt; - 使用React、Vue或Angular构建，数据存储在LocalStorage&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;作品集网站&lt;/strong&gt; - 展示你的项目和技能&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;登陆页面&lt;/strong&gt; - 练习UI/UX设计和转化率优化&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;计算器、待办事项应用&lt;/strong&gt; - 简单但实用的JavaScript应用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;免费数据库选项&#34;&gt;免费数据库选项&lt;/h2&gt;
+&lt;p&gt;如果确实需要数据库，这些选项提供免费层级：&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Namecheap域名托管Cloudflare保姆级教程</title>
       <link>http://localhost:1313/posts/namecheap-cloudflare-dns-guide/</link>
@@ -112,13 +156,6 @@
 &lt;li&gt;仓库准备了不同尺寸的包裹（响应式设计）&lt;/li&gt;
 &lt;li&gt;快递员根据设备自动选择合适包裹&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>First Post</title>
-      <link>http://localhost:1313/posts/first-post/</link>
-      <pubDate>Thu, 01 May 2025 01:21:31 +0800</pubDate>
-      <guid>http://localhost:1313/posts/first-post/</guid>
-      <description>&lt;p&gt;这是第一篇文章&lt;/p&gt;</description>
     </item>
     <item>
       <title>解决 Hugo 预览时出现 Page Not Found 的问题</title>
