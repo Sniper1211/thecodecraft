@@ -1,19 +1,24 @@
 {
-  "builds": [
-    {
-      "src": "/*",
-      "use": "@vercel/static",
-      "config": {
-        "distDir": "public"
-      }
-    }
-  ],
+  "buildCommand": "hugo --minify",
+  "outputDirectory": "public",
   "routes": [
     {
       "handle": "filesystem"
     },
     {
-      "src": "/.*",
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/posts/(.*)",
+      "dest": "/posts/$1"
+    },
+    {
+      "src": "/tags/(.*)",
+      "dest": "/tags/$1"
+    },
+    {
+      "src": "/(.*)",
       "dest": "/index.html"
     }
   ]
