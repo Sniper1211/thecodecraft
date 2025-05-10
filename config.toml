@@ -1,0 +1,18 @@
+baseURL = 'http://localhost:1313/'
+languageCode = 'zh-cn'
+title = '小白开发助手'
+theme = 'PaperMod'
+
+[params]
+  defaultTheme = 'auto'
+  editPost = { URL = 'https://github.com/adityatelange/hugo-PaperMod' }
+
+[build]
+  writeStats = true
+
+[services]
+  [services.disqus]
+    shortname = 'your-disqus-shortname'
+
+# 分页设置
+paginate = 10

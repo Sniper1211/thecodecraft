@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on 小白开发助手</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on 小白开发助手</description>
+    <generator>Hugo -- 0.146.7</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 06 May 2025 22:03:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Namecheap域名托管Cloudflare保姆级教程</title>
+      <link>http://localhost:1313/posts/namecheap-cloudflare-dns-guide/</link>
+      <pubDate>Tue, 06 May 2025 22:03:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/namecheap-cloudflare-dns-guide/</guid>
+      <description>&lt;p&gt;习惯使用 Cloudflare，买了新域名之后，要怎么托管到 Cloudflare 上呢？
+今天用 NameCheap 为例，介绍一下托管到 Cloudflare 上的流程。
+手把手教你两把Namecheap域名托管到Cloudflare！&lt;/p&gt;
+&lt;h2 id=&#34;方案选择5秒决策版&#34;&gt;方案选择（5秒决策版）&lt;/h2&gt;
+&lt;p&gt;🔹 &lt;strong&gt;只想用Cloudflare的CDN加速&lt;/strong&gt; ➔ 选DNS托管&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;dns托管保留namecheap注册&#34;&gt;DNS托管（保留Namecheap注册）&lt;/h3&gt;
+&lt;p&gt;这个方案适合「用Cloudflare加速但不想转移域名」的小伙伴，就像一次简单的搬家。&lt;/p&gt;
+&lt;h4 id=&#34;第一步认领cloudflare家门牌&#34;&gt;第一步：认领Cloudflare家门牌&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;登录Cloudflare控制台 ➔ 点击「添加站点」&lt;/li&gt;
+&lt;li&gt;输入裸域名（例：&lt;code&gt;yourdomain.com&lt;/code&gt; 别带www）&lt;/li&gt;
+&lt;li&gt;选择免费套餐 → 等系统扫描现有DNS记录（不想要的直接删）&lt;/li&gt;
+&lt;li&gt;记下分配的两个Nameservers地址（例：&lt;code&gt;kipp.ns.cloudflare.com&lt;/code&gt;）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;第二步namecheap换门锁&#34;&gt;第二步：Namecheap换门锁&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Namecheap后台找到域名 → 点击「Manage」&lt;/li&gt;
+&lt;li&gt;在下方的「Nameservers」域名服务器里选择「Custom DNS」&lt;/li&gt;
+&lt;li&gt;粘贴第一步提到的 Cloudflare 给的俩地址 → 保存&lt;/li&gt;
+&lt;li&gt;去泡杯咖啡等生效（通常10分钟，最长24小时）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;第三步布置cloudflare新家&#34;&gt;第三步：布置Cloudflare新家&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 常用DNS记录配置示例&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;A记录 → @ 指向 104.21.67.166（主域名）
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;CNAME记录 → www 指向 yourdomain.com（自动跳转）
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;⚠️ 重要设置：
+回到 Cloudflare 里找到 SSL/TLS 选择配置「完全」模式，强制HTTPS更安全&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;一般来说，现在的 Cloudflare 都能自动检测到 Namecheap 的域名，无需手动配置。&lt;/p&gt;
+&lt;h2 id=&#34;血泪经验总结&#34;&gt;血泪经验总结&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;改DNS后有的地区要等24小时生效，期间网站抽风属正常&lt;/li&gt;
+&lt;li&gt;SSL证书错误多半是因为没开「完全」模式&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;小贴士：这种方案只是用 CF 的 CDN 加速和简单的统计，方便管理，域名的续费和归属还是在 Namecheap 里。不会有更多麻烦的操作。顺利的话，15分钟搞定！&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>网站运行原理科普：1 分钟理解域名、服务器与DNS</title>
+      <link>http://localhost:1313/posts/web-basics-for-beginners/</link>
+      <pubDate>Mon, 05 May 2025 18:01:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/web-basics-for-beginners/</guid>
+      <description>&lt;p&gt;很多建站新手会在这里浪费很多时间，就为了理解域名、服务器与DNS是什么。
+今天简单介绍一下，快速入门，节约时间。&lt;/p&gt;
+&lt;h2 id=&#34;快递系统里的网站原理&#34;&gt;快递系统里的网站原理&lt;/h2&gt;
+&lt;p&gt;想象你要给朋友寄快递，这个过程恰好能帮助我们理解网站运行的基本要素：&lt;/p&gt;
+&lt;h3 id=&#34;1-域名--快递地址&#34;&gt;1. 域名 = 快递地址&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;就像「XX小区3号楼502室」是现实中的地址&lt;/li&gt;
+&lt;li&gt;「www.example.com」就是网站世界的地址&lt;/li&gt;
+&lt;li&gt;通过这个地址，快递员（浏览器）才能找到正确位置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-服务器--快递仓库&#34;&gt;2. 服务器 = 快递仓库&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;仓库里存放着各种包裹（网站文件）&lt;/li&gt;
+&lt;li&gt;这个特殊仓库需要：
+&lt;ul&gt;
+&lt;li&gt;全年无休（24小时运行）&lt;/li&gt;
+&lt;li&gt;超大货架（存储空间）&lt;/li&gt;
+&lt;li&gt;快速分拣系统（处理器）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-网站代码--包裹内容&#34;&gt;3. 网站代码 = 包裹内容&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;HTML：包裹里的物品清单&lt;/li&gt;
+&lt;li&gt;CSS：物品的包装样式&lt;/li&gt;
+&lt;li&gt;JavaScript：包裹里的智能说明书&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-dns--邮局分拣系统&#34;&gt;4. DNS = 邮局分拣系统&lt;/h3&gt;
+&lt;p&gt;当你在浏览器输入地址时：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;浏览器咨询DNS（邮局查询台）&lt;/li&gt;
+&lt;li&gt;DNS查找域名对应的IP（查询地址编码）&lt;/li&gt;
+&lt;li&gt;返回真实仓库坐标（服务器IP地址）&lt;/li&gt;
+&lt;li&gt;浏览器开始派送请求&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt=&#34;网站运行流程图&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/%E7%BD%91%E7%AB%99%E8%BF%90%E8%A1%8C%E6%B5%81%E7%A8%8B%E5%9B%BE.jpg&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;实际工作流程&#34;&gt;实际工作流程&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;你在浏览器输入网址&lt;/li&gt;
+&lt;li&gt;DNS解析获得IP（如：203.0.113.1）&lt;/li&gt;
+&lt;li&gt;浏览器向该IP的服务器发送请求&lt;/li&gt;
+&lt;li&gt;服务器打包好HTML/CSS/JS文件&lt;/li&gt;
+&lt;li&gt;通过互联网「快递」回你的电脑&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;新手常见疑问&#34;&gt;新手常见疑问&lt;/h2&gt;
+&lt;p&gt;❓ 为什么有时候网站打不开？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;地址写错（域名错误）&lt;/li&gt;
+&lt;li&gt;仓库关门（服务器宕机）&lt;/li&gt;
+&lt;li&gt;分拣系统故障（DNS问题）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;❓ 手机和电脑看到网页为什么不同？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;仓库准备了不同尺寸的包裹（响应式设计）&lt;/li&gt;
+&lt;li&gt;快递员根据设备自动选择合适包裹&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>First Post</title>
+      <link>http://localhost:1313/posts/first-post/</link>
+      <pubDate>Thu, 01 May 2025 01:21:31 +0800</pubDate>
+      <guid>http://localhost:1313/posts/first-post/</guid>
+      <description>&lt;p&gt;这是第一篇文章&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>解决 Hugo 预览时出现 Page Not Found 的问题</title>
+      <link>http://localhost:1313/posts/fix-hugo-preview-page-not-found/</link>
+      <pubDate>Sun, 27 Apr 2025 10:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/fix-hugo-preview-page-not-found/</guid>
+      <description>&lt;p&gt;搭建这个网站的时候，就遇到了这个问题，记录一下。
+“Page Not Found” 是 Hugo 网站预览时常见的错误提示。&lt;/p&gt;
+&lt;h2 id=&#34;问题现象&#34;&gt;问题现象&lt;/h2&gt;
+&lt;p&gt;在使用 &lt;code&gt;hugo server&lt;/code&gt; 命令预览 Hugo 网站时，浏览器访问 &lt;code&gt;http://localhost:1313/&lt;/code&gt; （演示用的端口号，不必一致），
+可能会显示 &amp;ldquo;Page Not Found&amp;rdquo; 的错误页面，而不是预期的网站内容。&lt;/p&gt;
+&lt;h2 id=&#34;可能的原因与解决方法&#34;&gt;可能的原因与解决方法&lt;/h2&gt;
+&lt;p&gt;在网上搜索一圈，基本可以确定，这个问题与 Hugo 的主题配置有关。&lt;/p&gt;
+&lt;h3 id=&#34;配置文件名错误&#34;&gt;配置文件名错误&lt;/h3&gt;
+&lt;p&gt;许多旧的教程或文档可能会引导我们将主题配置放在 &lt;code&gt;config.toml&lt;/code&gt; 文件中。
+但，这已经过时了。
+根据 Hugo 的较新版本和官方文档，&lt;strong&gt;主题相关的配置应该放在根目录下的 &lt;code&gt;hugo.toml&lt;/code&gt; 文件里&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;我们需要检查项目根目录下是否存在 &lt;code&gt;hugo.toml&lt;/code&gt; 文件，并确保您的主题设置（例如 &lt;code&gt;theme = &amp;quot;your-theme-name&amp;quot;&lt;/code&gt;）是在这个文件中配置的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;错误示例 (&lt;code&gt;config.toml&lt;/code&gt;)：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 这是旧的或不推荐的方式&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;baseURL&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://localhost:1313/&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;我的网站&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;languageCode&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;zh-CN&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ananke&amp;#34;&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;正确示例 (&lt;code&gt;hugo.toml&lt;/code&gt;)：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;baseURL&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://localhost:1313/&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;我的网站&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;languageCode&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;zh-CN&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ananke&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;hasCJKLanguage&lt;/span&gt; = &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;pagination&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;pagerSize&lt;/span&gt; = &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果您之前使用了 &lt;code&gt;config.toml&lt;/code&gt;，请尝试将配置迁移到 &lt;code&gt;hugo.toml&lt;/code&gt;（如果 &lt;code&gt;hugo.toml&lt;/code&gt; 不存在，则创建它），然后删除或重命名旧的 &lt;code&gt;config.toml&lt;/code&gt; 文件。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

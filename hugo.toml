@@ -1,0 +1,23 @@
+baseURL = 'https://localhost:1313'
+languageCode = 'zh-CN'
+title = '小白开发助手'
+theme = 'PaperMod'
+
+[params]
+  defaultTheme = 'auto'
+  ShowShareButtons = true
+  disableSpecial1stPost = true
+
+[build]
+  writeStats = true
+
+[menu]
+  [[menu.main]]
+    identifier = 'posts'
+    name = '文章'
+    url = '/posts/'
+    weight = 1
+
+[pagination]
+pagerSize = 10  # 新主题建议每页显示10篇文章
+paginatePath = "page"
