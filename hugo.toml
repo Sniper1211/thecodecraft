@@ -1,4 +1,4 @@
-baseURL = 'https://www.thecodecraft.site/'
+baseURL = 'https://thecodecraft.site/'
 languageCode = 'zh-CN'
 title = '小白开发助手'
 theme = 'PaperMod'
