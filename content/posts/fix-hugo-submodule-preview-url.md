@@ -5,7 +5,7 @@ tags: ["Hugo", "Git Submodule", "静态站点"]
 draft: false
 ---
 部署这个网站的时候遇到了一个问题，本地测试的时候文章都是正常的，但是部署到 vercel 之后，页面的URL出错。
-全部都是 ·localhost:1313· 开头的URL，而不是预期的 ·www.thecodecraft.site· 开头的URL。
+全部都是 `localhost:1313` 开头的URL，而不是预期的 `www.thecodecraft.site` 开头的URL。
 在 vercel 的 build logs 中发现了警告报错，逐行研读，最终解决了问题：
 
 ## 问题现象
