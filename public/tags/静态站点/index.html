@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Tags | 小白开发助手</title>
+<title>静态站点 | 小白开发助手</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/tags/">
+<link rel="canonical" href="http://localhost:1313/tags/%E9%9D%99%E6%80%81%E7%AB%99%E7%82%B9/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
@@ -18,8 +18,8 @@
 <link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/index.xml">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/tags/">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/%E9%9D%99%E6%80%81%E7%AB%99%E7%82%B9/index.xml">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/tags/%E9%9D%99%E6%80%81%E7%AB%99%E7%82%B9/">
 <noscript>
     <style>
         #theme-toggle,
@@ -107,22 +107,28 @@
         </ul>
     </nav>
 </header>
-<main class="main">
+<main class="main"> 
 <header class="page-header">
-    <h1>Tags</h1>
+  <h1>
+    静态站点
+  </h1>
 </header>
 
-<ul class="terms-tags">
-    <li>
-        <a href="http://localhost:1313/tags/git-submodule/">Git Submodule <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="http://localhost:1313/tags/hugo/">Hugo <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="http://localhost:1313/tags/%E9%9D%99%E6%80%81%E7%AB%99%E7%82%B9/">静态站点 <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-</ul>
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">解决Hugo子模块路径配置错误，导致的预览URL出错
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>问题现象 本地运行hugo server -D时，主题资源文件加载路径异常，控制台出现404错误
+排查过程 检查主题子模块配置 [submodule &#34;themes/PaperMod&#34;] path = themes/PaperMod url = https://github.com/adityatelange/hugo-PaperMod.git 发现主题资源路径被解析为http://localhost:1313/themes/PaperMod/... 确认Hugo默认将主题目录视为普通内容目录 根本原因 Hugo默认配置将themes目录作为内容资源路径处理，导致：
+主题子模块路径被错误解析 静态资源路径生成错误 解决方案 修改.gitmodules配置指定特殊目录标记：
+[submodule &#34;hugo_modules/PaperMod&#34;] path = hugo_modules/PaperMod url = https://github.com/adityatelange/hugo-PaperMod.git 关键修改点：
+将themes目录重命名为hugo_modules 通过Hugo的模块系统自动识别专用目录 实施效果 资源路径正确解析为http://localhost:1313/PaperMod/... 主题样式和脚本加载正常 预览功能完全恢复 技术总结 Hugo对特殊目录名称有特定处理逻辑 子模块配置需与Hugo模块系统配合使用 使用hugo mod命令管理依赖更可靠 hugo mod get github.com/adityatelange/hugo-PaperMod </p>
+  </div>
+  <footer class="entry-footer"><span title='2024-03-22 16:15:00 +0800 CST'>March 22, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to 解决Hugo子模块路径配置错误，导致的预览URL出错" href="http://localhost:1313/posts/fix-hugo-submodule-preview-url/"></a>
+</article>
     </main>
     
 <footer class="footer">

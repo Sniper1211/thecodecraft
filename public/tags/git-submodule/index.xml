@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Git Submodule on 小白开发助手</title>
+    <link>http://localhost:1313/tags/git-submodule/</link>
+    <description>Recent content in Git Submodule on 小白开发助手</description>
+    <generator>Hugo -- 0.146.7</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 22 Mar 2024 16:15:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/git-submodule/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>解决Hugo子模块路径配置错误，导致的预览URL出错</title>
+      <link>http://localhost:1313/posts/fix-hugo-submodule-preview-url/</link>
+      <pubDate>Fri, 22 Mar 2024 16:15:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/fix-hugo-submodule-preview-url/</guid>
+      <description>&lt;h2 id=&#34;问题现象&#34;&gt;问题现象&lt;/h2&gt;
+&lt;p&gt;本地运行&lt;code&gt;hugo server -D&lt;/code&gt;时，主题资源文件加载路径异常，控制台出现404错误&lt;/p&gt;
+&lt;h2 id=&#34;排查过程&#34;&gt;排查过程&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;检查主题子模块配置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-git&#34; data-lang=&#34;git&#34;&gt;[submodule &amp;#34;themes/PaperMod&amp;#34;]
+	path = themes/PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod.git
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;发现主题资源路径被解析为&lt;code&gt;http://localhost:1313/themes/PaperMod/...&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;确认Hugo默认将主题目录视为普通内容目录&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;根本原因&#34;&gt;根本原因&lt;/h2&gt;
+&lt;p&gt;Hugo默认配置将&lt;code&gt;themes&lt;/code&gt;目录作为内容资源路径处理，导致：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;主题子模块路径被错误解析&lt;/li&gt;
+&lt;li&gt;静态资源路径生成错误&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;解决方案&#34;&gt;解决方案&lt;/h2&gt;
+&lt;p&gt;修改&lt;code&gt;.gitmodules&lt;/code&gt;配置指定特殊目录标记：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-git&#34; data-lang=&#34;git&#34;&gt;[submodule &amp;#34;hugo_modules/PaperMod&amp;#34;]
+	path = hugo_modules/PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod.git
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;关键修改点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将&lt;code&gt;themes&lt;/code&gt;目录重命名为&lt;code&gt;hugo_modules&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;通过Hugo的模块系统自动识别专用目录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;实施效果&#34;&gt;实施效果&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;资源路径正确解析为&lt;code&gt;http://localhost:1313/PaperMod/...&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;主题样式和脚本加载正常&lt;/li&gt;
+&lt;li&gt;预览功能完全恢复&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;技术总结&#34;&gt;技术总结&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Hugo对特殊目录名称有特定处理逻辑&lt;/li&gt;
+&lt;li&gt;子模块配置需与Hugo模块系统配合使用&lt;/li&gt;
+&lt;li&gt;使用&lt;code&gt;hugo mod&lt;/code&gt;命令管理依赖更可靠&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo mod get github.com/adityatelange/hugo-PaperMod
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>
