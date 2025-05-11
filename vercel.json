@@ -1,5 +1,5 @@
 {
-  "buildCommand": "hugo --minify --baseURL=https://$VERCEL_URL/ --environment production",
+  "buildCommand": "hugo --minify --baseURL=https://thecodecraft.site/ --environment production",
   "outputDirectory": "public",
   "routes": [
     {
