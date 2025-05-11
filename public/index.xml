@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>小白开发助手</title>
-    <link>http://localhost:64975/</link>
+    <link>https://thecodecraft.site:1313/</link>
     <description>Recent content on 小白开发助手</description>
     <generator>Hugo -- 0.146.7</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sun, 11 May 2025 01:02:04 +0800</lastBuildDate>
-    <atom:link href="http://localhost:64975/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://thecodecraft.site:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Vercel免费替代方案：如何不花钱练习多个网站模板</title>
-      <link>http://localhost:64975/posts/vercel-free-alternatives-for-practice/</link>
+      <link>https://thecodecraft.site:1313/posts/vercel-free-alternatives-for-practice/</link>
       <pubDate>Sun, 11 May 2025 01:02:04 +0800</pubDate>
-      <guid>http://localhost:64975/posts/vercel-free-alternatives-for-practice/</guid>
+      <guid>https://thecodecraft.site:1313/posts/vercel-free-alternatives-for-practice/</guid>
       <description>&lt;h2 id=&#34;问题背景&#34;&gt;问题背景&lt;/h2&gt;
 &lt;p&gt;在Vercel上尝试部署网站时，很多人会遇到这样的问题：免费资源有限，特别是数据库等服务往往只能免费使用一次，之后就需要付费。对于想要练习多个网站模板的开发者来说，这是一个不小的障碍。本文将分享一些替代方案，帮助你在不花钱的情况下练习更多的网站模板。&lt;/p&gt;
 &lt;h2 id=&#34;免费托管平台比较&#34;&gt;免费托管平台比较&lt;/h2&gt;
@@ -54,9 +54,9 @@
     </item>
     <item>
       <title>Namecheap域名托管Cloudflare保姆级教程</title>
-      <link>http://localhost:64975/posts/namecheap-cloudflare-dns-guide/</link>
+      <link>https://thecodecraft.site:1313/posts/namecheap-cloudflare-dns-guide/</link>
       <pubDate>Tue, 06 May 2025 22:03:00 +0800</pubDate>
-      <guid>http://localhost:64975/posts/namecheap-cloudflare-dns-guide/</guid>
+      <guid>https://thecodecraft.site:1313/posts/namecheap-cloudflare-dns-guide/</guid>
       <description>&lt;p&gt;习惯使用 Cloudflare，买了新域名之后，要怎么托管到 Cloudflare 上呢？
 今天用 NameCheap 为例，介绍一下托管到 Cloudflare 上的流程。
 手把手教你两把Namecheap域名托管到Cloudflare！&lt;/p&gt;
@@ -97,9 +97,9 @@
     </item>
     <item>
       <title>网站运行原理科普：1 分钟理解域名、服务器与DNS</title>
-      <link>http://localhost:64975/posts/web-basics-for-beginners/</link>
+      <link>https://thecodecraft.site:1313/posts/web-basics-for-beginners/</link>
       <pubDate>Mon, 05 May 2025 18:01:00 +0800</pubDate>
-      <guid>http://localhost:64975/posts/web-basics-for-beginners/</guid>
+      <guid>https://thecodecraft.site:1313/posts/web-basics-for-beginners/</guid>
       <description>&lt;p&gt;很多建站新手会在这里浪费很多时间，就为了理解域名、服务器与DNS是什么。
 今天简单介绍一下，快速入门，节约时间。&lt;/p&gt;
 &lt;h2 id=&#34;快递系统里的网站原理&#34;&gt;快递系统里的网站原理&lt;/h2&gt;
@@ -135,7 +135,7 @@
 &lt;li&gt;返回真实仓库坐标（服务器IP地址）&lt;/li&gt;
 &lt;li&gt;浏览器开始派送请求&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img alt=&#34;网站运行流程图&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:64975/images/%E7%BD%91%E7%AB%99%E8%BF%90%E8%A1%8C%E6%B5%81%E7%A8%8B%E5%9B%BE.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;网站运行流程图&#34; loading=&#34;lazy&#34; src=&#34;https://thecodecraft.site:1313/images/%E7%BD%91%E7%AB%99%E8%BF%90%E8%A1%8C%E6%B5%81%E7%A8%8B%E5%9B%BE.jpg&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;实际工作流程&#34;&gt;实际工作流程&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;你在浏览器输入网址&lt;/li&gt;
@@ -159,9 +159,9 @@
     </item>
     <item>
       <title>解决 Hugo 预览时出现 Page Not Found 的问题</title>
-      <link>http://localhost:64975/posts/fix-hugo-preview-page-not-found/</link>
+      <link>https://thecodecraft.site:1313/posts/fix-hugo-preview-page-not-found/</link>
       <pubDate>Sun, 27 Apr 2025 10:00:00 +0800</pubDate>
-      <guid>http://localhost:64975/posts/fix-hugo-preview-page-not-found/</guid>
+      <guid>https://thecodecraft.site:1313/posts/fix-hugo-preview-page-not-found/</guid>
       <description>&lt;p&gt;搭建这个网站的时候，就遇到了这个问题，记录一下。
 “Page Not Found” 是 Hugo 网站预览时常见的错误提示。&lt;/p&gt;
 &lt;h2 id=&#34;问题现象&#34;&gt;问题现象&lt;/h2&gt;

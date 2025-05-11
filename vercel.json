@@ -1,5 +1,5 @@
 {
-  "buildCommand": "hugo --minify",
+  "buildCommand": "hugo --minify --baseURL=https://$VERCEL_URL/",
   "outputDirectory": "public",
   "routes": [
     {
