@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /page/
-Sitemap: https://thecodecraft.site/sitemap.xml
-Crawl-delay: 5
