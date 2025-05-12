@@ -1,12 +1,30 @@
 baseURL = 'https://thecodecraft.site/'
+enableRobotsTXT = true  # 启用自动生成robots.txt
+[params]
+  description = "小白开发者一站式技术博客，涵盖网站搭建、云服务配置、开发技巧等实用指南"
+  keywords = ["网站开发", "Hugo教程", "SEO优化", "静态站点", "云服务配置"]
+  defaultTheme = 'auto'
+  ShowShareButtons = true
+  disableSpecial1stPost = true
+  
+[languages]
+  [languages.zh]
+    languageName = "中文"
+    weight = 1
+    keywords = "网站开发,Hugo教程,SEO优化"
+  [languages.en]
+    languageName = "English"
+    weight = 2
+    keywords = "web development,hugo tutorial,seo optimization"
+
+[params.social]
+  OpenGraph = true
+  TwitterCard = true
 languageCode = 'zh-CN'
 title = '小白开发助手'
 theme = 'PaperMod'
 
-[params]
-  defaultTheme = 'auto'
-  ShowShareButtons = true
-  disableSpecial1stPost = true
+
 
 [build]
   writeStats = true
