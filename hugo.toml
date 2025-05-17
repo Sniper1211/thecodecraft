@@ -7,6 +7,7 @@ theme = 'PaperMod'
   defaultTheme = 'auto'
   ShowShareButtons = true
   disableSpecial1stPost = true
+  GoogleAnalyticsTag = "G-5QB3JTKHZH"
 
 [build]
   writeStats = true
@@ -19,5 +20,5 @@ theme = 'PaperMod'
     weight = 1
 
 [pagination]
-pagerSize = 10  # 新主题建议每页显示10篇文章
+pagerSize = 10
 paginatePath = "page"
