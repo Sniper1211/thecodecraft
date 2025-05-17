@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Namecheap on 小白开发助手</title>
+    <link>http://localhost:1313/tags/namecheap/</link>
+    <description>Recent content in Namecheap on 小白开发助手</description>
+    <generator>Hugo -- 0.146.7</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 06 May 2025 22:03:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/namecheap/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Namecheap域名托管Cloudflare保姆级教程</title>
+      <link>http://localhost:1313/posts/namecheap-cloudflare-dns-guide/</link>
+      <pubDate>Tue, 06 May 2025 22:03:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/namecheap-cloudflare-dns-guide/</guid>
+      <description>&lt;p&gt;习惯使用 Cloudflare，买了新域名之后，要怎么托管到 Cloudflare 上呢？
+今天用 NameCheap 为例，介绍一下托管到 Cloudflare 上的流程。
+手把手教你两把Namecheap域名托管到Cloudflare！&lt;/p&gt;
+&lt;h2 id=&#34;方案选择5秒决策版&#34;&gt;方案选择（5秒决策版）&lt;/h2&gt;
+&lt;p&gt;🔹 &lt;strong&gt;只想用Cloudflare的CDN加速&lt;/strong&gt; ➔ 选DNS托管&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;dns托管保留namecheap注册&#34;&gt;DNS托管（保留Namecheap注册）&lt;/h3&gt;
+&lt;p&gt;这个方案适合「用Cloudflare加速但不想转移域名」的小伙伴，就像一次简单的搬家。&lt;/p&gt;
+&lt;h4 id=&#34;第一步认领cloudflare家门牌&#34;&gt;第一步：认领Cloudflare家门牌&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;登录Cloudflare控制台 ➔ 点击「添加站点」&lt;/li&gt;
+&lt;li&gt;输入裸域名（例：&lt;code&gt;yourdomain.com&lt;/code&gt; 别带www）&lt;/li&gt;
+&lt;li&gt;选择免费套餐 → 等系统扫描现有DNS记录（不想要的直接删）&lt;/li&gt;
+&lt;li&gt;记下分配的两个Nameservers地址（例：&lt;code&gt;kipp.ns.cloudflare.com&lt;/code&gt;）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;第二步namecheap换门锁&#34;&gt;第二步：Namecheap换门锁&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Namecheap后台找到域名 → 点击「Manage」&lt;/li&gt;
+&lt;li&gt;在下方的「Nameservers」域名服务器里选择「Custom DNS」&lt;/li&gt;
+&lt;li&gt;粘贴第一步提到的 Cloudflare 给的俩地址 → 保存&lt;/li&gt;
+&lt;li&gt;去泡杯咖啡等生效（通常10分钟，最长24小时）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;第三步布置cloudflare新家&#34;&gt;第三步：布置Cloudflare新家&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 常用DNS记录配置示例&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;A记录 → @ 指向 104.21.67.166（主域名）
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;CNAME记录 → www 指向 yourdomain.com（自动跳转）
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;⚠️ 重要设置：
+回到 Cloudflare 里找到 SSL/TLS 选择配置「完全」模式，强制HTTPS更安全&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;一般来说，现在的 Cloudflare 都能自动检测到 Namecheap 的域名，无需手动配置。&lt;/p&gt;
+&lt;h2 id=&#34;血泪经验总结&#34;&gt;血泪经验总结&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;改DNS后有的地区要等24小时生效，期间网站抽风属正常&lt;/li&gt;
+&lt;li&gt;SSL证书错误多半是因为没开「完全」模式&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;小贴士：这种方案只是用 CF 的 CDN 加速和简单的统计，方便管理，域名的续费和归属还是在 Namecheap 里。不会有更多麻烦的操作。顺利的话，15分钟搞定！&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

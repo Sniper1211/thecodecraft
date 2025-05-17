@@ -1,6 +1,7 @@
 ---
 title: "解决 Hugo 预览时出现 Page Not Found 的问题"
 date: 2025-04-27T10:00:00+08:00
+tags: ["Hugo", "配置", "静态站点", "Page Not Found"]
 draft: false
 ---
 搭建这个网站的时候，就遇到了这个问题，记录一下。
