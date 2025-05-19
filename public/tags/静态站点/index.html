@@ -130,6 +130,62 @@
   <footer class="entry-footer"><span title='2025-05-11 01:26:04 +0800 CST'>May 11, 2025</span></footer>
   <a class="entry-link" aria-label="post link to 解决Hugo子模块路径配置错误，导致的预览URL出错" href="http://localhost:1313/posts/fix-hugo-submodule-preview-url/"></a>
 </article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Vercel免费替代方案：如何不花钱练习多个网站模板
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>问题背景 在Vercel上尝试部署网站时，很多人会遇到这样的问题：免费资源有限，特别是数据库等服务往往只能免费使用一次，之后就需要付费。对于想要练习多个网站模板的开发者来说，这是一个不小的障碍。本文将分享一些替代方案，帮助你在不花钱的情况下练习更多的网站模板。
+免费托管平台比较 除了Vercel，还有其他一些提供免费层级的托管平台：
+Netlify - 提供类似Vercel的免费托管服务，每月有100GB的带宽限制和300分钟的构建时间 GitHub Pages - 完全免费，适合静态网站 Cloudflare Pages - 提供慷慨的免费层级，无带宽限制 Render - 有免费层级，但有使用限制 Railway - 提供$5的免费额度，足够运行小型项目 本地开发环境 最经济实惠的方式是在本地搭建开发环境：
+Docker - 使用容器技术在本地模拟生产环境，可以同时运行多个项目而不互相干扰 XAMPP/MAMP - 为PHP/MySQL项目提供简单的本地开发栈 Node.js本地服务器 - 使用Express或其他框架在本地运行Node.js应用 LocalWP - 专为WordPress开发者设计的本地环境 使用模拟数据进行前端开发 对于前端开发，你可以：
+JSON Server - 创建一个完整的假REST API，无需实际数据库 Mock Service Worker - 在浏览器中拦截网络请求并模拟响应 静态JSON文件 - 简单项目可以直接使用静态JSON文件模拟API响应 LocalStorage/IndexedDB - 利用浏览器存储功能模拟后端存储 不需要付费数据库的项目推荐 以下是一些可以练习的项目类型，它们不需要复杂的后端数据库：
+静态博客 - 使用Hugo、Jekyll或Gatsby构建 单页应用(SPA) - 使用React、Vue或Angular构建，数据存储在LocalStorage 作品集网站 - 展示你的项目和技能 登陆页面 - 练习UI/UX设计和转化率优化 计算器、待办事项应用 - 简单但实用的JavaScript应用 免费数据库选项 如果确实需要数据库，这些选项提供免费层级：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-05-11 01:02:04 +0800 CST'>May 11, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Vercel免费替代方案：如何不花钱练习多个网站模板" href="http://localhost:1313/posts/vercel-free-alternatives-for-practice/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Namecheap域名托管Cloudflare保姆级教程
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>习惯使用 Cloudflare，买了新域名之后，要怎么托管到 Cloudflare 上呢？ 今天用 NameCheap 为例，介绍一下托管到 Cloudflare 上的流程。 手把手教你两把Namecheap域名托管到Cloudflare！
+方案选择（5秒决策版） 🔹 只想用Cloudflare的CDN加速 ➔ 选DNS托管
+DNS托管（保留Namecheap注册） 这个方案适合「用Cloudflare加速但不想转移域名」的小伙伴，就像一次简单的搬家。
+第一步：认领Cloudflare家门牌 登录Cloudflare控制台 ➔ 点击「添加站点」 输入裸域名（例：yourdomain.com 别带www） 选择免费套餐 → 等系统扫描现有DNS记录（不想要的直接删） 记下分配的两个Nameservers地址（例：kipp.ns.cloudflare.com） 第二步：Namecheap换门锁 Namecheap后台找到域名 → 点击「Manage」 在下方的「Nameservers」域名服务器里选择「Custom DNS」 粘贴第一步提到的 Cloudflare 给的俩地址 → 保存 去泡杯咖啡等生效（通常10分钟，最长24小时） 第三步：布置Cloudflare新家 # 常用DNS记录配置示例 A记录 → @ 指向 104.21.67.166（主域名） CNAME记录 → www 指向 yourdomain.com（自动跳转） ⚠️ 重要设置： 回到 Cloudflare 里找到 SSL/TLS 选择配置「完全」模式，强制HTTPS更安全
+一般来说，现在的 Cloudflare 都能自动检测到 Namecheap 的域名，无需手动配置。
+血泪经验总结 改DNS后有的地区要等24小时生效，期间网站抽风属正常 SSL证书错误多半是因为没开「完全」模式 小贴士：这种方案只是用 CF 的 CDN 加速和简单的统计，方便管理，域名的续费和归属还是在 Namecheap 里。不会有更多麻烦的操作。顺利的话，15分钟搞定！
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-05-06 22:03:00 +0800 CST'>May 6, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Namecheap域名托管Cloudflare保姆级教程" href="http://localhost:1313/posts/namecheap-cloudflare-dns-guide/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">解决 Hugo 预览时出现 Page Not Found 的问题
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>搭建这个网站的时候，就遇到了这个问题，记录一下。 “Page Not Found” 是 Hugo 网站预览时常见的错误提示。
+问题现象 在使用 hugo server 命令预览 Hugo 网站时，浏览器访问 http://localhost:1313/ （演示用的端口号，不必一致）， 可能会显示 “Page Not Found” 的错误页面，而不是预期的网站内容。
+可能的原因与解决方法 在网上搜索一圈，基本可以确定，这个问题与 Hugo 的主题配置有关。
+配置文件名错误 许多旧的教程或文档可能会引导我们将主题配置放在 config.toml 文件中。 但，这已经过时了。 根据 Hugo 的较新版本和官方文档，主题相关的配置应该放在根目录下的 hugo.toml 文件里。
+我们需要检查项目根目录下是否存在 hugo.toml 文件，并确保您的主题设置（例如 theme = &#34;your-theme-name&#34;）是在这个文件中配置的。
+错误示例 (config.toml)：
+# 这是旧的或不推荐的方式 baseURL = &#34;http://localhost:1313/&#34; title = &#34;我的网站&#34; languageCode = &#34;zh-CN&#34; theme = &#34;ananke&#34; 正确示例 (hugo.toml)：
+baseURL = &#34;http://localhost:1313/&#34; title = &#34;我的网站&#34; languageCode = &#34;zh-CN&#34; theme = &#34;ananke&#34; hasCJKLanguage = true [pagination] pagerSize = 5 如果您之前使用了 config.toml，请尝试将配置迁移到 hugo.toml（如果 hugo.toml 不存在，则创建它），然后删除或重命名旧的 config.toml 文件。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-04-27 10:00:00 +0800 CST'>April 27, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to 解决 Hugo 预览时出现 Page Not Found 的问题" href="http://localhost:1313/posts/fix-hugo-preview-page-not-found/"></a>
+</article>
     </main>
     
 <footer class="footer">
