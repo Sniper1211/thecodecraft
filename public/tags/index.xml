@@ -6,8 +6,50 @@
     <description>Recent content in Tags on 小白开发助手</description>
     <generator>Hugo -- 0.146.7</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 20 May 2025 23:18:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 23 May 2025 00:40:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A记录</title>
+      <link>http://localhost:1313/tags/a%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Fri, 23 May 2025 00:40:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/a%E8%AE%B0%E5%BD%95/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CNAME记录</title>
+      <link>http://localhost:1313/tags/cname%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Fri, 23 May 2025 00:40:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/cname%E8%AE%B0%E5%BD%95/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DNS</title>
+      <link>http://localhost:1313/tags/dns/</link>
+      <pubDate>Fri, 23 May 2025 00:40:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/dns/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>域名</title>
+      <link>http://localhost:1313/tags/%E5%9F%9F%E5%90%8D/</link>
+      <pubDate>Fri, 23 May 2025 00:40:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E5%9F%9F%E5%90%8D/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>新手教程</title>
+      <link>http://localhost:1313/tags/%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Fri, 23 May 2025 00:40:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>网站建设</title>
+      <link>http://localhost:1313/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/</link>
+      <pubDate>Fri, 23 May 2025 00:40:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/</guid>
+      <description></description>
+    </item>
     <item>
       <title>GitHub Pages</title>
       <link>http://localhost:1313/tags/github-pages/</link>
@@ -34,13 +76,6 @@
       <link>http://localhost:1313/tags/%E5%BB%BA%E7%AB%99/</link>
       <pubDate>Tue, 20 May 2025 23:18:00 +0800</pubDate>
       <guid>http://localhost:1313/tags/%E5%BB%BA%E7%AB%99/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>新手教程</title>
-      <link>http://localhost:1313/tags/%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/</link>
-      <pubDate>Tue, 20 May 2025 23:18:00 +0800</pubDate>
-      <guid>http://localhost:1313/tags/%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/</guid>
       <description></description>
     </item>
     <item>
@@ -79,13 +114,6 @@
       <description></description>
     </item>
     <item>
-      <title>网站建设</title>
-      <link>http://localhost:1313/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/</link>
-      <pubDate>Mon, 19 May 2025 23:01:41 +0800</pubDate>
-      <guid>http://localhost:1313/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Git Submodule</title>
       <link>http://localhost:1313/tags/git-submodule/</link>
       <pubDate>Sun, 11 May 2025 01:26:04 +0800</pubDate>
@@ -111,20 +139,6 @@
       <link>http://localhost:1313/tags/namecheap/</link>
       <pubDate>Tue, 06 May 2025 22:03:00 +0800</pubDate>
       <guid>http://localhost:1313/tags/namecheap/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>DNS</title>
-      <link>http://localhost:1313/tags/dns/</link>
-      <pubDate>Mon, 05 May 2025 18:01:00 +0800</pubDate>
-      <guid>http://localhost:1313/tags/dns/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>域名</title>
-      <link>http://localhost:1313/tags/%E5%9F%9F%E5%90%8D/</link>
-      <pubDate>Mon, 05 May 2025 18:01:00 +0800</pubDate>
-      <guid>http://localhost:1313/tags/%E5%9F%9F%E5%90%8D/</guid>
       <description></description>
     </item>
     <item>
