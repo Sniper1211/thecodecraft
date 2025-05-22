@@ -2,13 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/github-pages/</loc>
-    <lastmod>2025-05-20T23:18:00+08:00</lastmod>
+    <loc>http://localhost:1313/tags/a%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2025-05-23T00:40:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2025-05-23T00:40:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/cname%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2025-05-23T00:40:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/dns/</loc>
+    <lastmod>2025-05-23T00:40:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-05-20T23:18:00+08:00</lastmod>
+    <lastmod>2025-05-23T00:40:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-05-23T00:40:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E5%9F%9F%E5%90%8D/</loc>
+    <lastmod>2025-05-23T00:40:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-05-23T00:40:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/%E6%8A%80%E6%9C%AF%E7%A7%91%E6%99%AE/</loc>
+    <lastmod>2025-05-23T00:40:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2025-05-23T00:40:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/dns-for-beginners-a-record-and-cname/</loc>
+    <lastmod>2025-05-23T00:40:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/</loc>
+    <lastmod>2025-05-23T00:40:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/github-pages/</loc>
     <lastmod>2025-05-20T23:18:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/vercel/</loc>
@@ -17,13 +47,7 @@
     <loc>http://localhost:1313/tags/%E5%85%8D%E8%B4%B9%E6%96%B9%E6%A1%88/</loc>
     <lastmod>2025-05-20T23:18:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-05-20T23:18:00+08:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/%E5%BB%BA%E7%AB%99/</loc>
-    <lastmod>2025-05-20T23:18:00+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2025-05-20T23:18:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/how-to-build-website-for-free/</loc>
@@ -31,9 +55,6 @@
   </url><url>
     <loc>http://localhost:1313/tags/%E9%9D%99%E6%80%81%E7%AB%99%E7%82%B9/</loc>
     <lastmod>2025-05-20T23:18:00+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-05-19T23:01:41+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E4%B8%AA%E4%BA%BA%E5%93%81%E7%89%8C/</loc>
     <lastmod>2025-05-19T23:01:41+08:00</lastmod>
@@ -51,9 +72,6 @@
     <lastmod>2025-05-19T23:01:41+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E7%8B%AC%E7%AB%8B%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2025-05-19T23:01:41+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/</loc>
     <lastmod>2025-05-19T23:01:41+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/git-submodule/</loc>
@@ -77,12 +95,6 @@
     <loc>http://localhost:1313/posts/namecheap-cloudflare-dns-guide/</loc>
     <lastmod>2025-05-06T22:03:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/dns/</loc>
-    <lastmod>2025-05-05T18:01:00+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%E5%9F%9F%E5%90%8D/</loc>
-    <lastmod>2025-05-05T18:01:00+08:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
     <lastmod>2025-05-05T18:01:00+08:00</lastmod>
   </url><url>
@@ -97,5 +109,8 @@
   </url><url>
     <loc>http://localhost:1313/tags/%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2025-04-27T10:00:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/about/</loc>
+    <lastmod>2024-07-30T10:00:00+08:00</lastmod>
   </url>
 </urlset>

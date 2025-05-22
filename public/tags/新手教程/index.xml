@@ -6,8 +6,50 @@
     <description>Recent content in 新手教程 on 小白开发助手</description>
     <generator>Hugo -- 0.146.7</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 20 May 2025 23:18:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 23 May 2025 00:40:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>编程新手的 DNS 小课堂：A 记录和 CNAME 的奇妙世界</title>
+      <link>http://localhost:1313/posts/dns-for-beginners-a-record-and-cname/</link>
+      <pubDate>Fri, 23 May 2025 00:40:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/dns-for-beginners-a-record-and-cname/</guid>
+      <description>&lt;p&gt;刚刚拥有了一个酷酷的域名，是不是会遇到一些听起来“高大上”的名词，比如 DNS、A记录、CNAME？&lt;/p&gt;
+&lt;p&gt;别担心，它们并没有那么神秘！1 分钟给你讲明白，这是怎么回事。&lt;/p&gt;
+&lt;h3 id=&#34;一dns-的身份证系统网络世界的导航员&#34;&gt;一、DNS 的&amp;quot;身份证系统&amp;quot;：网络世界的导航员&lt;/h3&gt;
+&lt;p&gt;想象一下，互联网就像一个超级巨大的城市，每个网站都是城市里的一座房子。我们要去拜访这些房子，就需要地址，对吧？在网络世界里，这些“房子”（网站）也有两种地址：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;域名 (Domain Name)&lt;/strong&gt;：像是房子的门牌号，比如 &lt;code&gt;www.thecodecraft.site&lt;/code&gt; 或者 &lt;code&gt;www.google.com&lt;/code&gt;。这是我们人类容易记住的名字，友好又直观。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IP 地址 (IP Address)&lt;/strong&gt;：像是房子的精确GPS坐标，比如 &lt;code&gt;172.67.145.212&lt;/code&gt;。这是一串数字，计算机才能直接理解并找到目标。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;那么，我们输入好记的域名后，电脑是怎么找到对应的数字 IP 地址呢？答案就是 &lt;strong&gt;DNS (Domain Name System，域名系统)&lt;/strong&gt;！&lt;/p&gt;
+&lt;p&gt;你可以把 DNS 看作是这个网络大都市的“超级导航地图”或者“智能电话簿”。它专门负责把我们输入的域名“翻译”或“解析”成计算机认识的 IP 地址，这样你的浏览器才能准确地找到并加载你想要访问的网站内容。&lt;/p&gt;
+&lt;h3 id=&#34;二a记录直达目的地的导航箭头&#34;&gt;二、A记录：直达目的地的“导航箭头”&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;A 记录 (Address Record)&lt;/strong&gt;，顾名思义，就是“地址记录”。它是 DNS 系统里最简单、最直接的一种指路方式。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;它的任务&lt;/strong&gt;：将一个域名（比如你的网站域名 &lt;code&gt;www.yourwebsite.com&lt;/code&gt;）直接指向一个具体的 IPv4 地址（一种常见的 IP 地址格式，就是那一串数字）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;格式很简单&lt;/strong&gt;：&lt;code&gt;你的域名 → 服务器的 IP 地址&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;举个例子&lt;/strong&gt;：如果你为 &lt;code&gt;www.thecodecraft.site&lt;/code&gt; 设置 A 记录指向 &lt;code&gt;172.67.145.212&lt;/code&gt;，那么当有人访问 &lt;code&gt;www.thecodecraft.site&lt;/code&gt; 时，DNS 系统就会告诉浏览器：“嘿，去 &lt;code&gt;172.67.145.212&lt;/code&gt; 这个地方找！”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;：就像你直接告诉朋友你家的详细门牌号，朋友可以一步到位找到你，非常直接高效！没有绕弯子，直奔主题。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当你希望你的域名直接指向你服务器的那个独一无二的数字门牌号时，A 记录就是你的首选。&lt;/p&gt;
+&lt;h3 id=&#34;三cname记录灵活的指路牌别名&#34;&gt;三、CNAME记录：灵活的“指路牌别名”&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;CNAME 记录 (Canonical Name Record)&lt;/strong&gt;，意思是“规范名称记录”，它更像是一个“别名”、“外号”或者“快捷方式”。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;它的任务&lt;/strong&gt;：与 A 记录不同，CNAME 记录不是直接把域名指向一个 IP 地址，而是将一个域名指向另一个域名。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;格式是这样&lt;/strong&gt;：&lt;code&gt;你的一个域名（别名）→ 另一个规范的域名（目标域名）&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;举个例子&lt;/strong&gt;：你可以设置 &lt;code&gt;shop.thecodecraft.site&lt;/code&gt; 的 CNAME 记录指向 &lt;code&gt;www.thecodecraft.site&lt;/code&gt;。当有人访问 &lt;code&gt;shop.thecodecraft.site&lt;/code&gt; 时，DNS 会先查到它指向 &lt;code&gt;www.thecodecraft.site&lt;/code&gt;，然后再去查找 &lt;code&gt;www.thecodecraft.site&lt;/code&gt; 的记录（比如 &lt;code&gt;www.thecodecraft.site&lt;/code&gt; 有一个 A 记录指向某个 IP 地址），最终找到服务器的 IP 地址。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：这种方式非常灵活！想象一下，&lt;code&gt;www.thecodecraft.site&lt;/code&gt; 是你的“总部地址”。如果总部搬家了（IP 地址变了），你只需要更新总部 &lt;code&gt;www.thecodecraft.site&lt;/code&gt; 的 A 记录。所有通过 CNAME 指向总部的“分店”（比如 &lt;code&gt;shop.thecodecraft.site&lt;/code&gt;）的指路牌因为用的是别名，就自动更新了，不需要一个个去修改。这种“牵一发而动全身”的特性在管理多个服务或使用第三方服务时特别方便。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CNAME 记录就像是给你的网站设置了一个小名，访问小名也能找到它，而且如果“大名”对应的地址变了，小名也能自动跟上，省去了很多麻烦。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>零成本建站指南：不用买域名服务器，GitHub&#43;Vercel免费搭建个人网站</title>
       <link>http://localhost:1313/posts/how-to-build-website-for-free/</link>

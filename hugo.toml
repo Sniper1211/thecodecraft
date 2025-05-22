@@ -19,6 +19,12 @@ theme = 'PaperMod'
     url = '/posts/'
     weight = 1
 
+  [[menu.main]]
+    identifier = 'about'
+    name = '关于我'
+    url = '/about/'
+    weight = 2
+
 [pagination]
 pagerSize = 10
 paginatePath = "page"
