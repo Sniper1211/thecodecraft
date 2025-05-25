@@ -6,8 +6,20 @@
     <description>Recent content in 新手教程 on 小白开发助手</description>
     <generator>Hugo -- 0.146.7</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 23 May 2025 00:40:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 26 May 2025 01:49:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>网站的秘密地图：Sitemap 小白入门指南</title>
+      <link>http://localhost:1313/posts/what-is-sitemap/</link>
+      <pubDate>Mon, 26 May 2025 01:49:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/what-is-sitemap/</guid>
+      <description>&lt;h3 id=&#34;新手们sitemap-了解一下&#34;&gt;新手们，Sitemap 了解一下？&lt;/h3&gt;
+&lt;p&gt;想象一下，你精心搭建了一个漂亮的网站，里面有很多有价值的内容。但是，如果搜索引擎（比如百度、谷歌）找不到你的这些内容，那岂不是很可惜？就像你画了一幅绝美的画，却把它藏在了阁楼里，没人能欣赏到。&lt;/p&gt;
+&lt;p&gt;这时候，Sitemap 就派上用场了！ &lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h3 id=&#34;sitemap-是什么&#34;&gt;Sitemap 是什么？&lt;/h3&gt;
+&lt;p&gt;简单来说，Sitemap 就是一个&lt;strong&gt;网站地图&lt;/strong&gt;。 &lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt; 但它和你平时用的导航地图不太一样，它不是给访客直接看的，而是&lt;strong&gt;主要给搜索引擎看的&lt;/strong&gt;。 &lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;你可以把它想象成一个清单，上面列出了你网站上所有重要的页面链接。 &lt;!-- raw HTML omitted --&gt;3&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;4&lt;!-- raw HTML omitted --&gt; 搜索引擎的“蜘蛛”（一种自动抓取网页的程序）拿到这份地图后，就能更高效地了解你网站的结构，知道哪些页面可以被抓取和收录。 &lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>编程新手的 DNS 小课堂：A 记录和 CNAME 的奇妙世界</title>
       <link>http://localhost:1313/posts/dns-for-beginners-a-record-and-cname/</link>
