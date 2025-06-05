@@ -2,31 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/tags/app/</loc>
+    <lastmod>2025-06-06T00:25:00+08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-05-26T01:49:00+08:00</lastmod>
+    <lastmod>2025-06-06T00:25:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-05-26T01:49:00+08:00</lastmod>
+    <lastmod>2025-06-06T00:25:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-06-06T00:25:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-06-06T00:25:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/%E6%8A%80%E6%9C%AF%E7%A7%91%E6%99%AE/</loc>
+    <lastmod>2025-06-06T00:25:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2025-06-06T00:25:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/website-or-app-for-indie-developers/</loc>
+    <lastmod>2025-06-06T00:25:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/</loc>
+    <lastmod>2025-06-06T00:25:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/seo/</loc>
     <lastmod>2025-05-26T01:49:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/sitemap/</loc>
-    <lastmod>2025-05-26T01:49:00+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-05-26T01:49:00+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-05-26T01:49:00+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/%E6%8A%80%E6%9C%AF%E7%A7%91%E6%99%AE/</loc>
-    <lastmod>2025-05-26T01:49:00+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2025-05-26T01:49:00+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/</loc>
     <lastmod>2025-05-26T01:49:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/what-is-sitemap/</loc>

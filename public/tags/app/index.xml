@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>APP on 小白开发助手</title>
+    <link>http://localhost:1313/tags/app/</link>
+    <description>Recent content in APP on 小白开发助手</description>
+    <generator>Hugo -- 0.146.7</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 06 Jun 2025 00:25:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/app/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>独立开发，做网站还是做APP？</title>
+      <link>http://localhost:1313/posts/website-or-app-for-indie-developers/</link>
+      <pubDate>Fri, 06 Jun 2025 00:25:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/website-or-app-for-indie-developers/</guid>
+      <description>&lt;h2 id=&#34;给犹豫不决者的真心话&#34;&gt;给犹豫不决者的真心话&lt;/h2&gt;
+&lt;p&gt;想象你要开家小店：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;网站就像&lt;strong&gt;夜市摊位&lt;/strong&gt;：支张桌子就能营业，随时调整商品&lt;/li&gt;
+&lt;li&gt;APP则是&lt;strong&gt;商业综合体&lt;/strong&gt;：需要施工许可、消防验收、长期租约&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;三个灵魂拷问&#34;&gt;三个灵魂拷问&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;你的「商品」足够独特吗？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;奶茶店遍地时，新品牌需要商场展位(APP)&lt;/li&gt;
+&lt;li&gt;手作饰品更适合市集练摊(网站)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;你能否承受6个月零收入？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;开发APP的平均回本周期：11个月&lt;/li&gt;
+&lt;li&gt;网站获得首批用户：最快1周&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用户会在马桶上打开你的产品吗？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;高频需求适合APP（如社交、外卖）&lt;/li&gt;
+&lt;li&gt;低频服务用网站更划算（如预约装修）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;准备工作&#34;&gt;准备工作&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;注册免费开发工具：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;代码托管：&lt;a href=&#34;https://github.com&#34;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;云服务：&lt;a href=&#34;https://vercel.com&#34;&gt;Vercel&lt;/a&gt; 部署网站&lt;/li&gt;
+&lt;li&gt;数据库：&lt;a href=&#34;https://supabase.com&#34;&gt;Supabase&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;选择学习路径（附技术选择流程图）：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;graph TD
+  A[需要硬件功能?] --&amp;gt;|是| B(学Swift/Kotlin)
+  A --&amp;gt;|否| C[需要快速上线?] --&amp;gt;|是| D(用WordPress)
+  C --&amp;gt;|否| E(学HTML+CSS+JavaScript)
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;分步实施&#34;&gt;分步实施&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;网站开发路线&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;用 &lt;a href=&#34;https://codepen.io&#34;&gt;CodePen&lt;/a&gt; 在线练习基础三件套&lt;/li&gt;
+&lt;li&gt;选择 &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; 静态网站生成器&lt;/li&gt;
+&lt;li&gt;通过 &lt;a href=&#34;https://www.netlify.com&#34;&gt;Netlify&lt;/a&gt; 自动部署&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;APP开发路线&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用 &lt;a href=&#34;https://expo.dev&#34;&gt;Expo&lt;/a&gt; 快速创建React Native项目&lt;/li&gt;
+&lt;li&gt;通过 &lt;a href=&#34;https://ionic.io/appflow&#34;&gt;Appflow&lt;/a&gt; 实现云端构建&lt;/li&gt;
+&lt;li&gt;应用商店上架检查清单：
+&lt;ul&gt;
+&lt;li&gt;隐私政策页面&lt;/li&gt;
+&lt;li&gt;应用截图规范&lt;/li&gt;
+&lt;li&gt;年龄分级问卷&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;常见陷阱&#34;&gt;常见陷阱&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;域名备案注意事项（国内部署必备）&lt;/li&gt;
+&lt;li&gt;苹果审核被拒TOP3原因：
+&lt;ul&gt;
+&lt;li&gt;3.1.1 支付方式违规&lt;/li&gt;
+&lt;li&gt;4.3 重复应用&lt;/li&gt;
+&lt;li&gt;5.1.1 数据收集声明&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;网站SEO快速入门：
+&lt;ul&gt;
+&lt;li&gt;使用 &lt;a href=&#34;https://search.google.com&#34;&gt;Google Search Console&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;配置结构化数据&lt;/li&gt;
+&lt;li&gt;移动端友好测试&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;开发成本&#34;&gt;开发成本&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;网站&lt;/strong&gt;：采用React/Vue等框架，配合云服务部署&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;APP&lt;/strong&gt;：需区分iOS/Android双平台开发，上架审核流程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;维护难度&#34;&gt;维护难度&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;网站支持热更新，无需用户主动升级&lt;/li&gt;
+&lt;li&gt;APP版本碎片化严重，需持续兼容旧系统&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;获客渠道&#34;&gt;获客渠道&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;网站依赖SEO和社交媒体传播&lt;/li&gt;
+&lt;li&gt;APP依靠应用商店推荐和ASO优化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;盈利模式&#34;&gt;盈利模式&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;网站适合广告变现和订阅服务&lt;/li&gt;
+&lt;li&gt;APP更适合应用内购买和增值服务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;听听过来人的故事&#34;&gt;听听过来人的故事&lt;/h2&gt;
+&lt;h3 id=&#34;咖啡师转型记&#34;&gt;咖啡师转型记&lt;/h3&gt;
+&lt;p&gt;小美用 &lt;a href=&#34;https://bubble.io&#34;&gt;Bubble&lt;/a&gt; 零代码搭建咖啡订购网站：&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
