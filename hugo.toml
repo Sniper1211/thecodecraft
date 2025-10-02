@@ -7,7 +7,7 @@ theme = 'PaperMod'
   defaultTheme = 'auto'
   ShowShareButtons = true
   disableSpecial1stPost = true
-  GoogleAnalyticsTag = "G-5QB3JTKHZH"
+  GoogleAnalyticsTag = "G-172XYV0NGN"
 
 [build]
   writeStats = true
