@@ -2,9 +2,7 @@ baseURL = 'https://thecodecraft.site/'
 languageCode = 'zh-CN'
 title = '小白开发助手'
 
-[module]
-  [[module.imports]]
-    path = 'github.com/adityatelange/hugo-PaperMod'
+theme = "PaperMod"
 
 [params]
   defaultTheme = 'auto'

@@ -7,63 +7,17 @@
 <meta name="robots" content="noindex, nofollow">
 <title>零成本建站指南：不用买域名服务器，GitHub&#43;Vercel免费搭建个人网站 | 小白开发助手</title>
 <meta name="keywords" content="建站, 免费方案, GitHub Pages, Vercel, 静态站点, 新手教程">
-<meta name="description" content="一、为什么选择GitHub&#43;Vercel组合
-传统建站需要域名和服务器，这对新手来说门槛太高。现在通过GitHub的代码托管能力和Vercel的免费部署服务，我们可以完全零成本实现：
-
-✅ 免服务器费用（Vercel免费额度足够个人使用）
-✅ 免域名费用（使用默认的*.vercel.app二级域名）
-✅ 自动HTTPS加密（Vercel自动配置SSL证书）
-
-二、准备工作
-
-注册GitHub账号（官网）
-注册Vercel账号（支持GitHub一键登录）
-本地安装VS Code编辑器
-
-三、三步搭建基础网站
-步骤1：创建代码仓库
-在GitHub新建名为my-website的仓库，初始化时勾选&quot;Add a README file&quot;
-步骤2：编写静态页面
-在仓库根目录创建index.html：
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;我的免费网站&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Hello World!&lt;/h1&gt;
-    &lt;p&gt;由GitHub&#43;Vercel驱动&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-步骤3：部署到Vercel
-
-登录Vercel控制台
-点击&quot;Import Project&quot;选择GitHub仓库
-保持默认配置点击部署，30秒后即可获得在线地址
-
-四、进阶配置技巧
-自定义域名（可选）
-若已有域名，在Vercel的&quot;Domains&quot;设置中添加：
-CNAME记录 → your-domain.com → cname.vercel-dns.com
-配置自动更新
-在项目根目录创建vercel.json实现自动构建：
-{
-  &#34;builds&#34;: [
-    {
-      &#34;src&#34;: &#34;/*&#34;,
-      &#34;use&#34;: &#34;@vercel/static&#34;
-    }
-  ]
-}
-五、常见问题解答
-Q：网站访问量有限制吗？
-A：Vercel免费版每月提供100GB流量，个人博客完全够用
-Q：代码必须公开吗？
-A：GitHub公共仓库免费，私有仓库需付费。建议初期使用公共仓库
+<meta name="description" content="一、为什么选择GitHub&#43;Vercel组合 传统建站需要域名和服务器，这对新手来说门槛太高。现在通过GitHub的代码托管能力和Vercel的免费部署服务，我们可以完全零成本实现：
+✅ 免服务器费用（Vercel免费额度足够个人使用） ✅ 免域名费用（使用默认的*.vercel.app二级域名） ✅ 自动HTTPS加密（Vercel自动配置SSL证书） 二、准备工作 注册GitHub账号（官网） 注册Vercel账号（支持GitHub一键登录） 本地安装VS Code编辑器 三、三步搭建基础网站 步骤1：创建代码仓库 在GitHub新建名为my-website的仓库，初始化时勾选&quot;Add a README file&quot;
+步骤2：编写静态页面 在仓库根目录创建index.html：
+&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;title&gt;我的免费网站&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;h1&gt;Hello World!&lt;/h1&gt; &lt;p&gt;由GitHub&#43;Vercel驱动&lt;/p&gt; &lt;/body&gt; &lt;/html&gt; 步骤3：部署到Vercel 登录Vercel控制台 点击&quot;Import Project&quot;选择GitHub仓库 保持默认配置点击部署，30秒后即可获得在线地址 四、进阶配置技巧 自定义域名（可选） 若已有域名，在Vercel的&quot;Domains&quot;设置中添加：
+CNAME记录 → your-domain.com → cname.vercel-dns.com 配置自动更新 在项目根目录创建vercel.json实现自动构建：
+{ &#34;builds&#34;: [ { &#34;src&#34;: &#34;/*&#34;, &#34;use&#34;: &#34;@vercel/static&#34; } ] } 五、常见问题解答 Q：网站访问量有限制吗？ A：Vercel免费版每月提供100GB流量，个人博客完全够用
+Q：代码必须公开吗？ A：GitHub公共仓库免费，私有仓库需付费。建议初期使用公共仓库
 立即动手尝试，开启你的第一个免费网站吧！">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/posts/how-to-build-website-for-free/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a090830a421002426baafbd314e38f149d77b4c48a12ee9312700d770b27fb26.css" integrity="sha256-oJCDCkIQAkJrqvvTFOOPFJ13tMSKEu6TEnANdwsn&#43;yY=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -109,6 +63,19 @@ A：GitHub公共仓库免费，私有仓库需付费。建议初期使用公共�
 
     </style>
 </noscript>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-172XYV0NGN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-172XYV0NGN');
+</script>
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9245714228354292"
+     crossorigin="anonymous"></script>
 </head>
 
 <body class="" id="top">

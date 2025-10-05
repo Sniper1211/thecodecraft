@@ -9,43 +9,20 @@
 <meta name="keywords" content="DNS, 新手教程, A记录, CNAME记录, 域名, 网站建设">
 <meta name="description" content="刚刚拥有了一个酷酷的域名，是不是会遇到一些听起来“高大上”的名词，比如 DNS、A记录、CNAME？
 别担心，它们并没有那么神秘！1 分钟给你讲明白，这是怎么回事。
-一、DNS 的&quot;身份证系统&quot;：网络世界的导航员
-想象一下，互联网就像一个超级巨大的城市，每个网站都是城市里的一座房子。我们要去拜访这些房子，就需要地址，对吧？在网络世界里，这些“房子”（网站）也有两种地址：
-
-域名 (Domain Name)：像是房子的门牌号，比如 www.thecodecraft.site 或者 www.google.com。这是我们人类容易记住的名字，友好又直观。
-IP 地址 (IP Address)：像是房子的精确GPS坐标，比如 172.67.145.212。这是一串数字，计算机才能直接理解并找到目标。
-
-那么，我们输入好记的域名后，电脑是怎么找到对应的数字 IP 地址呢？答案就是 DNS (Domain Name System，域名系统)！
+一、DNS 的&quot;身份证系统&quot;：网络世界的导航员 想象一下，互联网就像一个超级巨大的城市，每个网站都是城市里的一座房子。我们要去拜访这些房子，就需要地址，对吧？在网络世界里，这些“房子”（网站）也有两种地址：
+域名 (Domain Name)：像是房子的门牌号，比如 www.thecodecraft.site 或者 www.google.com。这是我们人类容易记住的名字，友好又直观。 IP 地址 (IP Address)：像是房子的精确GPS坐标，比如 172.67.145.212。这是一串数字，计算机才能直接理解并找到目标。 那么，我们输入好记的域名后，电脑是怎么找到对应的数字 IP 地址呢？答案就是 DNS (Domain Name System，域名系统)！
 你可以把 DNS 看作是这个网络大都市的“超级导航地图”或者“智能电话簿”。它专门负责把我们输入的域名“翻译”或“解析”成计算机认识的 IP 地址，这样你的浏览器才能准确地找到并加载你想要访问的网站内容。
-二、A记录：直达目的地的“导航箭头”
-A 记录 (Address Record)，顾名思义，就是“地址记录”。它是 DNS 系统里最简单、最直接的一种指路方式。
-
-
+二、A记录：直达目的地的“导航箭头” A 记录 (Address Record)，顾名思义，就是“地址记录”。它是 DNS 系统里最简单、最直接的一种指路方式。
 它的任务：将一个域名（比如你的网站域名 www.yourwebsite.com）直接指向一个具体的 IPv4 地址（一种常见的 IP 地址格式，就是那一串数字）。
-
-
 格式很简单：你的域名 → 服务器的 IP 地址
-
-
 举个例子：如果你为 www.thecodecraft.site 设置 A 记录指向 172.67.145.212，那么当有人访问 www.thecodecraft.site 时，DNS 系统就会告诉浏览器：“嘿，去 172.67.145.212 这个地方找！”
-
-
 特点：就像你直接告诉朋友你家的详细门牌号，朋友可以一步到位找到你，非常直接高效！没有绕弯子，直奔主题。
-
-
 当你希望你的域名直接指向你服务器的那个独一无二的数字门牌号时，A 记录就是你的首选。
-三、CNAME记录：灵活的“指路牌别名”
-CNAME 记录 (Canonical Name Record)，意思是“规范名称记录”，它更像是一个“别名”、“外号”或者“快捷方式”。
-
-它的任务：与 A 记录不同，CNAME 记录不是直接把域名指向一个 IP 地址，而是将一个域名指向另一个域名。
-格式是这样：你的一个域名（别名）→ 另一个规范的域名（目标域名）
-举个例子：你可以设置 shop.thecodecraft.site 的 CNAME 记录指向 www.thecodecraft.site。当有人访问 shop.thecodecraft.site 时，DNS 会先查到它指向 www.thecodecraft.site，然后再去查找 www.thecodecraft.site 的记录（比如 www.thecodecraft.site 有一个 A 记录指向某个 IP 地址），最终找到服务器的 IP 地址。
-特点：这种方式非常灵活！想象一下，www.thecodecraft.site 是你的“总部地址”。如果总部搬家了（IP 地址变了），你只需要更新总部 www.thecodecraft.site 的 A 记录。所有通过 CNAME 指向总部的“分店”（比如 shop.thecodecraft.site）的指路牌因为用的是别名，就自动更新了，不需要一个个去修改。这种“牵一发而动全身”的特性在管理多个服务或使用第三方服务时特别方便。
-
-CNAME 记录就像是给你的网站设置了一个小名，访问小名也能找到它，而且如果“大名”对应的地址变了，小名也能自动跟上，省去了很多麻烦。">
+三、CNAME记录：灵活的“指路牌别名” CNAME 记录 (Canonical Name Record)，意思是“规范名称记录”，它更像是一个“别名”、“外号”或者“快捷方式”。
+它的任务：与 A 记录不同，CNAME 记录不是直接把域名指向一个 IP 地址，而是将一个域名指向另一个域名。 格式是这样：你的一个域名（别名）→ 另一个规范的域名（目标域名） 举个例子：你可以设置 shop.">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/posts/dns-for-beginners-a-record-and-cname/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a090830a421002426baafbd314e38f149d77b4c48a12ee9312700d770b27fb26.css" integrity="sha256-oJCDCkIQAkJrqvvTFOOPFJ13tMSKEu6TEnANdwsn&#43;yY=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -91,6 +68,19 @@ CNAME 记录就像是给你的网站设置了一个小名，访问小名也能�
 
     </style>
 </noscript>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-172XYV0NGN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-172XYV0NGN');
+</script>
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9245714228354292"
+     crossorigin="anonymous"></script>
 </head>
 
 <body class="" id="top">
@@ -197,40 +187,40 @@ CNAME 记录就像是给你的网站设置了一个小名，访问小名也能�
 <h3 id="四a记录-vs-cname记录快速对比">四、A记录 vs CNAME记录：快速对比<a hidden class="anchor" aria-hidden="true" href="#四a记录-vs-cname记录快速对比">#</a></h3>
 <p>为了让你更清楚地理解两者的区别，我们来看一个简单的对比表格：</p>
 <table>
-  <thead>
-      <tr>
-          <th>特性</th>
-          <th>A记录 (Address Record)</th>
-          <th>CNAME记录 (Canonical Name Record)</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>指向谁</strong></td>
-          <td>直接指向一个 IP 地址</td>
-          <td>指向另一个域名 (作为别名)</td>
-      </tr>
-      <tr>
-          <td><strong>解析过程</strong></td>
-          <td>一步到位，通常更快</td>
-          <td>可能需要多一步解析，理论上稍慢</td>
-      </tr>
-      <tr>
-          <td><strong>灵活性</strong></td>
-          <td>IP 地址变了，每个相关记录都得改</td>
-          <td>主域名 IP 变了，别名自动更新</td>
-      </tr>
-      <tr>
-          <td><strong>啥时候用</strong></td>
-          <td>服务器 IP 地址固定不变的情况</td>
-          <td>希望灵活管理，或使用第三方服务</td>
-      </tr>
-      <tr>
-          <td><strong>空主机名支持</strong></td>
-          <td>支持 (如 <code>thecodecraft.site</code>)</td>
-          <td>一般不支持用于根域名 (有特例)</td>
-      </tr>
-  </tbody>
+<thead>
+<tr>
+<th>特性</th>
+<th>A记录 (Address Record)</th>
+<th>CNAME记录 (Canonical Name Record)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>指向谁</strong></td>
+<td>直接指向一个 IP 地址</td>
+<td>指向另一个域名 (作为别名)</td>
+</tr>
+<tr>
+<td><strong>解析过程</strong></td>
+<td>一步到位，通常更快</td>
+<td>可能需要多一步解析，理论上稍慢</td>
+</tr>
+<tr>
+<td><strong>灵活性</strong></td>
+<td>IP 地址变了，每个相关记录都得改</td>
+<td>主域名 IP 变了，别名自动更新</td>
+</tr>
+<tr>
+<td><strong>啥时候用</strong></td>
+<td>服务器 IP 地址固定不变的情况</td>
+<td>希望灵活管理，或使用第三方服务</td>
+</tr>
+<tr>
+<td><strong>空主机名支持</strong></td>
+<td>支持 (如 <code>thecodecraft.site</code>)</td>
+<td>一般不支持用于根域名 (有特例)</td>
+</tr>
+</tbody>
 </table>
 <h3 id="五什么时候用哪个-你的选择指南">五、什么时候用哪个？—— 你的选择指南<a hidden class="anchor" aria-hidden="true" href="#五什么时候用哪个-你的选择指南">#</a></h3>
 <p>了解了它们的区别，那么在实际操作中，我们应该如何选择呢？别急，这里有份简单指南：</p>
