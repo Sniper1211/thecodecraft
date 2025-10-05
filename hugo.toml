@@ -9,10 +9,10 @@ theme = "PaperMod"
   ShowShareButtons = true
   disableSpecial1stPost = true
 
-[analytics]
-  google = { SiteVerificationTag = "" }
-
 GoogleAnalyticsTag = "G-172XYV0NGN"
+
+[params]
+  GoogleAnalyticsTag = "G-172XYV0NGN"
 
 [build]
   writeStats = true
