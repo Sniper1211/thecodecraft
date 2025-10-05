@@ -4,7 +4,7 @@
     <title>小白开发助手</title>
     <link>http://localhost:1313/</link>
     <description>Recent content on 小白开发助手</description>
-    <generator>Hugo -- 0.146.7</generator>
+    <generator>Hugo -- 0.125.7</generator>
     <language>zh-CN</language>
     <lastBuildDate>Fri, 06 Jun 2025 00:25:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
@@ -13,515 +13,152 @@
       <link>http://localhost:1313/posts/website-or-app-for-indie-developers/</link>
       <pubDate>Fri, 06 Jun 2025 00:25:00 +0800</pubDate>
       <guid>http://localhost:1313/posts/website-or-app-for-indie-developers/</guid>
-      <description>&lt;h2 id=&#34;给犹豫不决者的真心话&#34;&gt;给犹豫不决者的真心话&lt;/h2&gt;
-&lt;p&gt;想象你要开家小店：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;网站就像&lt;strong&gt;夜市摊位&lt;/strong&gt;：支张桌子就能营业，随时调整商品&lt;/li&gt;
-&lt;li&gt;APP则是&lt;strong&gt;商业综合体&lt;/strong&gt;：需要施工许可、消防验收、长期租约&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;三个灵魂拷问&#34;&gt;三个灵魂拷问&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;你的「商品」足够独特吗？&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;奶茶店遍地时，新品牌需要商场展位(APP)&lt;/li&gt;
-&lt;li&gt;手作饰品更适合市集练摊(网站)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;你能否承受6个月零收入？&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;开发APP的平均回本周期：11个月&lt;/li&gt;
-&lt;li&gt;网站获得首批用户：最快1周&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;用户会在马桶上打开你的产品吗？&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;高频需求适合APP（如社交、外卖）&lt;/li&gt;
-&lt;li&gt;低频服务用网站更划算（如预约装修）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;准备工作&#34;&gt;准备工作&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;注册免费开发工具：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;代码托管：&lt;a href=&#34;https://github.com&#34;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;云服务：&lt;a href=&#34;https://vercel.com&#34;&gt;Vercel&lt;/a&gt; 部署网站&lt;/li&gt;
-&lt;li&gt;数据库：&lt;a href=&#34;https://supabase.com&#34;&gt;Supabase&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;选择学习路径（附技术选择流程图）：&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;graph TD
-  A[需要硬件功能?] --&amp;gt;|是| B(学Swift/Kotlin)
-  A --&amp;gt;|否| C[需要快速上线?] --&amp;gt;|是| D(用WordPress)
-  C --&amp;gt;|否| E(学HTML+CSS+JavaScript)
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;分步实施&#34;&gt;分步实施&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;网站开发路线&lt;/strong&gt;：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;用 &lt;a href=&#34;https://codepen.io&#34;&gt;CodePen&lt;/a&gt; 在线练习基础三件套&lt;/li&gt;
-&lt;li&gt;选择 &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; 静态网站生成器&lt;/li&gt;
-&lt;li&gt;通过 &lt;a href=&#34;https://www.netlify.com&#34;&gt;Netlify&lt;/a&gt; 自动部署&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;APP开发路线&lt;/strong&gt;：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;使用 &lt;a href=&#34;https://expo.dev&#34;&gt;Expo&lt;/a&gt; 快速创建React Native项目&lt;/li&gt;
-&lt;li&gt;通过 &lt;a href=&#34;https://ionic.io/appflow&#34;&gt;Appflow&lt;/a&gt; 实现云端构建&lt;/li&gt;
-&lt;li&gt;应用商店上架检查清单：
-&lt;ul&gt;
-&lt;li&gt;隐私政策页面&lt;/li&gt;
-&lt;li&gt;应用截图规范&lt;/li&gt;
-&lt;li&gt;年龄分级问卷&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;常见陷阱&#34;&gt;常见陷阱&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;域名备案注意事项（国内部署必备）&lt;/li&gt;
-&lt;li&gt;苹果审核被拒TOP3原因：
-&lt;ul&gt;
-&lt;li&gt;3.1.1 支付方式违规&lt;/li&gt;
-&lt;li&gt;4.3 重复应用&lt;/li&gt;
-&lt;li&gt;5.1.1 数据收集声明&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;网站SEO快速入门：
-&lt;ul&gt;
-&lt;li&gt;使用 &lt;a href=&#34;https://search.google.com&#34;&gt;Google Search Console&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;配置结构化数据&lt;/li&gt;
-&lt;li&gt;移动端友好测试&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;开发成本&#34;&gt;开发成本&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;网站&lt;/strong&gt;：采用React/Vue等框架，配合云服务部署&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;APP&lt;/strong&gt;：需区分iOS/Android双平台开发，上架审核流程&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;维护难度&#34;&gt;维护难度&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;网站支持热更新，无需用户主动升级&lt;/li&gt;
-&lt;li&gt;APP版本碎片化严重，需持续兼容旧系统&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;获客渠道&#34;&gt;获客渠道&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;网站依赖SEO和社交媒体传播&lt;/li&gt;
-&lt;li&gt;APP依靠应用商店推荐和ASO优化&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;盈利模式&#34;&gt;盈利模式&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;网站适合广告变现和订阅服务&lt;/li&gt;
-&lt;li&gt;APP更适合应用内购买和增值服务&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;听听过来人的故事&#34;&gt;听听过来人的故事&lt;/h2&gt;
-&lt;h3 id=&#34;咖啡师转型记&#34;&gt;咖啡师转型记&lt;/h3&gt;
-&lt;p&gt;小美用 &lt;a href=&#34;https://bubble.io&#34;&gt;Bubble&lt;/a&gt; 零代码搭建咖啡订购网站：&lt;/p&gt;</description>
+      <description>给犹豫不决者的真心话 想象你要开家小店：
+网站就像夜市摊位：支张桌子就能营业，随时调整商品 APP则是商业综合体：需要施工许可、消防验收、长期租约 三个灵魂拷问 你的「商品」足够独特吗？
+奶茶店遍地时，新品牌需要商场展位(APP) 手作饰品更适合市集练摊(网站) 你能否承受6个月零收入？
+开发APP的平均回本周期：11个月 网站获得首批用户：最快1周 用户会在马桶上打开你的产品吗？
+高频需求适合APP（如社交、外卖） 低频服务用网站更划算（如预约装修） 准备工作 注册免费开发工具：
+代码托管：GitHub 云服务：Vercel 部署网站 数据库：Supabase 选择学习路径（附技术选择流程图）：
+graph TD A[需要硬件功能?] --&amp;gt;|是| B(学Swift/Kotlin) A --&amp;gt;|否| C[需要快速上线?] --&amp;gt;|是| D(用WordPress) C --&amp;gt;|否| E(学HTML+CSS+JavaScript) 分步实施 网站开发路线：
+用 CodePen 在线练习基础三件套 选择 Hugo 静态网站生成器 通过 Netlify 自动部署 APP开发路线：
+使用 Expo 快速创建React Native项目 通过 Appflow 实现云端构建 应用商店上架检查清单： 隐私政策页面 应用截图规范 年龄分级问卷 常见陷阱 域名备案注意事项（国内部署必备） 苹果审核被拒TOP3原因： 3.1.1 支付方式违规 4.3 重复应用 5.1.1 数据收集声明 网站SEO快速入门： 使用 Google Search Console 配置结构化数据 移动端友好测试 开发成本 网站：采用React/Vue等框架，配合云服务部署 APP：需区分iOS/Android双平台开发，上架审核流程 维护难度 网站支持热更新，无需用户主动升级 APP版本碎片化严重，需持续兼容旧系统 获客渠道 网站依赖SEO和社交媒体传播 APP依靠应用商店推荐和ASO优化 盈利模式 网站适合广告变现和订阅服务 APP更适合应用内购买和增值服务 听听过来人的故事 咖啡师转型记 小美用 Bubble 零代码搭建咖啡订购网站：</description>
     </item>
     <item>
       <title>网站的秘密地图：Sitemap 入门指南</title>
       <link>http://localhost:1313/posts/what-is-sitemap/</link>
       <pubDate>Mon, 26 May 2025 01:49:00 +0800</pubDate>
       <guid>http://localhost:1313/posts/what-is-sitemap/</guid>
-      <description>&lt;h3 id=&#34;新手们sitemap-了解一下&#34;&gt;新手们，Sitemap 了解一下？&lt;/h3&gt;
-&lt;p&gt;想象一下，你精心搭建了一个漂亮的网站，里面有很多有价值的内容。但是，如果搜索引擎（比如百度、谷歌）找不到你的这些内容，那岂不是很可惜？就像你画了一幅绝美的画，却把它藏在了阁楼里，没人能欣赏到。&lt;/p&gt;
-&lt;p&gt;这时候，Sitemap 就派上用场了！&lt;/p&gt;
-&lt;h3 id=&#34;sitemap-是什么&#34;&gt;Sitemap 是什么？&lt;/h3&gt;
-&lt;p&gt;简单来说，Sitemap 就是一个&lt;strong&gt;网站地图&lt;/strong&gt;。但它和你平时用的导航地图不太一样，它不是给访客直接看的，而是&lt;strong&gt;主要给搜索引擎看的&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;你可以把它想象成一个清单，上面列出了你网站上所有重要的页面链接。搜索引擎的“蜘蛛”（一种自动抓取网页的程序）拿到这份地图后，就能更高效地了解你网站的结构，知道哪些页面可以被抓取和收录。&lt;/p&gt;
-&lt;p&gt;常见的 Sitemap 文件格式有 &lt;code&gt;.xml&lt;/code&gt; 和 &lt;code&gt;.txt&lt;/code&gt;。其中 &lt;code&gt;.xml&lt;/code&gt; 格式更为常用，因为它能提供更多关于页面的信息，比如页面的更新频率、最后修改时间等。&lt;/p&gt;
-&lt;h3 id=&#34;为什么-sitemap-对你的网站很重要&#34;&gt;为什么 Sitemap 对你的网站很重要？&lt;/h3&gt;
-&lt;p&gt;对于编程和建站新手来说，理解 Sitemap 的重要性非常有帮助：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;帮助搜索引擎发现你的网站内容&lt;/strong&gt;：特别是对于新网站，或者内容结构比较复杂的网站，Sitemap 可以引导搜索引擎更快、更全面地发现你的所有页面。如果没有 Sitemap，一些深藏的页面可能很难被搜索引擎找到。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;提高网站的 SEO (搜索引擎优化)&lt;/strong&gt;：虽然 Sitemap 本身不能直接提升你的网站排名，但它可以确保你的内容被搜索引擎收录。只有被收录了，你的网站才有机会在搜索结果中展现给用户，从而间接提升 SEO 效果。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;告诉搜索引擎页面的重要性（可选）&lt;/strong&gt;：在 &lt;code&gt;.xml&lt;/code&gt; 格式的 Sitemap 中，你可以指定不同页面的相对重要性以及更新频率，这有助于搜索引擎更智能地抓取你的网站。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;及时通知更新&lt;/strong&gt;：当你网站内容更新后，Sitemap 也可以帮助搜索引擎更快地发现这些变化。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;新手如何处理-sitemap&#34;&gt;新手如何处理 Sitemap？&lt;/h3&gt;
-&lt;p&gt;很多现代的建站工具或博客系统（比如你正在使用的 Hugo）通常会自动生成 Sitemap 文件（一般是 &lt;code&gt;sitemap.xml&lt;/code&gt;），你不需要手动创建。&lt;/p&gt;
-&lt;p&gt;你需要做的通常是：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;检查 Sitemap 是否生成&lt;/strong&gt;：在你的网站根目录下看看是否有 &lt;code&gt;sitemap.xml&lt;/code&gt; 文件。例如，如果你的域名是 &lt;code&gt;example.com&lt;/code&gt;，那么 Sitemap 通常在 &lt;code&gt;example.com/sitemap.xml&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;提交 Sitemap 给搜索引擎&lt;/strong&gt;：你可以通过搜索引擎提供的站长工具（如 Google Search Console、百度搜索资源平台）提交你的 Sitemap 链接。这样搜索引擎就能定期检查你的 Sitemap 并更新收录。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;总结一下&#34;&gt;总结一下&lt;/h3&gt;
-&lt;p&gt;对于新手来说，Sitemap 可能听起来有点技术化，但它的核心作用很简单：&lt;strong&gt;帮助搜索引擎更好地理解和收录你的网站内容&lt;/strong&gt;。&lt;/p&gt;</description>
+      <description>新手们，Sitemap 了解一下？ 想象一下，你精心搭建了一个漂亮的网站，里面有很多有价值的内容。但是，如果搜索引擎（比如百度、谷歌）找不到你的这些内容，那岂不是很可惜？就像你画了一幅绝美的画，却把它藏在了阁楼里，没人能欣赏到。
+这时候，Sitemap 就派上用场了！
+Sitemap 是什么？ 简单来说，Sitemap 就是一个网站地图。但它和你平时用的导航地图不太一样，它不是给访客直接看的，而是主要给搜索引擎看的。
+你可以把它想象成一个清单，上面列出了你网站上所有重要的页面链接。搜索引擎的“蜘蛛”（一种自动抓取网页的程序）拿到这份地图后，就能更高效地了解你网站的结构，知道哪些页面可以被抓取和收录。
+常见的 Sitemap 文件格式有 .xml 和 .txt。其中 .xml 格式更为常用，因为它能提供更多关于页面的信息，比如页面的更新频率、最后修改时间等。
+为什么 Sitemap 对你的网站很重要？ 对于编程和建站新手来说，理解 Sitemap 的重要性非常有帮助：
+帮助搜索引擎发现你的网站内容：特别是对于新网站，或者内容结构比较复杂的网站，Sitemap 可以引导搜索引擎更快、更全面地发现你的所有页面。如果没有 Sitemap，一些深藏的页面可能很难被搜索引擎找到。 提高网站的 SEO (搜索引擎优化)：虽然 Sitemap 本身不能直接提升你的网站排名，但它可以确保你的内容被搜索引擎收录。只有被收录了，你的网站才有机会在搜索结果中展现给用户，从而间接提升 SEO 效果。 告诉搜索引擎页面的重要性（可选）：在 .xml 格式的 Sitemap 中，你可以指定不同页面的相对重要性以及更新频率，这有助于搜索引擎更智能地抓取你的网站。 及时通知更新：当你网站内容更新后，Sitemap 也可以帮助搜索引擎更快地发现这些变化。 新手如何处理 Sitemap？ 很多现代的建站工具或博客系统（比如你正在使用的 Hugo）通常会自动生成 Sitemap 文件（一般是 sitemap.xml），你不需要手动创建。
+你需要做的通常是：
+检查 Sitemap 是否生成：在你的网站根目录下看看是否有 sitemap.xml 文件。例如，如果你的域名是 example.com，那么 Sitemap 通常在 example.com/sitemap.xml。 提交 Sitemap 给搜索引擎：你可以通过搜索引擎提供的站长工具（如 Google Search Console、百度搜索资源平台）提交你的 Sitemap 链接。这样搜索引擎就能定期检查你的 Sitemap 并更新收录。 总结一下 对于新手来说，Sitemap 可能听起来有点技术化，但它的核心作用很简单：帮助搜索引擎更好地理解和收录你的网站内容。</description>
     </item>
     <item>
       <title>编程新手的 DNS 小课堂：A 记录和 CNAME 的奇妙世界</title>
       <link>http://localhost:1313/posts/dns-for-beginners-a-record-and-cname/</link>
       <pubDate>Fri, 23 May 2025 00:40:00 +0800</pubDate>
       <guid>http://localhost:1313/posts/dns-for-beginners-a-record-and-cname/</guid>
-      <description>&lt;p&gt;刚刚拥有了一个酷酷的域名，是不是会遇到一些听起来“高大上”的名词，比如 DNS、A记录、CNAME？&lt;/p&gt;
-&lt;p&gt;别担心，它们并没有那么神秘！1 分钟给你讲明白，这是怎么回事。&lt;/p&gt;
-&lt;h3 id=&#34;一dns-的身份证系统网络世界的导航员&#34;&gt;一、DNS 的&amp;quot;身份证系统&amp;quot;：网络世界的导航员&lt;/h3&gt;
-&lt;p&gt;想象一下，互联网就像一个超级巨大的城市，每个网站都是城市里的一座房子。我们要去拜访这些房子，就需要地址，对吧？在网络世界里，这些“房子”（网站）也有两种地址：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;域名 (Domain Name)&lt;/strong&gt;：像是房子的门牌号，比如 &lt;code&gt;www.thecodecraft.site&lt;/code&gt; 或者 &lt;code&gt;www.google.com&lt;/code&gt;。这是我们人类容易记住的名字，友好又直观。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;IP 地址 (IP Address)&lt;/strong&gt;：像是房子的精确GPS坐标，比如 &lt;code&gt;172.67.145.212&lt;/code&gt;。这是一串数字，计算机才能直接理解并找到目标。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;那么，我们输入好记的域名后，电脑是怎么找到对应的数字 IP 地址呢？答案就是 &lt;strong&gt;DNS (Domain Name System，域名系统)&lt;/strong&gt;！&lt;/p&gt;
-&lt;p&gt;你可以把 DNS 看作是这个网络大都市的“超级导航地图”或者“智能电话簿”。它专门负责把我们输入的域名“翻译”或“解析”成计算机认识的 IP 地址，这样你的浏览器才能准确地找到并加载你想要访问的网站内容。&lt;/p&gt;
-&lt;h3 id=&#34;二a记录直达目的地的导航箭头&#34;&gt;二、A记录：直达目的地的“导航箭头”&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;A 记录 (Address Record)&lt;/strong&gt;，顾名思义，就是“地址记录”。它是 DNS 系统里最简单、最直接的一种指路方式。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;它的任务&lt;/strong&gt;：将一个域名（比如你的网站域名 &lt;code&gt;www.yourwebsite.com&lt;/code&gt;）直接指向一个具体的 IPv4 地址（一种常见的 IP 地址格式，就是那一串数字）。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;格式很简单&lt;/strong&gt;：&lt;code&gt;你的域名 → 服务器的 IP 地址&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;举个例子&lt;/strong&gt;：如果你为 &lt;code&gt;www.thecodecraft.site&lt;/code&gt; 设置 A 记录指向 &lt;code&gt;172.67.145.212&lt;/code&gt;，那么当有人访问 &lt;code&gt;www.thecodecraft.site&lt;/code&gt; 时，DNS 系统就会告诉浏览器：“嘿，去 &lt;code&gt;172.67.145.212&lt;/code&gt; 这个地方找！”&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;：就像你直接告诉朋友你家的详细门牌号，朋友可以一步到位找到你，非常直接高效！没有绕弯子，直奔主题。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;当你希望你的域名直接指向你服务器的那个独一无二的数字门牌号时，A 记录就是你的首选。&lt;/p&gt;
-&lt;h3 id=&#34;三cname记录灵活的指路牌别名&#34;&gt;三、CNAME记录：灵活的“指路牌别名”&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;CNAME 记录 (Canonical Name Record)&lt;/strong&gt;，意思是“规范名称记录”，它更像是一个“别名”、“外号”或者“快捷方式”。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;它的任务&lt;/strong&gt;：与 A 记录不同，CNAME 记录不是直接把域名指向一个 IP 地址，而是将一个域名指向另一个域名。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;格式是这样&lt;/strong&gt;：&lt;code&gt;你的一个域名（别名）→ 另一个规范的域名（目标域名）&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;举个例子&lt;/strong&gt;：你可以设置 &lt;code&gt;shop.thecodecraft.site&lt;/code&gt; 的 CNAME 记录指向 &lt;code&gt;www.thecodecraft.site&lt;/code&gt;。当有人访问 &lt;code&gt;shop.thecodecraft.site&lt;/code&gt; 时，DNS 会先查到它指向 &lt;code&gt;www.thecodecraft.site&lt;/code&gt;，然后再去查找 &lt;code&gt;www.thecodecraft.site&lt;/code&gt; 的记录（比如 &lt;code&gt;www.thecodecraft.site&lt;/code&gt; 有一个 A 记录指向某个 IP 地址），最终找到服务器的 IP 地址。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：这种方式非常灵活！想象一下，&lt;code&gt;www.thecodecraft.site&lt;/code&gt; 是你的“总部地址”。如果总部搬家了（IP 地址变了），你只需要更新总部 &lt;code&gt;www.thecodecraft.site&lt;/code&gt; 的 A 记录。所有通过 CNAME 指向总部的“分店”（比如 &lt;code&gt;shop.thecodecraft.site&lt;/code&gt;）的指路牌因为用的是别名，就自动更新了，不需要一个个去修改。这种“牵一发而动全身”的特性在管理多个服务或使用第三方服务时特别方便。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;CNAME 记录就像是给你的网站设置了一个小名，访问小名也能找到它，而且如果“大名”对应的地址变了，小名也能自动跟上，省去了很多麻烦。&lt;/p&gt;</description>
+      <description>刚刚拥有了一个酷酷的域名，是不是会遇到一些听起来“高大上”的名词，比如 DNS、A记录、CNAME？
+别担心，它们并没有那么神秘！1 分钟给你讲明白，这是怎么回事。
+一、DNS 的&amp;quot;身份证系统&amp;quot;：网络世界的导航员 想象一下，互联网就像一个超级巨大的城市，每个网站都是城市里的一座房子。我们要去拜访这些房子，就需要地址，对吧？在网络世界里，这些“房子”（网站）也有两种地址：
+域名 (Domain Name)：像是房子的门牌号，比如 www.thecodecraft.site 或者 www.google.com。这是我们人类容易记住的名字，友好又直观。 IP 地址 (IP Address)：像是房子的精确GPS坐标，比如 172.67.145.212。这是一串数字，计算机才能直接理解并找到目标。 那么，我们输入好记的域名后，电脑是怎么找到对应的数字 IP 地址呢？答案就是 DNS (Domain Name System，域名系统)！
+你可以把 DNS 看作是这个网络大都市的“超级导航地图”或者“智能电话簿”。它专门负责把我们输入的域名“翻译”或“解析”成计算机认识的 IP 地址，这样你的浏览器才能准确地找到并加载你想要访问的网站内容。
+二、A记录：直达目的地的“导航箭头” A 记录 (Address Record)，顾名思义，就是“地址记录”。它是 DNS 系统里最简单、最直接的一种指路方式。
+它的任务：将一个域名（比如你的网站域名 www.yourwebsite.com）直接指向一个具体的 IPv4 地址（一种常见的 IP 地址格式，就是那一串数字）。
+格式很简单：你的域名 → 服务器的 IP 地址
+举个例子：如果你为 www.thecodecraft.site 设置 A 记录指向 172.67.145.212，那么当有人访问 www.thecodecraft.site 时，DNS 系统就会告诉浏览器：“嘿，去 172.67.145.212 这个地方找！”
+特点：就像你直接告诉朋友你家的详细门牌号，朋友可以一步到位找到你，非常直接高效！没有绕弯子，直奔主题。
+当你希望你的域名直接指向你服务器的那个独一无二的数字门牌号时，A 记录就是你的首选。
+三、CNAME记录：灵活的“指路牌别名” CNAME 记录 (Canonical Name Record)，意思是“规范名称记录”，它更像是一个“别名”、“外号”或者“快捷方式”。
+它的任务：与 A 记录不同，CNAME 记录不是直接把域名指向一个 IP 地址，而是将一个域名指向另一个域名。 格式是这样：你的一个域名（别名）→ 另一个规范的域名（目标域名） 举个例子：你可以设置 shop.</description>
     </item>
     <item>
       <title>零成本建站指南：不用买域名服务器，GitHub&#43;Vercel免费搭建个人网站</title>
       <link>http://localhost:1313/posts/how-to-build-website-for-free/</link>
       <pubDate>Tue, 20 May 2025 23:18:00 +0800</pubDate>
       <guid>http://localhost:1313/posts/how-to-build-website-for-free/</guid>
-      <description>&lt;h3 id=&#34;一为什么选择githubvercel组合&#34;&gt;一、为什么选择GitHub+Vercel组合&lt;/h3&gt;
-&lt;p&gt;传统建站需要域名和服务器，这对新手来说门槛太高。现在通过GitHub的代码托管能力和Vercel的免费部署服务，我们可以完全零成本实现：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;✅ 免服务器费用（Vercel免费额度足够个人使用）&lt;/li&gt;
-&lt;li&gt;✅ 免域名费用（使用默认的*.vercel.app二级域名）&lt;/li&gt;
-&lt;li&gt;✅ 自动HTTPS加密（Vercel自动配置SSL证书）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;二准备工作&#34;&gt;二、准备工作&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;注册GitHub账号（&lt;a href=&#34;https://github.com&#34;&gt;官网&lt;/a&gt;）&lt;/li&gt;
-&lt;li&gt;注册Vercel账号（支持GitHub一键登录）&lt;/li&gt;
-&lt;li&gt;本地安装VS Code编辑器&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;三三步搭建基础网站&#34;&gt;三、三步搭建基础网站&lt;/h3&gt;
-&lt;h4 id=&#34;步骤1创建代码仓库&#34;&gt;步骤1：创建代码仓库&lt;/h4&gt;
-&lt;p&gt;在GitHub新建名为&lt;code&gt;my-website&lt;/code&gt;的仓库，初始化时勾选&amp;quot;Add a README file&amp;quot;&lt;/p&gt;
-&lt;h4 id=&#34;步骤2编写静态页面&#34;&gt;步骤2：编写静态页面&lt;/h4&gt;
-&lt;p&gt;在仓库根目录创建&lt;code&gt;index.html&lt;/code&gt;：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;&amp;gt;我的免费网站&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;h1&lt;/span&gt;&amp;gt;Hello World!&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;h1&lt;/span&gt;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;由GitHub+Vercel驱动&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;步骤3部署到vercel&#34;&gt;步骤3：部署到Vercel&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;登录Vercel控制台&lt;/li&gt;
-&lt;li&gt;点击&amp;quot;Import Project&amp;quot;选择GitHub仓库&lt;/li&gt;
-&lt;li&gt;保持默认配置点击部署，30秒后即可获得在线地址&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;四进阶配置技巧&#34;&gt;四、进阶配置技巧&lt;/h3&gt;
-&lt;h4 id=&#34;自定义域名可选&#34;&gt;自定义域名（可选）&lt;/h4&gt;
-&lt;p&gt;若已有域名，在Vercel的&amp;quot;Domains&amp;quot;设置中添加：&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;CNAME记录 → your-domain.com → cname.vercel-dns.com
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;配置自动更新&#34;&gt;配置自动更新&lt;/h4&gt;
-&lt;p&gt;在项目根目录创建&lt;code&gt;vercel.json&lt;/code&gt;实现自动构建：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;builds&amp;#34;&lt;/span&gt;: [
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;src&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/*&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;use&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;@vercel/static&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  ]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;五常见问题解答&#34;&gt;五、常见问题解答&lt;/h3&gt;
-&lt;p&gt;Q：网站访问量有限制吗？
-A：Vercel免费版每月提供100GB流量，个人博客完全够用&lt;/p&gt;
-&lt;p&gt;Q：代码必须公开吗？
-A：GitHub公共仓库免费，私有仓库需付费。建议初期使用公共仓库&lt;/p&gt;
-&lt;p&gt;立即动手尝试，开启你的第一个免费网站吧！&lt;/p&gt;</description>
+      <description>一、为什么选择GitHub+Vercel组合 传统建站需要域名和服务器，这对新手来说门槛太高。现在通过GitHub的代码托管能力和Vercel的免费部署服务，我们可以完全零成本实现：
+✅ 免服务器费用（Vercel免费额度足够个人使用） ✅ 免域名费用（使用默认的*.vercel.app二级域名） ✅ 自动HTTPS加密（Vercel自动配置SSL证书） 二、准备工作 注册GitHub账号（官网） 注册Vercel账号（支持GitHub一键登录） 本地安装VS Code编辑器 三、三步搭建基础网站 步骤1：创建代码仓库 在GitHub新建名为my-website的仓库，初始化时勾选&amp;quot;Add a README file&amp;quot;
+步骤2：编写静态页面 在仓库根目录创建index.html：
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;我的免费网站&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h1&amp;gt;Hello World!&amp;lt;/h1&amp;gt; &amp;lt;p&amp;gt;由GitHub+Vercel驱动&amp;lt;/p&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 步骤3：部署到Vercel 登录Vercel控制台 点击&amp;quot;Import Project&amp;quot;选择GitHub仓库 保持默认配置点击部署，30秒后即可获得在线地址 四、进阶配置技巧 自定义域名（可选） 若已有域名，在Vercel的&amp;quot;Domains&amp;quot;设置中添加：
+CNAME记录 → your-domain.com → cname.vercel-dns.com 配置自动更新 在项目根目录创建vercel.json实现自动构建：
+{ &amp;#34;builds&amp;#34;: [ { &amp;#34;src&amp;#34;: &amp;#34;/*&amp;#34;, &amp;#34;use&amp;#34;: &amp;#34;@vercel/static&amp;#34; } ] } 五、常见问题解答 Q：网站访问量有限制吗？ A：Vercel免费版每月提供100GB流量，个人博客完全够用
+Q：代码必须公开吗？ A：GitHub公共仓库免费，私有仓库需付费。建议初期使用公共仓库
+立即动手尝试，开启你的第一个免费网站吧！</description>
     </item>
     <item>
       <title>为什么一定要做自己的网站，哪怕再小</title>
       <link>http://localhost:1313/posts/why-you-need-a-personal-website/</link>
       <pubDate>Mon, 19 May 2025 23:01:41 +0800</pubDate>
       <guid>http://localhost:1313/posts/why-you-need-a-personal-website/</guid>
-      <description>&lt;p&gt;在今天这个互联网时代，我总觉得有个自己的小网站，就像随身揣着一片小天地，它能装下你的想法、作品，甚至是你对未来的野心。别小瞧了这事儿，哪怕它一开始只是个简单的页面，也可能是你人生里的一大步。&lt;/p&gt;
-&lt;h3 id=&#34;一小网站大用处&#34;&gt;一、小网站，大用处&lt;/h3&gt;
-&lt;p&gt;说真的，我以前总觉得，做网站这事儿离自己八竿子打不着。这不是程序员、大公司才玩得转的吗？后来才明白，这完全是个心理误区。我的一个朋友，他就是个普通的摄影师，自己弄了个网站，把平时拍的照片往上面一放。一开始简简单单，连个设计都没有。可没想到，就是这么个不起眼的小网站，居然给他带来了不少私活。客户就是通过这个网站联系到他，说喜欢他的风格，想约拍。&lt;/p&gt;
-&lt;p&gt;你看，这不就是个实实在在的例子吗？网站这玩意儿，不管你刚开始做得多粗糙，它都能成为你个人展示的舞台。在这个数字化的世界里，它就是你的 &amp;ldquo;门面&amp;rdquo;，让人一眼就能找到你，了解你。&lt;/p&gt;
-&lt;h3 id=&#34;二为啥说网站是你的-数字基本盘&#34;&gt;二、为啥说网站是你的 &amp;ldquo;数字基本盘&amp;rdquo;&lt;/h3&gt;
-&lt;p&gt;想想看，我们每天刷社交媒体，发朋友圈，晒自拍。这些平台确实挺方便，可它们到底是谁的？是那些科技巨头的。你发的东西，随时可能被算法埋没，或者因为平台规则改了，就再也找不着了。我以前就遇到过这种情况，辛辛苦苦写了个长文，发在某个社交平台上，结果没过几个月，就因为平台调整，阅读量直接清零。那叫一个心疼！&lt;/p&gt;
-&lt;p&gt;但你要是有自己的网站就不一样了。它完全属于你。你想怎么改就怎么改，想发啥就发啥。它是你在数字世界里的根，不会因为你没缴电费就突然消失。就像我认识的那个小众音乐人，他自己搭建了个小网站。一开始就是个简单的音频播放器，配上歌词和一些创作感悟。后来慢慢积累，成了他和粉丝交流的专属空间。有粉丝说，就喜欢他网站上那种 &amp;ldquo;原汁原味&amp;rdquo; 的感觉，不像其他平台那么商业化。&lt;/p&gt;
-&lt;h3 id=&#34;三别再依赖公共平台了抓住自己的小天地&#34;&gt;三、别再依赖公共平台了，抓住自己的小天地&lt;/h3&gt;
-&lt;p&gt;说实话，我自己以前也觉得这事儿有点玄乎。不就发个照片、写个文字吗？微信、微博不都行嘛。但后来我仔细琢磨，这真的不一样。公共平台就像别人的房子，你住着可以，但你要想改造一下，可能得看房东脸色。而且，说白了，你在那儿发的东西，最终的收益还是平台的。你发得再火，广告收益也落不着你多少。&lt;/p&gt;
-&lt;p&gt;但你要是有自己的网站，那就不一样了。你发的每一篇文章、每一张照片，都是你的资产。你可以通过网站卖自己的作品，比如摄影集、电子书；也可以放广告，赚点外快；甚至可以把网站做成一个品牌，吸引合作机会。而且，你完全不用担心哪天平台把你封了，或者把你的内容删了，因为这是你的地盘。&lt;/p&gt;
-&lt;h3 id=&#34;四别小瞧了自己迈出第一步才是关键&#34;&gt;四、别小瞧了自己，迈出第一步才是关键&lt;/h3&gt;
-&lt;p&gt;我知道，很多人可能会觉得，我自己做网站？这得多难啊！我以前也是这么想的，后来才发现，这事儿没想象中那么复杂。现在市面上有那么多建站工具，比如 WordPress、Wix、Squarespace，它们都有现成的模板，你照着葫芦画瓢就行。而且，很多工具还提供免费试用，你可以先试试水，觉得合适了再继续。&lt;/p&gt;
-&lt;p&gt;刚开始的时候，别想着一步到位。就像我之前说的那个摄影师朋友，他最开始的网站就是个简单的图片展示页。但就是这么一个小小的起步，他坚持更新，慢慢优化，现在他的网站成了他接活儿的 &amp;ldquo;金字招牌&amp;rdquo;。你看，只要迈出了第一步，后面的事儿都可以一步步来。&lt;/p&gt;
-&lt;h3 id=&#34;五别等了现在就开始吧&#34;&gt;五、别等了，现在就开始吧&lt;/h3&gt;
-&lt;p&gt;说真的，我写这篇文章就是想跟大家说，别再犹豫了。在这个互联网时代，拥有自己的网站就像给自己准备了一把钥匙，能打开很多扇以前你根本想不到的门。它不需要你一开始就做得多么完美，哪怕只是个小小的开始，它都能成为你成长的基石。&lt;/p&gt;
-&lt;p&gt;别再把时间浪费在那些不稳定的公共平台上，开始搭建自己的小天地吧。刚开始可能会有点难，但当你看到自己的网站一点点成长起来，那种成就感是无可比拟的。相信我，这会是你人生中一个超棒的决定！&lt;/p&gt;</description>
+      <description>在今天这个互联网时代，我总觉得有个自己的小网站，就像随身揣着一片小天地，它能装下你的想法、作品，甚至是你对未来的野心。别小瞧了这事儿，哪怕它一开始只是个简单的页面，也可能是你人生里的一大步。
+一、小网站，大用处 说真的，我以前总觉得，做网站这事儿离自己八竿子打不着。这不是程序员、大公司才玩得转的吗？后来才明白，这完全是个心理误区。我的一个朋友，他就是个普通的摄影师，自己弄了个网站，把平时拍的照片往上面一放。一开始简简单单，连个设计都没有。可没想到，就是这么个不起眼的小网站，居然给他带来了不少私活。客户就是通过这个网站联系到他，说喜欢他的风格，想约拍。
+你看，这不就是个实实在在的例子吗？网站这玩意儿，不管你刚开始做得多粗糙，它都能成为你个人展示的舞台。在这个数字化的世界里，它就是你的 &amp;ldquo;门面&amp;rdquo;，让人一眼就能找到你，了解你。
+二、为啥说网站是你的 &amp;ldquo;数字基本盘&amp;rdquo; 想想看，我们每天刷社交媒体，发朋友圈，晒自拍。这些平台确实挺方便，可它们到底是谁的？是那些科技巨头的。你发的东西，随时可能被算法埋没，或者因为平台规则改了，就再也找不着了。我以前就遇到过这种情况，辛辛苦苦写了个长文，发在某个社交平台上，结果没过几个月，就因为平台调整，阅读量直接清零。那叫一个心疼！
+但你要是有自己的网站就不一样了。它完全属于你。你想怎么改就怎么改，想发啥就发啥。它是你在数字世界里的根，不会因为你没缴电费就突然消失。就像我认识的那个小众音乐人，他自己搭建了个小网站。一开始就是个简单的音频播放器，配上歌词和一些创作感悟。后来慢慢积累，成了他和粉丝交流的专属空间。有粉丝说，就喜欢他网站上那种 &amp;ldquo;原汁原味&amp;rdquo; 的感觉，不像其他平台那么商业化。
+三、别再依赖公共平台了，抓住自己的小天地 说实话，我自己以前也觉得这事儿有点玄乎。不就发个照片、写个文字吗？微信、微博不都行嘛。但后来我仔细琢磨，这真的不一样。公共平台就像别人的房子，你住着可以，但你要想改造一下，可能得看房东脸色。而且，说白了，你在那儿发的东西，最终的收益还是平台的。你发得再火，广告收益也落不着你多少。
+但你要是有自己的网站，那就不一样了。你发的每一篇文章、每一张照片，都是你的资产。你可以通过网站卖自己的作品，比如摄影集、电子书；也可以放广告，赚点外快；甚至可以把网站做成一个品牌，吸引合作机会。而且，你完全不用担心哪天平台把你封了，或者把你的内容删了，因为这是你的地盘。
+四、别小瞧了自己，迈出第一步才是关键 我知道，很多人可能会觉得，我自己做网站？这得多难啊！我以前也是这么想的，后来才发现，这事儿没想象中那么复杂。现在市面上有那么多建站工具，比如 WordPress、Wix、Squarespace，它们都有现成的模板，你照着葫芦画瓢就行。而且，很多工具还提供免费试用，你可以先试试水，觉得合适了再继续。
+刚开始的时候，别想着一步到位。就像我之前说的那个摄影师朋友，他最开始的网站就是个简单的图片展示页。但就是这么一个小小的起步，他坚持更新，慢慢优化，现在他的网站成了他接活儿的 &amp;ldquo;金字招牌&amp;rdquo;。你看，只要迈出了第一步，后面的事儿都可以一步步来。
+五、别等了，现在就开始吧 说真的，我写这篇文章就是想跟大家说，别再犹豫了。在这个互联网时代，拥有自己的网站就像给自己准备了一把钥匙，能打开很多扇以前你根本想不到的门。它不需要你一开始就做得多么完美，哪怕只是个小小的开始，它都能成为你成长的基石。
+别再把时间浪费在那些不稳定的公共平台上，开始搭建自己的小天地吧。刚开始可能会有点难，但当你看到自己的网站一点点成长起来，那种成就感是无可比拟的。相信我，这会是你人生中一个超棒的决定！</description>
     </item>
     <item>
       <title>解决Hugo子模块路径配置错误，导致的预览URL出错</title>
       <link>http://localhost:1313/posts/fix-hugo-submodule-preview-url/</link>
       <pubDate>Sun, 11 May 2025 01:26:04 +0800</pubDate>
       <guid>http://localhost:1313/posts/fix-hugo-submodule-preview-url/</guid>
-      <description>&lt;p&gt;部署这个网站的时候遇到了一个问题，本地测试的时候文章都是正常的，但是部署到 vercel 之后，页面的URL出错。
-全部都是 &lt;code&gt;localhost:1313&lt;/code&gt; 开头的URL，而不是预期的 &lt;code&gt;www.thecodecraft.site&lt;/code&gt; 开头的URL。
-在 vercel 的 build logs 中发现了警告报错，逐行研读，最终解决了问题：&lt;/p&gt;
-&lt;h2 id=&#34;问题现象&#34;&gt;问题现象&lt;/h2&gt;
-&lt;p&gt;在 Vercel运行项目时，主题资源文件加载路径异常，控制台出现404错误。这会导致 vercel 的项目主页不显示预览效果。
-同时，通过域名访问时，所有的链接都会失效，被解析为解析为&lt;code&gt;localhost:1313/...&lt;/code&gt;。&lt;/p&gt;
-&lt;h2 id=&#34;排查过程&#34;&gt;排查过程&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;检查主题子模块配置&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-git&#34; data-lang=&#34;git&#34;&gt;[submodule &amp;#34;themes/PaperMod&amp;#34;]
-	path = themes/PaperMod
-	url = https://github.com/adityatelange/hugo-PaperMod.git
-&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;发现主题资源路径被解析为&lt;code&gt;http://localhost:1313/themes/PaperMod/...&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;确认Hugo默认将主题目录视为普通内容目录&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;根本原因&#34;&gt;根本原因&lt;/h2&gt;
-&lt;p&gt;Hugo默认配置将&lt;code&gt;themes&lt;/code&gt;目录作为内容资源路径处理，导致：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;主题子模块路径被错误解析&lt;/li&gt;
-&lt;li&gt;静态资源路径生成错误&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;解决方案&#34;&gt;解决方案&lt;/h2&gt;
-&lt;p&gt;修改&lt;code&gt;.gitmodules&lt;/code&gt;配置指定特殊目录标记：&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-git&#34; data-lang=&#34;git&#34;&gt;[submodule &amp;#34;hugo_modules/PaperMod&amp;#34;]
-	path = hugo_modules/PaperMod
-	url = https://github.com/adityatelange/hugo-PaperMod.git
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;关键修改点：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;将&lt;code&gt;themes&lt;/code&gt;目录重命名为&lt;code&gt;hugo_modules&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;通过Hugo的模块系统自动识别专用目录&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;实施效果&#34;&gt;实施效果&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;资源路径正确解析为&lt;code&gt;http://localhost:1313/PaperMod/...&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;主题样式和脚本加载正常&lt;/li&gt;
-&lt;li&gt;预览功能完全恢复&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;技术总结&#34;&gt;技术总结&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;Hugo对特殊目录名称有特定处理逻辑&lt;/li&gt;
-&lt;li&gt;子模块配置需与Hugo模块系统配合使用&lt;/li&gt;
-&lt;li&gt;使用&lt;code&gt;hugo mod&lt;/code&gt;命令管理依赖更可靠&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo mod get github.com/adityatelange/hugo-PaperMod
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>部署这个网站的时候遇到了一个问题，本地测试的时候文章都是正常的，但是部署到 vercel 之后，页面的URL出错。 全部都是 localhost:1313 开头的URL，而不是预期的 www.thecodecraft.site 开头的URL。 在 vercel 的 build logs 中发现了警告报错，逐行研读，最终解决了问题：
+问题现象 在 Vercel运行项目时，主题资源文件加载路径异常，控制台出现404错误。这会导致 vercel 的项目主页不显示预览效果。 同时，通过域名访问时，所有的链接都会失效，被解析为解析为localhost:1313/...。
+排查过程 检查主题子模块配置 [submodule &amp;#34;themes/PaperMod&amp;#34;] path = themes/PaperMod url = https://github.com/adityatelange/hugo-PaperMod.git 发现主题资源路径被解析为http://localhost:1313/themes/PaperMod/... 确认Hugo默认将主题目录视为普通内容目录 根本原因 Hugo默认配置将themes目录作为内容资源路径处理，导致：
+主题子模块路径被错误解析 静态资源路径生成错误 解决方案 修改.gitmodules配置指定特殊目录标记：
+[submodule &amp;#34;hugo_modules/PaperMod&amp;#34;] path = hugo_modules/PaperMod url = https://github.com/adityatelange/hugo-PaperMod.git 关键修改点：
+将themes目录重命名为hugo_modules 通过Hugo的模块系统自动识别专用目录 实施效果 资源路径正确解析为http://localhost:1313/PaperMod/... 主题样式和脚本加载正常 预览功能完全恢复 技术总结 Hugo对特殊目录名称有特定处理逻辑 子模块配置需与Hugo模块系统配合使用 使用hugo mod命令管理依赖更可靠 hugo mod get github.com/adityatelange/hugo-PaperMod </description>
     </item>
     <item>
       <title>Vercel免费替代方案：如何不花钱练习多个网站模板</title>
       <link>http://localhost:1313/posts/vercel-free-alternatives-for-practice/</link>
       <pubDate>Sun, 11 May 2025 01:02:04 +0800</pubDate>
       <guid>http://localhost:1313/posts/vercel-free-alternatives-for-practice/</guid>
-      <description>&lt;h2 id=&#34;问题背景&#34;&gt;问题背景&lt;/h2&gt;
-&lt;p&gt;在Vercel上尝试部署网站时，很多人会遇到这样的问题：免费资源有限，特别是数据库等服务往往只能免费使用一次，之后就需要付费。对于想要练习多个网站模板的开发者来说，这是一个不小的障碍。本文将分享一些替代方案，帮助你在不花钱的情况下练习更多的网站模板。&lt;/p&gt;
-&lt;h2 id=&#34;免费托管平台比较&#34;&gt;免费托管平台比较&lt;/h2&gt;
-&lt;p&gt;除了Vercel，还有其他一些提供免费层级的托管平台：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Netlify&lt;/strong&gt; - 提供类似Vercel的免费托管服务，每月有100GB的带宽限制和300分钟的构建时间&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GitHub Pages&lt;/strong&gt; - 完全免费，适合静态网站&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Cloudflare Pages&lt;/strong&gt; - 提供慷慨的免费层级，无带宽限制&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Render&lt;/strong&gt; - 有免费层级，但有使用限制&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Railway&lt;/strong&gt; - 提供$5的免费额度，足够运行小型项目&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;本地开发环境&#34;&gt;本地开发环境&lt;/h2&gt;
-&lt;p&gt;最经济实惠的方式是在本地搭建开发环境：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Docker&lt;/strong&gt; - 使用容器技术在本地模拟生产环境，可以同时运行多个项目而不互相干扰&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;XAMPP/MAMP&lt;/strong&gt; - 为PHP/MySQL项目提供简单的本地开发栈&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Node.js本地服务器&lt;/strong&gt; - 使用Express或其他框架在本地运行Node.js应用&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;LocalWP&lt;/strong&gt; - 专为WordPress开发者设计的本地环境&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;使用模拟数据进行前端开发&#34;&gt;使用模拟数据进行前端开发&lt;/h2&gt;
-&lt;p&gt;对于前端开发，你可以：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;JSON Server&lt;/strong&gt; - 创建一个完整的假REST API，无需实际数据库&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Mock Service Worker&lt;/strong&gt; - 在浏览器中拦截网络请求并模拟响应&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;静态JSON文件&lt;/strong&gt; - 简单项目可以直接使用静态JSON文件模拟API响应&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;LocalStorage/IndexedDB&lt;/strong&gt; - 利用浏览器存储功能模拟后端存储&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;不需要付费数据库的项目推荐&#34;&gt;不需要付费数据库的项目推荐&lt;/h2&gt;
-&lt;p&gt;以下是一些可以练习的项目类型，它们不需要复杂的后端数据库：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;静态博客&lt;/strong&gt; - 使用Hugo、Jekyll或Gatsby构建&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;单页应用(SPA)&lt;/strong&gt; - 使用React、Vue或Angular构建，数据存储在LocalStorage&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;作品集网站&lt;/strong&gt; - 展示你的项目和技能&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;登陆页面&lt;/strong&gt; - 练习UI/UX设计和转化率优化&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;计算器、待办事项应用&lt;/strong&gt; - 简单但实用的JavaScript应用&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;免费数据库选项&#34;&gt;免费数据库选项&lt;/h2&gt;
-&lt;p&gt;如果确实需要数据库，这些选项提供免费层级：&lt;/p&gt;</description>
+      <description>问题背景 在Vercel上尝试部署网站时，很多人会遇到这样的问题：免费资源有限，特别是数据库等服务往往只能免费使用一次，之后就需要付费。对于想要练习多个网站模板的开发者来说，这是一个不小的障碍。本文将分享一些替代方案，帮助你在不花钱的情况下练习更多的网站模板。
+免费托管平台比较 除了Vercel，还有其他一些提供免费层级的托管平台：
+Netlify - 提供类似Vercel的免费托管服务，每月有100GB的带宽限制和300分钟的构建时间 GitHub Pages - 完全免费，适合静态网站 Cloudflare Pages - 提供慷慨的免费层级，无带宽限制 Render - 有免费层级，但有使用限制 Railway - 提供$5的免费额度，足够运行小型项目 本地开发环境 最经济实惠的方式是在本地搭建开发环境：
+Docker - 使用容器技术在本地模拟生产环境，可以同时运行多个项目而不互相干扰 XAMPP/MAMP - 为PHP/MySQL项目提供简单的本地开发栈 Node.js本地服务器 - 使用Express或其他框架在本地运行Node.js应用 LocalWP - 专为WordPress开发者设计的本地环境 使用模拟数据进行前端开发 对于前端开发，你可以：
+JSON Server - 创建一个完整的假REST API，无需实际数据库 Mock Service Worker - 在浏览器中拦截网络请求并模拟响应 静态JSON文件 - 简单项目可以直接使用静态JSON文件模拟API响应 LocalStorage/IndexedDB - 利用浏览器存储功能模拟后端存储 不需要付费数据库的项目推荐 以下是一些可以练习的项目类型，它们不需要复杂的后端数据库：
+静态博客 - 使用Hugo、Jekyll或Gatsby构建 单页应用(SPA) - 使用React、Vue或Angular构建，数据存储在LocalStorage 作品集网站 - 展示你的项目和技能 登陆页面 - 练习UI/UX设计和转化率优化 计算器、待办事项应用 - 简单但实用的JavaScript应用 免费数据库选项 如果确实需要数据库，这些选项提供免费层级：</description>
     </item>
     <item>
       <title>Namecheap域名托管Cloudflare保姆级教程</title>
       <link>http://localhost:1313/posts/namecheap-cloudflare-dns-guide/</link>
       <pubDate>Tue, 06 May 2025 22:03:00 +0800</pubDate>
       <guid>http://localhost:1313/posts/namecheap-cloudflare-dns-guide/</guid>
-      <description>&lt;p&gt;习惯使用 Cloudflare，买了新域名之后，要怎么托管到 Cloudflare 上呢？
-今天用 NameCheap 为例，介绍一下托管到 Cloudflare 上的流程。
-手把手教你两把Namecheap域名托管到Cloudflare！&lt;/p&gt;
-&lt;h2 id=&#34;方案选择5秒决策版&#34;&gt;方案选择（5秒决策版）&lt;/h2&gt;
-&lt;p&gt;🔹 &lt;strong&gt;只想用Cloudflare的CDN加速&lt;/strong&gt; ➔ 选DNS托管&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;dns托管保留namecheap注册&#34;&gt;DNS托管（保留Namecheap注册）&lt;/h3&gt;
-&lt;p&gt;这个方案适合「用Cloudflare加速但不想转移域名」的小伙伴，就像一次简单的搬家。&lt;/p&gt;
-&lt;h4 id=&#34;第一步认领cloudflare家门牌&#34;&gt;第一步：认领Cloudflare家门牌&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;登录Cloudflare控制台 ➔ 点击「添加站点」&lt;/li&gt;
-&lt;li&gt;输入裸域名（例：&lt;code&gt;yourdomain.com&lt;/code&gt; 别带www）&lt;/li&gt;
-&lt;li&gt;选择免费套餐 → 等系统扫描现有DNS记录（不想要的直接删）&lt;/li&gt;
-&lt;li&gt;记下分配的两个Nameservers地址（例：&lt;code&gt;kipp.ns.cloudflare.com&lt;/code&gt;）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&#34;第二步namecheap换门锁&#34;&gt;第二步：Namecheap换门锁&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;Namecheap后台找到域名 → 点击「Manage」&lt;/li&gt;
-&lt;li&gt;在下方的「Nameservers」域名服务器里选择「Custom DNS」&lt;/li&gt;
-&lt;li&gt;粘贴第一步提到的 Cloudflare 给的俩地址 → 保存&lt;/li&gt;
-&lt;li&gt;去泡杯咖啡等生效（通常10分钟，最长24小时）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&#34;第三步布置cloudflare新家&#34;&gt;第三步：布置Cloudflare新家&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 常用DNS记录配置示例&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;A记录 → @ 指向 104.21.67.166（主域名）
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;CNAME记录 → www 指向 yourdomain.com（自动跳转）
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;⚠️ 重要设置：
-回到 Cloudflare 里找到 SSL/TLS 选择配置「完全」模式，强制HTTPS更安全&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;一般来说，现在的 Cloudflare 都能自动检测到 Namecheap 的域名，无需手动配置。&lt;/p&gt;
-&lt;h2 id=&#34;血泪经验总结&#34;&gt;血泪经验总结&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;改DNS后有的地区要等24小时生效，期间网站抽风属正常&lt;/li&gt;
-&lt;li&gt;SSL证书错误多半是因为没开「完全」模式&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;小贴士：这种方案只是用 CF 的 CDN 加速和简单的统计，方便管理，域名的续费和归属还是在 Namecheap 里。不会有更多麻烦的操作。顺利的话，15分钟搞定！&lt;/p&gt;</description>
+      <description>习惯使用 Cloudflare，买了新域名之后，要怎么托管到 Cloudflare 上呢？ 今天用 NameCheap 为例，介绍一下托管到 Cloudflare 上的流程。 手把手教你两把Namecheap域名托管到Cloudflare！
+方案选择（5秒决策版） 🔹 只想用Cloudflare的CDN加速 ➔ 选DNS托管
+DNS托管（保留Namecheap注册） 这个方案适合「用Cloudflare加速但不想转移域名」的小伙伴，就像一次简单的搬家。
+第一步：认领Cloudflare家门牌 登录Cloudflare控制台 ➔ 点击「添加站点」 输入裸域名（例：yourdomain.com 别带www） 选择免费套餐 → 等系统扫描现有DNS记录（不想要的直接删） 记下分配的两个Nameservers地址（例：kipp.ns.cloudflare.com） 第二步：Namecheap换门锁 Namecheap后台找到域名 → 点击「Manage」 在下方的「Nameservers」域名服务器里选择「Custom DNS」 粘贴第一步提到的 Cloudflare 给的俩地址 → 保存 去泡杯咖啡等生效（通常10分钟，最长24小时） 第三步：布置Cloudflare新家 # 常用DNS记录配置示例 A记录 → @ 指向 104.21.67.166（主域名） CNAME记录 → www 指向 yourdomain.com（自动跳转） ⚠️ 重要设置： 回到 Cloudflare 里找到 SSL/TLS 选择配置「完全」模式，强制HTTPS更安全
+一般来说，现在的 Cloudflare 都能自动检测到 Namecheap 的域名，无需手动配置。
+血泪经验总结 改DNS后有的地区要等24小时生效，期间网站抽风属正常 SSL证书错误多半是因为没开「完全」模式 小贴士：这种方案只是用 CF 的 CDN 加速和简单的统计，方便管理，域名的续费和归属还是在 Namecheap 里。不会有更多麻烦的操作。顺利的话，15分钟搞定！</description>
     </item>
     <item>
       <title>网站运行原理科普：1 分钟理解域名、服务器与DNS</title>
       <link>http://localhost:1313/posts/web-basics-for-beginners/</link>
       <pubDate>Mon, 05 May 2025 18:01:00 +0800</pubDate>
       <guid>http://localhost:1313/posts/web-basics-for-beginners/</guid>
-      <description>&lt;p&gt;很多建站新手会在这里浪费很多时间，就为了理解域名、服务器与DNS是什么。
-今天简单介绍一下，快速入门，节约时间。&lt;/p&gt;
-&lt;h2 id=&#34;快递系统里的网站原理&#34;&gt;快递系统里的网站原理&lt;/h2&gt;
-&lt;p&gt;想象你要给朋友寄快递，这个过程恰好能帮助我们理解网站运行的基本要素：&lt;/p&gt;
-&lt;h3 id=&#34;1-域名--快递地址&#34;&gt;1. 域名 = 快递地址&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;就像「XX小区3号楼502室」是现实中的地址&lt;/li&gt;
-&lt;li&gt;「www.example.com」就是网站世界的地址&lt;/li&gt;
-&lt;li&gt;通过这个地址，快递员（浏览器）才能找到正确位置&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;2-服务器--快递仓库&#34;&gt;2. 服务器 = 快递仓库&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;仓库里存放着各种包裹（网站文件）&lt;/li&gt;
-&lt;li&gt;这个特殊仓库需要：
-&lt;ul&gt;
-&lt;li&gt;全年无休（24小时运行）&lt;/li&gt;
-&lt;li&gt;超大货架（存储空间）&lt;/li&gt;
-&lt;li&gt;快速分拣系统（处理器）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;3-网站代码--包裹内容&#34;&gt;3. 网站代码 = 包裹内容&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;HTML：包裹里的物品清单&lt;/li&gt;
-&lt;li&gt;CSS：物品的包装样式&lt;/li&gt;
-&lt;li&gt;JavaScript：包裹里的智能说明书&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;4-dns--邮局分拣系统&#34;&gt;4. DNS = 邮局分拣系统&lt;/h3&gt;
-&lt;p&gt;当你在浏览器输入地址时：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;浏览器咨询DNS（邮局查询台）&lt;/li&gt;
-&lt;li&gt;DNS查找域名对应的IP（查询地址编码）&lt;/li&gt;
-&lt;li&gt;返回真实仓库坐标（服务器IP地址）&lt;/li&gt;
-&lt;li&gt;浏览器开始派送请求&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img alt=&#34;网站运行流程图&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/%E7%BD%91%E7%AB%99%E8%BF%90%E8%A1%8C%E6%B5%81%E7%A8%8B%E5%9B%BE.jpg&#34; title=&#34;网站运行流程图&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;实际工作流程&#34;&gt;实际工作流程&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;你在浏览器输入网址&lt;/li&gt;
-&lt;li&gt;DNS解析获得IP（如：203.0.113.1）&lt;/li&gt;
-&lt;li&gt;浏览器向该IP的服务器发送请求&lt;/li&gt;
-&lt;li&gt;服务器打包好HTML/CSS/JS文件&lt;/li&gt;
-&lt;li&gt;通过互联网「快递」回你的电脑&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;新手常见疑问&#34;&gt;新手常见疑问&lt;/h2&gt;
-&lt;p&gt;❓ 为什么有时候网站打不开？&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;地址写错（域名错误）&lt;/li&gt;
-&lt;li&gt;仓库关门（服务器宕机）&lt;/li&gt;
-&lt;li&gt;分拣系统故障（DNS问题）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;❓ 手机和电脑看到网页为什么不同？&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;仓库准备了不同尺寸的包裹（响应式设计）&lt;/li&gt;
-&lt;li&gt;快递员根据设备自动选择合适包裹&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>很多建站新手会在这里浪费很多时间，就为了理解域名、服务器与DNS是什么。 今天简单介绍一下，快速入门，节约时间。
+快递系统里的网站原理 想象你要给朋友寄快递，这个过程恰好能帮助我们理解网站运行的基本要素：
+1. 域名 = 快递地址 就像「XX小区3号楼502室」是现实中的地址 「www.example.com」就是网站世界的地址 通过这个地址，快递员（浏览器）才能找到正确位置 2. 服务器 = 快递仓库 仓库里存放着各种包裹（网站文件） 这个特殊仓库需要： 全年无休（24小时运行） 超大货架（存储空间） 快速分拣系统（处理器） 3. 网站代码 = 包裹内容 HTML：包裹里的物品清单 CSS：物品的包装样式 JavaScript：包裹里的智能说明书 4. DNS = 邮局分拣系统 当你在浏览器输入地址时：
+浏览器咨询DNS（邮局查询台） DNS查找域名对应的IP（查询地址编码） 返回真实仓库坐标（服务器IP地址） 浏览器开始派送请求 实际工作流程 你在浏览器输入网址 DNS解析获得IP（如：203.0.113.1） 浏览器向该IP的服务器发送请求 服务器打包好HTML/CSS/JS文件 通过互联网「快递」回你的电脑 新手常见疑问 ❓ 为什么有时候网站打不开？
+地址写错（域名错误） 仓库关门（服务器宕机） 分拣系统故障（DNS问题） ❓ 手机和电脑看到网页为什么不同？
+仓库准备了不同尺寸的包裹（响应式设计） 快递员根据设备自动选择合适包裹 </description>
     </item>
     <item>
       <title>关于我</title>
       <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 05 May 2025 10:00:00 +0800</pubDate>
       <guid>http://localhost:1313/about/</guid>
-      <description>&lt;h2 id=&#34;关于我&#34;&gt;关于我&lt;/h2&gt;
-&lt;p&gt;你好！欢迎来到我的博客。&lt;/p&gt;
-&lt;p&gt;我是一名热衷于分享技术知识的开发者。&lt;/p&gt;
-&lt;p&gt;你可以在这里找到关于编程、Web 开发以及其他有趣的技术主题的文章。&lt;/p&gt;
-&lt;p&gt;希望我的分享能对你有所帮助！&lt;/p&gt;</description>
+      <description>关于我 你好！欢迎来到我的博客。
+我是一名热衷于分享技术知识的开发者。
+你可以在这里找到关于编程、Web 开发以及其他有趣的技术主题的文章。
+希望我的分享能对你有所帮助！</description>
     </item>
     <item>
       <title>解决 Hugo 预览时出现 Page Not Found 的问题</title>
       <link>http://localhost:1313/posts/fix-hugo-preview-page-not-found/</link>
       <pubDate>Sun, 27 Apr 2025 10:00:00 +0800</pubDate>
       <guid>http://localhost:1313/posts/fix-hugo-preview-page-not-found/</guid>
-      <description>&lt;p&gt;搭建这个网站的时候，就遇到了这个问题，记录一下。
-“Page Not Found” 是 Hugo 网站预览时常见的错误提示。&lt;/p&gt;
-&lt;h2 id=&#34;问题现象&#34;&gt;问题现象&lt;/h2&gt;
-&lt;p&gt;在使用 &lt;code&gt;hugo server&lt;/code&gt; 命令预览 Hugo 网站时，浏览器访问 &lt;code&gt;http://localhost:1313/&lt;/code&gt; （演示用的端口号，不必一致），
-可能会显示 &amp;ldquo;Page Not Found&amp;rdquo; 的错误页面，而不是预期的网站内容。&lt;/p&gt;
-&lt;h2 id=&#34;可能的原因与解决方法&#34;&gt;可能的原因与解决方法&lt;/h2&gt;
-&lt;p&gt;在网上搜索一圈，基本可以确定，这个问题与 Hugo 的主题配置有关。&lt;/p&gt;
-&lt;h3 id=&#34;配置文件名错误&#34;&gt;配置文件名错误&lt;/h3&gt;
-&lt;p&gt;许多旧的教程或文档可能会引导我们将主题配置放在 &lt;code&gt;config.toml&lt;/code&gt; 文件中。
-但，这已经过时了。
-根据 Hugo 的较新版本和官方文档，&lt;strong&gt;主题相关的配置应该放在根目录下的 &lt;code&gt;hugo.toml&lt;/code&gt; 文件里&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;我们需要检查项目根目录下是否存在 &lt;code&gt;hugo.toml&lt;/code&gt; 文件，并确保您的主题设置（例如 &lt;code&gt;theme = &amp;quot;your-theme-name&amp;quot;&lt;/code&gt;）是在这个文件中配置的。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;错误示例 (&lt;code&gt;config.toml&lt;/code&gt;)：&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 这是旧的或不推荐的方式&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;baseURL&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://localhost:1313/&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;我的网站&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;languageCode&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;zh-CN&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ananke&amp;#34;&lt;/span&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;正确示例 (&lt;code&gt;hugo.toml&lt;/code&gt;)：&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;baseURL&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://localhost:1313/&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;我的网站&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;languageCode&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;zh-CN&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ananke&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;hasCJKLanguage&lt;/span&gt; = &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;pagination&lt;/span&gt;]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;pagerSize&lt;/span&gt; = &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果您之前使用了 &lt;code&gt;config.toml&lt;/code&gt;，请尝试将配置迁移到 &lt;code&gt;hugo.toml&lt;/code&gt;（如果 &lt;code&gt;hugo.toml&lt;/code&gt; 不存在，则创建它），然后删除或重命名旧的 &lt;code&gt;config.toml&lt;/code&gt; 文件。&lt;/p&gt;</description>
+      <description>搭建这个网站的时候，就遇到了这个问题，记录一下。 “Page Not Found” 是 Hugo 网站预览时常见的错误提示。
+问题现象 在使用 hugo server 命令预览 Hugo 网站时，浏览器访问 http://localhost:1313/ （演示用的端口号，不必一致）， 可能会显示 &amp;ldquo;Page Not Found&amp;rdquo; 的错误页面，而不是预期的网站内容。
+可能的原因与解决方法 在网上搜索一圈，基本可以确定，这个问题与 Hugo 的主题配置有关。
+配置文件名错误 许多旧的教程或文档可能会引导我们将主题配置放在 config.toml 文件中。 但，这已经过时了。 根据 Hugo 的较新版本和官方文档，主题相关的配置应该放在根目录下的 hugo.toml 文件里。
+我们需要检查项目根目录下是否存在 hugo.toml 文件，并确保您的主题设置（例如 theme = &amp;quot;your-theme-name&amp;quot;）是在这个文件中配置的。
+错误示例 (config.toml)：
+# 这是旧的或不推荐的方式 baseURL = &amp;#34;http://localhost:1313/&amp;#34; title = &amp;#34;我的网站&amp;#34; languageCode = &amp;#34;zh-CN&amp;#34; theme = &amp;#34;ananke&amp;#34; 正确示例 (hugo.toml)：
+baseURL = &amp;#34;http://localhost:1313/&amp;#34; title = &amp;#34;我的网站&amp;#34; languageCode = &amp;#34;zh-CN&amp;#34; theme = &amp;#34;ananke&amp;#34; hasCJKLanguage = true [pagination] pagerSize = 5 如果您之前使用了 config.</description>
     </item>
   </channel>
 </rss>
