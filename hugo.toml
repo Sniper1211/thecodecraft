@@ -8,7 +8,11 @@ theme = "PaperMod"
   defaultTheme = 'auto'
   ShowShareButtons = true
   disableSpecial1stPost = true
-  GoogleAnalyticsTag = "G-172XYV0NGN"
+
+[analytics]
+  google = { SiteVerificationTag = "" }
+
+GoogleAnalyticsTag = "G-172XYV0NGN"
 
 [build]
   writeStats = true
