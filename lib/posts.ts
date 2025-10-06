@@ -4,7 +4,7 @@ import matter from 'gray-matter'
 import { remark } from 'remark'
 import remarkHtml from 'remark-html'
 
-const postsDirectory = path.join(process.cwd(), 'content/posts')
+const postsDirectory = path.join(process.cwd(), '_posts')
 
 export interface Post {
   slug: string
@@ -34,10 +34,10 @@ export async function getPosts(): Promise<Post[]> {
         tags: data.tags || [],
         content,
         excerpt
-      }
+      } as Post
     })
   )
-
+  
   // 按日期排序
   return posts.sort((a, b) => {
     if (a.date < b.date) {
@@ -48,13 +48,13 @@ export async function getPosts(): Promise<Post[]> {
   })
 }
 
-export async function getPostBySlug(slug: string): Promise<Post | null> {
+export async function getPostBySlug(slug: string): Promise<Post | undefined> {
   try {
     const fullPath = path.join(postsDirectory, `${slug}.md`)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const { data, content } = matter(fileContents)
     
-    // 转换Markdown为HTML
+    // 使用remark将markdown转换为HTML
     const processedContent = await remark()
       .use(remarkHtml)
       .process(content)
@@ -69,6 +69,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
       excerpt: content.substring(0, 150) + '...'
     }
   } catch (error) {
-    return null
+    console.error(`Error getting post by slug ${slug}:`, error)
+    return undefined
   }
 }

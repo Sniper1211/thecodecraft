@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: '我的博客',
-  description: '基于Next.js的简单博客系统',
+  title: 'The Code Craft - 技术博客与独立开发',
+  description: '分享技术实践、编程知识和独立开发经验',
 }
 
 export default function RootLayout({
@@ -16,10 +17,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh-CN">
-      <head>
-        {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-172XYV0NGN"></script>
-        <script
+      <head />
+      <body className={inter.className}>
+        {/* Google Analytics - 使用Next.js的Script组件正确加载 */}
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-172XYV0NGN`}
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -29,10 +36,13 @@ export default function RootLayout({
             `,
           }}
         />
-        {/* Google AdSense */}
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9245714228354292" crossOrigin="anonymous"></script>
-      </head>
-      <body className={inter.className}>
+        {/* Google AdSense - 使用Next.js的Script组件正确加载 */}
+        <Script
+          id="adsbygoogle-init"
+          strategy="afterInteractive"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9245714228354292"
+          crossOrigin="anonymous"
+        />
         <header className="bg-white shadow-sm">
           <div className="max-w-4xl mx-auto px-4 py-6">
             <h1 className="text-3xl font-bold text-gray-900">我的博客</h1>

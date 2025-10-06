@@ -4,7 +4,7 @@
     <title>Hugo on 小白开发助手</title>
     <link>http://localhost:1313/tags/hugo/</link>
     <description>Recent content in Hugo on 小白开发助手</description>
-    <generator>Hugo -- 0.125.7</generator>
+    <generator>Hugo -- 0.146.0</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sun, 11 May 2025 01:26:04 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
@@ -13,26 +13,87 @@
       <link>http://localhost:1313/posts/fix-hugo-submodule-preview-url/</link>
       <pubDate>Sun, 11 May 2025 01:26:04 +0800</pubDate>
       <guid>http://localhost:1313/posts/fix-hugo-submodule-preview-url/</guid>
-      <description>部署这个网站的时候遇到了一个问题，本地测试的时候文章都是正常的，但是部署到 vercel 之后，页面的URL出错。 全部都是 localhost:1313 开头的URL，而不是预期的 www.thecodecraft.site 开头的URL。 在 vercel 的 build logs 中发现了警告报错，逐行研读，最终解决了问题：
-问题现象 在 Vercel运行项目时，主题资源文件加载路径异常，控制台出现404错误。这会导致 vercel 的项目主页不显示预览效果。 同时，通过域名访问时，所有的链接都会失效，被解析为解析为localhost:1313/...。
-排查过程 检查主题子模块配置 [submodule &amp;#34;themes/PaperMod&amp;#34;] path = themes/PaperMod url = https://github.com/adityatelange/hugo-PaperMod.git 发现主题资源路径被解析为http://localhost:1313/themes/PaperMod/... 确认Hugo默认将主题目录视为普通内容目录 根本原因 Hugo默认配置将themes目录作为内容资源路径处理，导致：
-主题子模块路径被错误解析 静态资源路径生成错误 解决方案 修改.gitmodules配置指定特殊目录标记：
-[submodule &amp;#34;hugo_modules/PaperMod&amp;#34;] path = hugo_modules/PaperMod url = https://github.com/adityatelange/hugo-PaperMod.git 关键修改点：
-将themes目录重命名为hugo_modules 通过Hugo的模块系统自动识别专用目录 实施效果 资源路径正确解析为http://localhost:1313/PaperMod/... 主题样式和脚本加载正常 预览功能完全恢复 技术总结 Hugo对特殊目录名称有特定处理逻辑 子模块配置需与Hugo模块系统配合使用 使用hugo mod命令管理依赖更可靠 hugo mod get github.com/adityatelange/hugo-PaperMod </description>
+      <description>&lt;p&gt;部署这个网站的时候遇到了一个问题，本地测试的时候文章都是正常的，但是部署到 vercel 之后，页面的URL出错。
+全部都是 &lt;code&gt;localhost:1313&lt;/code&gt; 开头的URL，而不是预期的 &lt;code&gt;www.thecodecraft.site&lt;/code&gt; 开头的URL。
+在 vercel 的 build logs 中发现了警告报错，逐行研读，最终解决了问题：&lt;/p&gt;
+&lt;h2 id=&#34;问题现象&#34;&gt;问题现象&lt;/h2&gt;
+&lt;p&gt;在 Vercel运行项目时，主题资源文件加载路径异常，控制台出现404错误。这会导致 vercel 的项目主页不显示预览效果。
+同时，通过域名访问时，所有的链接都会失效，被解析为解析为&lt;code&gt;localhost:1313/...&lt;/code&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;排查过程&#34;&gt;排查过程&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;检查主题子模块配置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-git&#34; data-lang=&#34;git&#34;&gt;[submodule &amp;#34;themes/PaperMod&amp;#34;]
+	path = themes/PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod.git
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;发现主题资源路径被解析为&lt;code&gt;http://localhost:1313/themes/PaperMod/...&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;确认Hugo默认将主题目录视为普通内容目录&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;根本原因&#34;&gt;根本原因&lt;/h2&gt;
+&lt;p&gt;Hugo默认配置将&lt;code&gt;themes&lt;/code&gt;目录作为内容资源路径处理，导致：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;主题子模块路径被错误解析&lt;/li&gt;
+&lt;li&gt;静态资源路径生成错误&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;解决方案&#34;&gt;解决方案&lt;/h2&gt;
+&lt;p&gt;修改&lt;code&gt;.gitmodules&lt;/code&gt;配置指定特殊目录标记：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-git&#34; data-lang=&#34;git&#34;&gt;[submodule &amp;#34;hugo_modules/PaperMod&amp;#34;]
+	path = hugo_modules/PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod.git
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;关键修改点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将&lt;code&gt;themes&lt;/code&gt;目录重命名为&lt;code&gt;hugo_modules&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;通过Hugo的模块系统自动识别专用目录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;实施效果&#34;&gt;实施效果&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;资源路径正确解析为&lt;code&gt;http://localhost:1313/PaperMod/...&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;主题样式和脚本加载正常&lt;/li&gt;
+&lt;li&gt;预览功能完全恢复&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;技术总结&#34;&gt;技术总结&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Hugo对特殊目录名称有特定处理逻辑&lt;/li&gt;
+&lt;li&gt;子模块配置需与Hugo模块系统配合使用&lt;/li&gt;
+&lt;li&gt;使用&lt;code&gt;hugo mod&lt;/code&gt;命令管理依赖更可靠&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo mod get github.com/adityatelange/hugo-PaperMod
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>解决 Hugo 预览时出现 Page Not Found 的问题</title>
       <link>http://localhost:1313/posts/fix-hugo-preview-page-not-found/</link>
       <pubDate>Sun, 27 Apr 2025 10:00:00 +0800</pubDate>
       <guid>http://localhost:1313/posts/fix-hugo-preview-page-not-found/</guid>
-      <description>搭建这个网站的时候，就遇到了这个问题，记录一下。 “Page Not Found” 是 Hugo 网站预览时常见的错误提示。
-问题现象 在使用 hugo server 命令预览 Hugo 网站时，浏览器访问 http://localhost:1313/ （演示用的端口号，不必一致）， 可能会显示 &amp;ldquo;Page Not Found&amp;rdquo; 的错误页面，而不是预期的网站内容。
-可能的原因与解决方法 在网上搜索一圈，基本可以确定，这个问题与 Hugo 的主题配置有关。
-配置文件名错误 许多旧的教程或文档可能会引导我们将主题配置放在 config.toml 文件中。 但，这已经过时了。 根据 Hugo 的较新版本和官方文档，主题相关的配置应该放在根目录下的 hugo.toml 文件里。
-我们需要检查项目根目录下是否存在 hugo.toml 文件，并确保您的主题设置（例如 theme = &amp;quot;your-theme-name&amp;quot;）是在这个文件中配置的。
-错误示例 (config.toml)：
-# 这是旧的或不推荐的方式 baseURL = &amp;#34;http://localhost:1313/&amp;#34; title = &amp;#34;我的网站&amp;#34; languageCode = &amp;#34;zh-CN&amp;#34; theme = &amp;#34;ananke&amp;#34; 正确示例 (hugo.toml)：
-baseURL = &amp;#34;http://localhost:1313/&amp;#34; title = &amp;#34;我的网站&amp;#34; languageCode = &amp;#34;zh-CN&amp;#34; theme = &amp;#34;ananke&amp;#34; hasCJKLanguage = true [pagination] pagerSize = 5 如果您之前使用了 config.</description>
+      <description>&lt;p&gt;搭建这个网站的时候，就遇到了这个问题，记录一下。
+“Page Not Found” 是 Hugo 网站预览时常见的错误提示。&lt;/p&gt;
+&lt;h2 id=&#34;问题现象&#34;&gt;问题现象&lt;/h2&gt;
+&lt;p&gt;在使用 &lt;code&gt;hugo server&lt;/code&gt; 命令预览 Hugo 网站时，浏览器访问 &lt;code&gt;http://localhost:1313/&lt;/code&gt; （演示用的端口号，不必一致），
+可能会显示 &amp;ldquo;Page Not Found&amp;rdquo; 的错误页面，而不是预期的网站内容。&lt;/p&gt;
+&lt;h2 id=&#34;可能的原因与解决方法&#34;&gt;可能的原因与解决方法&lt;/h2&gt;
+&lt;p&gt;在网上搜索一圈，基本可以确定，这个问题与 Hugo 的主题配置有关。&lt;/p&gt;
+&lt;h3 id=&#34;配置文件名错误&#34;&gt;配置文件名错误&lt;/h3&gt;
+&lt;p&gt;许多旧的教程或文档可能会引导我们将主题配置放在 &lt;code&gt;config.toml&lt;/code&gt; 文件中。
+但，这已经过时了。
+根据 Hugo 的较新版本和官方文档，&lt;strong&gt;主题相关的配置应该放在根目录下的 &lt;code&gt;hugo.toml&lt;/code&gt; 文件里&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;我们需要检查项目根目录下是否存在 &lt;code&gt;hugo.toml&lt;/code&gt; 文件，并确保您的主题设置（例如 &lt;code&gt;theme = &amp;quot;your-theme-name&amp;quot;&lt;/code&gt;）是在这个文件中配置的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;错误示例 (&lt;code&gt;config.toml&lt;/code&gt;)：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 这是旧的或不推荐的方式&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;baseURL&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://localhost:1313/&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;我的网站&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;languageCode&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;zh-CN&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ananke&amp;#34;&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;正确示例 (&lt;code&gt;hugo.toml&lt;/code&gt;)：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;baseURL&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://localhost:1313/&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;我的网站&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;languageCode&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;zh-CN&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ananke&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;hasCJKLanguage&lt;/span&gt; = &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;pagination&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;pagerSize&lt;/span&gt; = &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果您之前使用了 &lt;code&gt;config.toml&lt;/code&gt;，请尝试将配置迁移到 &lt;code&gt;hugo.toml&lt;/code&gt;（如果 &lt;code&gt;hugo.toml&lt;/code&gt; 不存在，则创建它），然后删除或重命名旧的 &lt;code&gt;config.toml&lt;/code&gt; 文件。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
