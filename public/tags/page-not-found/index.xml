@@ -4,7 +4,7 @@
     <title>Page Not Found on 小白开发助手</title>
     <link>http://localhost:1313/tags/page-not-found/</link>
     <description>Recent content in Page Not Found on 小白开发助手</description>
-    <generator>Hugo -- 0.125.7</generator>
+    <generator>Hugo -- 0.146.0</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sun, 27 Apr 2025 10:00:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/page-not-found/index.xml" rel="self" type="application/rss+xml" />
@@ -13,14 +13,34 @@
       <link>http://localhost:1313/posts/fix-hugo-preview-page-not-found/</link>
       <pubDate>Sun, 27 Apr 2025 10:00:00 +0800</pubDate>
       <guid>http://localhost:1313/posts/fix-hugo-preview-page-not-found/</guid>
-      <description>搭建这个网站的时候，就遇到了这个问题，记录一下。 “Page Not Found” 是 Hugo 网站预览时常见的错误提示。
-问题现象 在使用 hugo server 命令预览 Hugo 网站时，浏览器访问 http://localhost:1313/ （演示用的端口号，不必一致）， 可能会显示 &amp;ldquo;Page Not Found&amp;rdquo; 的错误页面，而不是预期的网站内容。
-可能的原因与解决方法 在网上搜索一圈，基本可以确定，这个问题与 Hugo 的主题配置有关。
-配置文件名错误 许多旧的教程或文档可能会引导我们将主题配置放在 config.toml 文件中。 但，这已经过时了。 根据 Hugo 的较新版本和官方文档，主题相关的配置应该放在根目录下的 hugo.toml 文件里。
-我们需要检查项目根目录下是否存在 hugo.toml 文件，并确保您的主题设置（例如 theme = &amp;quot;your-theme-name&amp;quot;）是在这个文件中配置的。
-错误示例 (config.toml)：
-# 这是旧的或不推荐的方式 baseURL = &amp;#34;http://localhost:1313/&amp;#34; title = &amp;#34;我的网站&amp;#34; languageCode = &amp;#34;zh-CN&amp;#34; theme = &amp;#34;ananke&amp;#34; 正确示例 (hugo.toml)：
-baseURL = &amp;#34;http://localhost:1313/&amp;#34; title = &amp;#34;我的网站&amp;#34; languageCode = &amp;#34;zh-CN&amp;#34; theme = &amp;#34;ananke&amp;#34; hasCJKLanguage = true [pagination] pagerSize = 5 如果您之前使用了 config.</description>
+      <description>&lt;p&gt;搭建这个网站的时候，就遇到了这个问题，记录一下。
+“Page Not Found” 是 Hugo 网站预览时常见的错误提示。&lt;/p&gt;
+&lt;h2 id=&#34;问题现象&#34;&gt;问题现象&lt;/h2&gt;
+&lt;p&gt;在使用 &lt;code&gt;hugo server&lt;/code&gt; 命令预览 Hugo 网站时，浏览器访问 &lt;code&gt;http://localhost:1313/&lt;/code&gt; （演示用的端口号，不必一致），
+可能会显示 &amp;ldquo;Page Not Found&amp;rdquo; 的错误页面，而不是预期的网站内容。&lt;/p&gt;
+&lt;h2 id=&#34;可能的原因与解决方法&#34;&gt;可能的原因与解决方法&lt;/h2&gt;
+&lt;p&gt;在网上搜索一圈，基本可以确定，这个问题与 Hugo 的主题配置有关。&lt;/p&gt;
+&lt;h3 id=&#34;配置文件名错误&#34;&gt;配置文件名错误&lt;/h3&gt;
+&lt;p&gt;许多旧的教程或文档可能会引导我们将主题配置放在 &lt;code&gt;config.toml&lt;/code&gt; 文件中。
+但，这已经过时了。
+根据 Hugo 的较新版本和官方文档，&lt;strong&gt;主题相关的配置应该放在根目录下的 &lt;code&gt;hugo.toml&lt;/code&gt; 文件里&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;我们需要检查项目根目录下是否存在 &lt;code&gt;hugo.toml&lt;/code&gt; 文件，并确保您的主题设置（例如 &lt;code&gt;theme = &amp;quot;your-theme-name&amp;quot;&lt;/code&gt;）是在这个文件中配置的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;错误示例 (&lt;code&gt;config.toml&lt;/code&gt;)：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 这是旧的或不推荐的方式&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;baseURL&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://localhost:1313/&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;我的网站&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;languageCode&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;zh-CN&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ananke&amp;#34;&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;正确示例 (&lt;code&gt;hugo.toml&lt;/code&gt;)：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;baseURL&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://localhost:1313/&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;我的网站&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;languageCode&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;zh-CN&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ananke&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;hasCJKLanguage&lt;/span&gt; = &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;pagination&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;pagerSize&lt;/span&gt; = &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果您之前使用了 &lt;code&gt;config.toml&lt;/code&gt;，请尝试将配置迁移到 &lt;code&gt;hugo.toml&lt;/code&gt;（如果 &lt;code&gt;hugo.toml&lt;/code&gt; 不存在，则创建它），然后删除或重命名旧的 &lt;code&gt;config.toml&lt;/code&gt; 文件。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

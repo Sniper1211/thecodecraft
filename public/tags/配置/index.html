@@ -4,7 +4,7 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>配置 | 小白开发助手</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
@@ -58,18 +58,17 @@
     </style>
 </noscript>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-172XYV0NGN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-172XYV0NGN');
-</script>
-
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9245714228354292"
-     crossorigin="anonymous"></script>
+     crossorigin="anonymous"></script><meta property="og:url" content="http://localhost:1313/tags/%E9%85%8D%E7%BD%AE/">
+  <meta property="og:site_name" content="小白开发助手">
+  <meta property="og:title" content="配置">
+  <meta property="og:locale" content="zh-CN">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="配置">
+<meta name="twitter:description" content="">
+
 </head>
 
 <body class="list" id="top">
@@ -145,7 +144,8 @@
 我们需要检查项目根目录下是否存在 hugo.toml 文件，并确保您的主题设置（例如 theme = &#34;your-theme-name&#34;）是在这个文件中配置的。
 错误示例 (config.toml)：
 # 这是旧的或不推荐的方式 baseURL = &#34;http://localhost:1313/&#34; title = &#34;我的网站&#34; languageCode = &#34;zh-CN&#34; theme = &#34;ananke&#34; 正确示例 (hugo.toml)：
-baseURL = &#34;http://localhost:1313/&#34; title = &#34;我的网站&#34; languageCode = &#34;zh-CN&#34; theme = &#34;ananke&#34; hasCJKLanguage = true [pagination] pagerSize = 5 如果您之前使用了 config....</p>
+baseURL = &#34;http://localhost:1313/&#34; title = &#34;我的网站&#34; languageCode = &#34;zh-CN&#34; theme = &#34;ananke&#34; hasCJKLanguage = true [pagination] pagerSize = 5 如果您之前使用了 config.toml，请尝试将配置迁移到 hugo.toml（如果 hugo.toml 不存在，则创建它），然后删除或重命名旧的 config.toml 文件。
+...</p>
   </div>
   <footer class="entry-footer"><span title='2025-04-27 10:00:00 +0800 CST'>April 27, 2025</span></footer>
   <a class="entry-link" aria-label="post link to 解决 Hugo 预览时出现 Page Not Found 的问题" href="http://localhost:1313/posts/fix-hugo-preview-page-not-found/"></a>
