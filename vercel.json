@@ -9,20 +9,23 @@
       }
     }
   ],
-  "routes": [
-    {
-      "src": "/post/(.*)",
-      "dest": "/posts/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ],
+  "routes": [],
   "rewrites": [
     {
       "source": "/post/:slug",
-      "destination": "/posts/:slug"
+      "destination": "/posts/:slug.html"
+    },
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/about/index.html"
+    },
+    {
+      "source": "/posts/:slug",
+      "destination": "/posts/:slug.html"
     }
   ]
 }
