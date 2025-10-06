@@ -1,15 +1,31 @@
 import { getPostBySlug, getPosts } from '@/lib/posts'
 import { notFound } from 'next/navigation'
+import { Metadata } from 'next'
 
 export async function generateStaticParams() {
   const posts = await getPosts()
   return posts.map((post) => ({
-    slug: post.slug,
+    slug: encodeURIComponent(post.slug),
   }))
 }
 
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const post = await getPostBySlug(decodeURIComponent(params.slug))
+  
+  if (!post) {
+    return {
+      title: '文章未找到',
+    }
+  }
+  
+  return {
+    title: `${post.title} - The Code Craft`,
+    description: post.excerpt,
+  }
+}
+
 export default async function PostPage({ params }: { params: { slug: string } }) {
-  const post = await getPostBySlug(params.slug)
+  const post = await getPostBySlug(decodeURIComponent(params.slug))
 
   if (!post) {
     notFound()
