@@ -50,7 +50,9 @@ export async function getPosts(): Promise<Post[]> {
 
 export async function getPostBySlug(slug: string): Promise<Post | undefined> {
   try {
-    const fullPath = path.join(postsDirectory, `${slug}.md`)
+    // 解码URL编码的slug
+    const decodedSlug = decodeURIComponent(slug)
+    const fullPath = path.join(postsDirectory, `${decodedSlug}.md`)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const { data, content } = matter(fileContents)
     
