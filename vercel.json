@@ -9,7 +9,6 @@
       }
     }
   ],
-  "routes": [],
   "rewrites": [
     {
       "source": "/post/:slug",
@@ -22,10 +21,6 @@
     {
       "source": "/about",
       "destination": "/about/index.html"
-    },
-    {
-      "source": "/posts/:slug",
-      "destination": "/posts/:slug.html"
     }
   ]
 }
