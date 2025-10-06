@@ -17,8 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh-CN">
-      <head />
-      <body className={inter.className}>
+      <head>
         {/* Google Analytics - 使用Next.js的Script组件正确加载 */}
         <Script
           strategy="afterInteractive"
@@ -43,6 +42,8 @@ export default function RootLayout({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9245714228354292"
           crossOrigin="anonymous"
         />
+      </head>
+      <body className={inter.className}>
         <header className="bg-white shadow-sm">
           <div className="max-w-4xl mx-auto px-4 py-6">
             <h1 className="text-3xl font-bold text-gray-900">我的博客</h1>
