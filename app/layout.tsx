@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     default: 'The Code Craft - 技术博客与独立开发',
     template: '%s | The Code Craft'
   },
-  description: '分享技术实践、编程知识和独立开发经验',
+  description: '探索编程艺术，分享技术实践，记录独立开发旅程',
   keywords: ['编程', '技术博客', '独立开发', '前端开发', '全栈开发'],
   authors: [{ name: 'The Code Craft' }],
   openGraph: {
@@ -50,28 +50,23 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
+      <body className="antialiased bg-gradient-to-br from-slate-50 via-white to-slate-100 text-slate-900 font-sans min-h-screen">
         <div className="flex flex-col min-h-screen">
-          {/* 导航栏 */}
-          <header className="bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="flex justify-between items-center h-16">
-                <div className="flex items-center space-x-8">
-                  <a href="/" className="text-2xl font-bold text-gray-900 dark:text-white hover:text-primary-500 transition-colors">
-                    The Code Craft
-                  </a>
-                  <nav className="hidden md:flex space-x-6">
-                    <a href="/" className="nav-link">首页</a>
-                    <a href="/about" className="nav-link">关于</a>
-                  </nav>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <button className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
-                    <svg className="w-5 h-5 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                  </button>
-                </div>
+          {/* 精致导航栏 */}
+          <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-2xl border-b border-slate-200/60 shadow-elegant">
+            <div className="container-custom">
+              <div className="flex justify-between items-center h-28">
+                <a 
+                  href="/" 
+                  className="text-4xl font-black text-gradient-hero hover:scale-105 transition-all duration-500 tracking-tighter"
+                >
+                  The Code Craft
+                </a>
+                
+                <nav className="flex items-center space-x-16">
+                  <a href="/" className="nav-link text-xl font-semibold">首页</a>
+                  <a href="/about" className="nav-link text-xl font-semibold">关于</a>
+                </nav>
               </div>
             </div>
           </header>
@@ -81,32 +76,33 @@ export default function RootLayout({
             {children}
           </main>
 
-          {/* 页脚 */}
-          <footer className="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">The Code Craft</h3>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    分享技术实践、编程知识和独立开发经验
+          {/* 精致页脚 */}
+          <footer className="bg-white/90 backdrop-blur-2xl border-t border-slate-200/60 py-24">
+            <div className="container-custom">
+              <div className="text-center">
+                <div className="flex justify-center items-center mb-16">
+                  <a 
+                    href="/" 
+                    className="text-4xl font-black text-gradient-hero tracking-tighter"
+                  >
+                    The Code Craft
+                  </a>
+                </div>
+                
+                <p className="text-slate-600 text-xl leading-relaxed max-w-3xl mx-auto mb-16 font-normal">
+                  探索编程艺术，分享技术实践，记录独立开发旅程
+                </p>
+                
+                <div className="flex justify-center space-x-20 mb-16">
+                  <a href="/" className="nav-link text-lg font-medium">首页</a>
+                  <a href="/about" className="nav-link text-lg font-medium">关于</a>
+                </div>
+                
+                <div className="border-t border-slate-200/60 pt-16">
+                  <p className="text-slate-500 text-sm font-medium">
+                    © 2025 The Code Craft. 基于 Next.js 构建
                   </p>
                 </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">链接</h4>
-                  <div className="space-y-2">
-                    <a href="/" className="block text-gray-600 dark:text-gray-400 hover:text-primary-500 transition-colors">首页</a>
-                    <a href="/about" className="block text-gray-600 dark:text-gray-400 hover:text-primary-500 transition-colors">关于</a>
-                  </div>
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">联系</h4>
-                  <p className="text-gray-600 dark:text-gray-400">欢迎交流技术问题</p>
-                </div>
-              </div>
-              <div className="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8 text-center">
-                <p className="text-gray-500 dark:text-gray-400">
-                  © 2025 The Code Craft. 基于 Next.js 构建
-                </p>
               </div>
             </div>
           </footer>

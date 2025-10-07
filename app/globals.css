@@ -2,93 +2,334 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans:wght@600;700&display=swap');
 
-:root {
-  --foreground: 15, 23, 42;
-  --background: 248, 250, 252;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground: 248, 250, 252;
-    --background: 15, 23, 42;
+/* 精致基础样式重置 */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+  }
+  
+  code {
+    font-family: 'JetBrains Mono', Monaco, Consolas, monospace;
+    font-weight: 500;
   }
 }
 
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  color: rgb(var(--foreground));
-  background: rgb(var(--background));
-  font-family: 'Inter', system-ui, sans-serif;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* 自定义组件样式 */
+/* 精致组件样式系统 */
 @layer components {
+  /* 按钮系统 */
+  .btn {
+    @apply inline-flex items-center justify-center font-medium rounded-2xl transition-all duration-500 ease-out focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-opacity-50;
+  }
+  
   .btn-primary {
-    @apply bg-primary-500 hover:bg-primary-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+    @apply btn bg-gradient-to-r from-primary-500 via-primary-600 to-accent-500 text-white hover:from-primary-600 hover:via-primary-700 hover:to-accent-600 focus:ring-primary-500 shadow-elegant hover:shadow-elegant-lg px-10 py-4 font-semibold text-lg transform hover:scale-105 hover:-translate-y-1;
   }
   
   .btn-secondary {
-    @apply bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+    @apply btn bg-white/80 backdrop-blur-sm text-slate-700 border border-slate-200/60 hover:bg-white hover:border-slate-300 focus:ring-slate-500 shadow-sm hover:shadow-elegant px-8 py-3 font-medium transform hover:scale-105;
   }
   
+  /* 卡片系统 */
   .card {
-    @apply bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-6;
+    @apply bg-white/95 backdrop-blur-xl rounded-3xl shadow-elegant border border-white/80 hover:shadow-elegant-lg transition-all duration-700 transform hover:-translate-y-2;
   }
   
+  .card-glass {
+    @apply bg-white/20 backdrop-blur-2xl rounded-3xl shadow-elegant border border-white/30 hover:bg-white/30 transition-all duration-700;
+  }
+  
+  /* 导航系统 */
   .nav-link {
-    @apply text-gray-600 hover:text-primary-500 dark:text-gray-300 dark:hover:text-primary-400 font-medium transition-colors duration-200;
+    @apply text-slate-600 hover:text-slate-900 font-medium transition-all duration-500 relative text-lg hover:scale-105;
+  }
+  
+  .nav-link.active {
+    @apply text-slate-900 font-semibold;
+  }
+  
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-500;
+  }
+  
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+  
+  /* 布局系统 */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-8;
+  }
+  
+  .section-padding {
+    @apply py-32;
+  }
+  
+  /* 文字效果系统 */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 via-accent-500 to-primary-600 bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-elegant {
+    @apply bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-hero {
+    @apply bg-gradient-to-r from-slate-900 via-primary-600 to-accent-500 bg-clip-text text-transparent;
+  }
+  
+  /* 玻璃效果 */
+  .glass-effect {
+    @apply bg-white/20 backdrop-blur-2xl border border-white/30;
+  }
+  
+  /* 装饰元素 */
+  .decorative-line {
+    @apply w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full;
   }
 }
 
-/* 文章内容样式 */
-.article-content {
-  @apply prose prose-lg max-w-none prose-headings:font-semibold prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-a:text-primary-500 prose-a:no-underline hover:prose-a:underline prose-strong:font-semibold prose-code:bg-gray-100 dark:prose-code:bg-gray-800 prose-code:text-gray-800 dark:prose-code:text-gray-200 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-pre:bg-gray-900 prose-pre:text-white prose-blockquote:border-l-primary-500 prose-blockquote:bg-gray-50 dark:prose-blockquote:bg-gray-800 prose-blockquote:italic prose-table:border-gray-200 prose-img:rounded-lg;
+/* 精致文章内容样式 */
+.prose-custom {
+  @apply prose prose-slate max-w-none 
+         prose-headings:font-bold prose-headings:tracking-tight 
+         prose-p:leading-relaxed prose-p:text-lg prose-p:text-slate-700
+         prose-a:text-primary-600 prose-a:no-underline prose-a:font-medium hover:prose-a:text-primary-700
+         prose-strong:font-semibold 
+         prose-code:font-mono prose-code:text-sm prose-code:bg-slate-100 prose-code:rounded-xl prose-code:px-3 prose-code:py-1
+         prose-pre:bg-slate-900 prose-pre:rounded-3xl prose-pre:shadow-elegant-xl
+         prose-blockquote:border-l-4 prose-blockquote:border-primary-300 prose-blockquote:bg-primary-50 prose-blockquote:italic prose-blockquote:pl-8 prose-blockquote:pr-6
+         prose-img:rounded-3xl prose-img:shadow-elegant
+         prose-table:border-slate-200 prose-table:shadow-elegant;
 }
 
-.article-content h1 {
-  @apply text-4xl font-bold text-gray-900 dark:text-white mb-6;
+.prose-custom h1 {
+  @apply text-6xl md:text-7xl font-black tracking-tight mb-12 text-gradient-hero leading-tight;
 }
 
-.article-content h2 {
-  @apply text-2xl font-semibold text-gray-800 dark:text-gray-200 mt-8 mb-4;
+.prose-custom h2 {
+  @apply text-4xl md:text-5xl font-bold mt-20 mb-10 border-b border-slate-200 pb-6 text-gradient-elegant leading-tight;
 }
 
-.article-content h3 {
-  @apply text-xl font-semibold text-gray-700 dark:text-gray-300 mt-6 mb-3;
+.prose-custom h3 {
+  @apply text-2xl md:text-3xl font-semibold mt-16 mb-8 text-gradient-elegant leading-relaxed;
 }
 
-/* 滚动条样式 */
+.prose-custom p {
+  @apply text-slate-700 leading-relaxed text-lg;
+}
+
+/* 精致滚动条样式 */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(var(--background));
+  background: linear-gradient(to bottom, #f8fafc, #f1f5f9);
+  border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 3px;
+  background: linear-gradient(to bottom, #cbd5e1, #94a3b8);
+  border-radius: 8px;
+  border: 2px solid #f8fafc;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: linear-gradient(to bottom, #94a3b8, #64748b);
 }
 
 /* 选择文本样式 */
 ::selection {
-  background: #0ea5e9;
+  background: linear-gradient(45deg, #0ea5e9, #a855f7);
   color: white;
+  text-shadow: none;
+}
+
+/* 精致动画效果系统 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(168, 85, 247, 0.5);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease-out;
+}
+
+.slide-in {
+  animation: slideIn 0.8s ease-out;
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* 精致响应式设计 */
+@media (max-width: 768px) {
+  .container-custom {
+    @apply px-6;
+  }
+  
+  .section-padding {
+    @apply py-24;
+  }
+  
+  .prose-custom h1 {
+    @apply text-4xl md:text-5xl;
+  }
+  
+  .prose-custom h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  .prose-custom h3 {
+    @apply text-xl md:text-2xl;
+  }
+  
+  .prose-custom p {
+    @apply text-base;
+  }
+}
+
+/* 精致暗色模式支持 */
+@media (prefers-color-scheme: dark) {
+  .dark .prose-custom {
+    @apply prose-invert;
+  }
+  
+  .dark .btn-secondary {
+    @apply bg-slate-800/80 text-slate-200 border-slate-700/60 hover:bg-slate-700/80;
+  }
+  
+  .dark .card {
+    @apply bg-slate-800/95 border-slate-700/60;
+  }
+  
+  .dark .card-glass {
+    @apply bg-slate-800/30 border-slate-600/30;
+  }
+  
+  .dark .nav-link {
+    @apply text-slate-300 hover:text-white;
+  }
+  
+  .dark .nav-link.active {
+    @apply text-white;
+  }
+  
+  .dark .nav-link::after {
+    @apply from-primary-400 to-accent-400;
+  }
+  
+  .dark body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: linear-gradient(to bottom, #1e293b, #0f172a);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #475569, #334155);
+    border: 2px solid #1e293b;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #334155, #475569);
+  }
+  
+  .dark .text-gradient-elegant {
+    @apply bg-gradient-to-r from-white via-slate-300 to-white bg-clip-text text-transparent;
+  }
+  
+  .dark .text-gradient-hero {
+    @apply bg-gradient-to-r from-white via-primary-400 to-accent-400 bg-clip-text text-transparent;
+  }
+}
+
+/* 精致加载动画 */
+.loading-dots {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.loading-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: loading-dots 1.4s ease-in-out infinite both;
+}
+
+.loading-dots span:nth-child(1) { animation-delay: -0.32s; }
+.loading-dots span:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes loading-dots {
+  0%, 80%, 100% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
