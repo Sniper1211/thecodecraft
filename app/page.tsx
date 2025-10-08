@@ -4,8 +4,41 @@ import Link from 'next/link'
 export default async function Home() {
   const posts = await getPosts()
 
+  // 主页结构化数据
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'The Code Craft',
+    description: '探索编程艺术，分享技术实践，记录独立开发旅程',
+    url: 'https://www.thecodecraft.site',
+    author: {
+      '@type': 'Person',
+      name: 'The Code Craft',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'The Code Craft',
+      url: 'https://www.thecodecraft.site',
+    },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://www.thecodecraft.site/search?q={search_term_string}',
+      'query-input': 'required name=search_term_string',
+    },
+    mainEntity: {
+      '@type': 'Blog',
+      name: 'The Code Craft Blog',
+      description: '技术博客与独立开发经验分享',
+    },
+  }
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100/30 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900/20">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100/30 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900/20">
       {/* Hero Section */}
       <section className="relative py-32">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5 dark:from-blue-500/3 dark:via-purple-500/3 dark:to-pink-500/3"></div>
@@ -77,5 +110,6 @@ export default async function Home() {
         </div>
       </section>
     </div>
+    </>
   )
 }
