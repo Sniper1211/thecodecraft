@@ -14,13 +14,58 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   
   if (!post) {
     return {
-      title: '文章未找到',
+      title: '文章未找到 - The Code Craft',
+      description: '抱歉，您访问的文章不存在。',
     }
   }
+
+  const baseUrl = 'https://www.thecodecraft.site'
+  const postUrl = `${baseUrl}/posts/${encodeURIComponent(post.slug)}`
   
   return {
     title: `${post.title} - The Code Craft`,
     description: post.excerpt,
+    keywords: post.tags.join(', '),
+    authors: [{ name: 'The Code Craft' }],
+    creator: 'The Code Craft',
+    publisher: 'The Code Craft',
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
+    metadataBase: new URL(baseUrl),
+    alternates: {
+      canonical: postUrl,
+    },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: postUrl,
+      siteName: 'The Code Craft',
+      locale: 'zh_CN',
+      type: 'article',
+      publishedTime: post.date,
+      authors: ['The Code Craft'],
+      tags: post.tags,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      creator: '@thecodecraft',
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
   }
 }
 
@@ -31,8 +76,44 @@ export default async function PostPage({ params }: { params: { slug: string } })
     notFound()
   }
 
+  const baseUrl = 'https://www.thecodecraft.site'
+  const postUrl = `${baseUrl}/posts/${encodeURIComponent(post.slug)}`
+  
+  // 结构化数据
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.excerpt,
+    author: {
+      '@type': 'Person',
+      name: 'The Code Craft',
+      url: baseUrl,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'The Code Craft',
+      url: baseUrl,
+    },
+    datePublished: post.date,
+    dateModified: post.date,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': postUrl,
+    },
+    url: postUrl,
+    keywords: post.tags.join(', '),
+    articleSection: 'Technology',
+    inLanguage: 'zh-CN',
+  }
+
   return (
-    <article className="bg-gradient-to-br from-slate-50 via-white to-blue-50/20 dark:from-slate-900 dark:via-slate-800 dark:to-blue-900/10 min-h-screen">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <article className="bg-gradient-to-br from-slate-50 via-white to-blue-50/20 dark:from-slate-900 dark:via-slate-800 dark:to-blue-900/10 min-h-screen">
       <div className="max-w-4xl mx-auto px-6 py-16">
         {/* 文章头部 */}
         <header className="mb-16 text-center">
@@ -80,5 +161,6 @@ export default async function PostPage({ params }: { params: { slug: string } })
         </footer>
       </div>
     </article>
+    </>
   )
 }

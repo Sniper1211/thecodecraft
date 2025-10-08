@@ -1,19 +1,55 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import Script from 'next/script'
+import Analytics from '@/components/Analytics'
+import AdSense from '@/components/AdSense'
 
 export const metadata: Metadata = {
   title: {
     default: 'The Code Craft - 技术博客与独立开发',
     template: '%s | The Code Craft'
   },
-  description: '探索编程艺术，分享技术实践，记录独立开发旅程',
-  keywords: ['编程', '技术博客', '独立开发', '前端开发', '全栈开发'],
+  description: '探索编程艺术，分享技术实践，记录独立开发旅程。提供前端开发、全栈开发、建站教程等高质量技术内容。',
+  keywords: ['编程', '技术博客', '独立开发', '前端开发', '全栈开发', 'Next.js', 'React', 'JavaScript', 'TypeScript', 'Vercel', '建站教程'],
   authors: [{ name: 'The Code Craft' }],
+  creator: 'The Code Craft',
+  publisher: 'The Code Craft',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://www.thecodecraft.site'),
+  alternates: {
+    canonical: 'https://www.thecodecraft.site',
+  },
   openGraph: {
     type: 'website',
     locale: 'zh_CN',
+    url: 'https://www.thecodecraft.site',
     siteName: 'The Code Craft',
+    title: 'The Code Craft - 技术博客与独立开发',
+    description: '探索编程艺术，分享技术实践，记录独立开发旅程。提供前端开发、全栈开发、建站教程等高质量技术内容。',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'The Code Craft - 技术博客与独立开发',
+    description: '探索编程艺术，分享技术实践，记录独立开发旅程',
+    creator: '@thecodecraft',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code', // 您可以稍后替换为实际的验证码
   },
 }
 
@@ -25,31 +61,9 @@ export default function RootLayout({
   return (
     <html lang="zh-CN" className="scroll-smooth">
       <head>
-        {/* Google Analytics */}
-        <Script
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=G-172XYV0NGN`}
-        />
-        <Script
-          id="gtag-init"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-172XYV0NGN');
-            `,
-          }}
-        />
-        {/* Google AdSense */}
-        <Script
-          id="adsbygoogle-init"
-          strategy="afterInteractive"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9245714228354292"
-          crossOrigin="anonymous"
-        />
-      </head>
+          <Analytics />
+          <AdSense />
+        </head>
       <body className="antialiased bg-gradient-to-br from-slate-50 via-white to-slate-100 text-slate-900 font-sans min-h-screen">
         <div className="flex flex-col min-h-screen">
           {/* 精致导航栏 */}
