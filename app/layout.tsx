@@ -3,7 +3,6 @@ import './globals.css'
 import Script from 'next/script'
 import Analytics from '@/components/Analytics'
 import AdSense from '@/components/AdSense'
-import AdsterraBanner from '@/components/AdsterraBanner'
 
 export const metadata: Metadata = {
   title: {
@@ -88,8 +87,6 @@ export default function RootLayout({
 
           {/* 主内容区域 */}
           <main className="flex-1">
-            {/* 全站顶部广告位（生产环境显示） */}
-            <AdsterraBanner />
             {children}
           </main>
 

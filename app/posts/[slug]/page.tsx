@@ -5,7 +5,7 @@ import { Metadata } from 'next'
 export async function generateStaticParams() {
   const posts = await getPosts()
   return posts.map((post) => ({
-    slug: encodeURIComponent(post.slug),
+    slug: post.slug,
   }))
 }
 
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 
   const baseUrl = 'https://www.thecodecraft.site'
-  const postUrl = `${baseUrl}/posts/${encodeURIComponent(post.slug)}`
+  const postUrl = `${baseUrl}/posts/${encodeURIComponent(post.slug)}/`
   
   return {
     title: `${post.title} - The Code Craft`,
@@ -77,7 +77,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
   }
 
   const baseUrl = 'https://www.thecodecraft.site'
-  const postUrl = `${baseUrl}/posts/${encodeURIComponent(post.slug)}`
+  const postUrl = `${baseUrl}/posts/${encodeURIComponent(post.slug)}/`
   
   // 结构化数据
   const jsonLd = {
