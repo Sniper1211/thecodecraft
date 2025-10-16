@@ -21,11 +21,13 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
   const baseUrl = 'https://www.thecodecraft.site'
   const postUrl = `${baseUrl}/posts/${encodeURIComponent(post.slug)}/`
+  // 使用更短的页面描述，防止过长
+  const metaDescription = post.excerpt
   
   return {
     title: `${post.title} - The Code Craft`,
-    description: post.excerpt,
-    keywords: post.tags.join(', '),
+    description: metaDescription,
+    keywords: post.tags && post.tags.length ? post.tags : ['编程', '技术博客', '独立开发', '前端开发', '全栈开发', '建站教程'],
     authors: [{ name: 'The Code Craft' }],
     creator: 'The Code Craft',
     publisher: 'The Code Craft',
@@ -40,7 +42,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     },
     openGraph: {
       title: post.title,
-      description: post.excerpt,
+      description: metaDescription,
       url: postUrl,
       siteName: 'The Code Craft',
       locale: 'zh_CN',
@@ -52,7 +54,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     twitter: {
       card: 'summary_large_image',
       title: post.title,
-      description: post.excerpt,
+      description: metaDescription,
       creator: '@thecodecraft',
     },
     robots: {
@@ -78,13 +80,14 @@ export default async function PostPage({ params }: { params: { slug: string } })
 
   const baseUrl = 'https://www.thecodecraft.site'
   const postUrl = `${baseUrl}/posts/${encodeURIComponent(post.slug)}/`
+  const metaDescription = post.excerpt
   
   // 结构化数据
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: post.title,
-    description: post.excerpt,
+    description: metaDescription,
     author: {
       '@type': 'Person',
       name: 'The Code Craft',
@@ -102,7 +105,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
       '@id': postUrl,
     },
     url: postUrl,
-    keywords: post.tags.join(', '),
+    keywords: (post.tags || []).join(', '),
     articleSection: 'Technology',
     inLanguage: 'zh-CN',
   }
