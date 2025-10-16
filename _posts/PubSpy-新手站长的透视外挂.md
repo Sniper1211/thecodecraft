@@ -76,3 +76,7 @@ PubSpy 是一个免费的 Chrome 浏览器扩展，核心是 **“AdSense 反向
 
 - 安装地址：<https://chromewebstore.google.com/detail/pubspyio/foknhhcbfhdhocmbapkphabgjbikofeb>
 - 打开你关心的网站，点一下 PubSpy，开始你的“站群侦探”之旅。
+
+
+### 文末推荐
+- [IndieStarter](https://www.indiestarter.space/)：一站式工具导航平台，帮助新手站长快速高效工作。
