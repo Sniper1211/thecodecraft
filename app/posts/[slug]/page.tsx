@@ -1,6 +1,7 @@
 import { getPostBySlug, getPosts } from '@/lib/posts'
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
+import AdsterraBanner from '@/components/AdsterraBanner'
 
 export async function generateStaticParams() {
   const posts = await getPosts()
@@ -162,6 +163,10 @@ export default async function PostPage({ params }: { params: { slug: string } })
             </div>
           </div>
         </footer>
+        {/* 文章结尾 Banner 广告位（生产环境显示） */}
+        <div className="mt-12">
+          <AdsterraBanner />
+        </div>
       </div>
     </article>
     </>
