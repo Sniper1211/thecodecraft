@@ -53,17 +53,6 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* 广告位：置于首页 Hero 与文章列表之间，更居中且不打扰首屏 */}
-      {/* 生产环境将加载脚本，本地开发不显示内容（除非使用生产预览） */}
-      {/**
-       * 注意：AdsterraBanner 是客户端组件，会在生产环境插入广告内容。
-       * 如果需要只在首页显示，此处插入即可；文章页可单独决定是否添加。
-       */}
-      <div className="max-w-5xl mx-auto px-6">
-        {/* 轻微上/下间距，避免紧贴内容 */}
-        <AdsterraBanner />
-      </div>
-
       {/* Articles Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
@@ -73,45 +62,52 @@ export default async function Home() {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.map((post) => (
-              <article key={post.slug}>
-                <Link
-                  href={`/posts/${post.slug}/`}
-                  aria-label={post.title}
-                  className="group block hover:no-underline focus:outline-none"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-2xl p-8 shadow-sm border border-slate-100/60 dark:border-slate-700/60 hover:shadow-2xl transition-all duration-500 h-full flex flex-col transform hover:-translate-y-2 hover:scale-105">
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2 leading-relaxed tracking-tight">
-                        {post.title}
-                      </h3>
-                      <p className="text-slate-600 dark:text-slate-300 mb-6 line-clamp-3 flex-1 leading-relaxed text-sm font-normal">
-                        {post.excerpt}
-                      </p>
-                    </div>
-                    
-                    <div className="flex items-center justify-between mt-auto pt-6 border-t border-slate-100/60 dark:border-slate-700/60">
-                      <time className="text-xs text-slate-500 dark:text-slate-400 font-medium">
-                        {post.date}
-                      </time>
-                      <div className="flex flex-wrap gap-1">
-                        {post.tags.slice(0, 2).map((tag) => (
-                          <span key={tag} className="bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 text-xs px-2.5 py-1 rounded-full font-medium">
-                            {tag}
-                          </span>
-                        ))}
-                        {post.tags.length > 2 && (
-                          <span className="text-xs text-slate-400 dark:text-slate-500">
-                            +{post.tags.length - 2}
-                          </span>
-                        )}
+            {posts.map((post, index) => (
+              <>
+                <article key={post.slug}>
+                  <Link
+                    href={`/posts/${post.slug}/`}
+                    aria-label={post.title}
+                    className="group block hover:no-underline focus:outline-none"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-2xl p-8 shadow-sm border border-slate-100/60 dark:border-slate-700/60 hover:shadow-2xl transition-all duration-500 h-full flex flex-col transform hover:-translate-y-2 hover:scale-105">
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2 leading-relaxed tracking-tight">
+                          {post.title}
+                        </h3>
+                        <p className="text-slate-600 dark:text-slate-300 mb-6 line-clamp-3 flex-1 leading-relaxed text-sm font-normal">
+                          {post.excerpt}
+                        </p>
+                      </div>
+                      
+                      <div className="flex items-center justify-between mt-auto pt-6 border-t border-slate-100/60 dark:border-slate-700/60">
+                        <time className="text-xs text-slate-500 dark:text-slate-400 font-medium">
+                          {post.date}
+                        </time>
+                        <div className="flex flex-wrap gap-1">
+                          {post.tags.slice(0, 2).map((tag) => (
+                            <span key={tag} className="bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 text-xs px-2.5 py-1 rounded-full font-medium">
+                              {tag}
+                            </span>
+                          ))}
+                          {post.tags.length > 2 && (
+                            <span className="text-xs text-slate-400 dark:text-slate-500">
+                              +{post.tags.length - 2}
+                            </span>
+                          )}
+                        </div>
                       </div>
                     </div>
+                  </Link>
+                </article>
+                {index === 5 && (
+                  <div className="md:col-span-2 lg:col-span-3">
+                    <AdsterraBanner />
                   </div>
-                </Link>
-              </article>
+                )}
+              </>
             ))}
           </div>
 
