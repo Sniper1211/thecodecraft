@@ -3,6 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
 import remarkHtml from 'remark-html'
+import remarkGfm from 'remark-gfm'
 
 const postsDirectory = path.join(process.cwd(), '_posts')
 
@@ -37,10 +38,11 @@ export async function getPosts(): Promise<Post[]> {
   const fileNames = fs.readdirSync(postsDirectory)
   const items = await Promise.all(
     fileNames.map(async (fileName) => {
-      const slug = fileName.replace(/\.md$/, '')
+      // 读取 front matter，优先使用自定义 slug；否则回退到文件名（统一为 NFC）
       const fullPath = path.join(postsDirectory, fileName)
       const fileContents = fs.readFileSync(fullPath, 'utf8')
       const { data, content } = matter(fileContents)
+      const slug = (data.slug ? String(data.slug).trim() : fileName.replace(/\.md$/, '').normalize('NFC'))
 
       const excerpt = makeExcerpt(content, 150)
 
@@ -65,26 +67,71 @@ export async function getPosts(): Promise<Post[]> {
     .map(({ post }) => post)
 }
 
-export async function getPostBySlug(slug: string): Promise<Post | undefined> {
+export async function getPostBySlug(slugParam: string): Promise<Post | undefined> {
   try {
-    // 解码URL编码的slug
-    const decodedSlug = decodeURIComponent(slug)
-    const fullPath = path.join(postsDirectory, `${decodedSlug}.md`)
+    // 兼容特殊字符与 Unicode 归一化，并支持 front matter 自定义 slug
+    const wanted = slugParam.normalize('NFC')
+    try {
+      fs.appendFileSync(path.join(process.cwd(), '.next', 'post-debug.log'), `param:${slugParam}\n`)
+    } catch {}
+    const fileNames = fs.readdirSync(postsDirectory)
+    const targetFile = fileNames.find((fn) => {
+      const fullPath = path.join(postsDirectory, fn)
+      const fileContents = fs.readFileSync(fullPath, 'utf8')
+      const { data } = matter(fileContents)
+      const filenameSlug = fn.replace(/\.md$/, '').normalize('NFC')
+      const frontSlug = data.slug ? String(data.slug).trim() : undefined
+      const candidates = [frontSlug, filenameSlug].filter(Boolean) as string[]
+      try {
+        fs.appendFileSync(
+          path.join(process.cwd(), '.next', 'post-debug.log'),
+          `candidates for ${fn}: ${JSON.stringify(candidates)}\n`
+        )
+      } catch {}
+      return candidates.some((s) => (
+        s === wanted ||
+        s === decodeURIComponent(wanted) ||
+        encodeURIComponent(s) === wanted
+      ))
+    })
+    try {
+      fs.appendFileSync(path.join(process.cwd(), '.next', 'post-debug.log'), `matched:${String(targetFile)}\n`)
+    } catch {}
+
+    if (!targetFile) {
+      throw new Error(`Post not found for slug: ${slugParam}`)
+    }
+
+    const fullPath = path.join(postsDirectory, targetFile)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const { data, content } = matter(fileContents)
-    
-    // 使用remark将markdown转换为HTML
-    const processedContent = await remark()
-      .use(remarkHtml)
-      .process(content)
-    let contentHtml = processedContent.toString()
-    // 将内容中的所有 h1 降级为 h2，避免与页面标题重复
+
+    let contentHtml: string
+    try {
+      const processedContent = await remark()
+        .use(remarkGfm)
+        .use(remarkHtml)
+        .process(content)
+      contentHtml = processedContent.toString()
+    } catch (e) {
+      const escaped = content
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+      contentHtml = `<pre class="not-prose">${escaped}</pre>`
+      try {
+        fs.appendFileSync(
+          path.join(process.cwd(), '.next', 'post-debug.log'),
+          `remark fallback for ${slugParam}: ${String((e as Error).message)}\n`
+        )
+      } catch {}
+    }
     contentHtml = contentHtml
       .replace(/<h1(\s[^>]*)?>/g, '<h2$1>')
       .replace(/<\/h1>/g, '</h2>')
-    
+
     return {
-      slug,
+      slug: (data.slug ? String(data.slug).trim() : targetFile.replace(/\.md$/, '').normalize('NFC')),
       title: data.title || '无标题',
       date: data.date ? new Date(data.date).toLocaleDateString('zh-CN') : '未知日期',
       tags: data.tags || [],
@@ -92,7 +139,13 @@ export async function getPostBySlug(slug: string): Promise<Post | undefined> {
       excerpt: makeExcerpt(content, 150)
     }
   } catch (error) {
-    console.error(`Error getting post by slug ${slug}:`, error)
+    try {
+      fs.appendFileSync(
+        path.join(process.cwd(), '.next', 'post-debug.log'),
+        `error for ${slugParam}: ${String((error as Error).stack || error)}\n`
+      )
+    } catch {}
+    console.error(`Error getting post by slug ${slugParam}:`, error)
     return undefined
   }
 }

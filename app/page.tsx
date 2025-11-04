@@ -66,11 +66,9 @@ export default async function Home() {
               <>
                 <article key={post.slug}>
                   <Link
-                    href={`/posts/${post.slug}/`}
+                    href={`/posts/${encodeURIComponent(post.slug)}/`}
                     aria-label={post.title}
                     className="group block hover:no-underline focus:outline-none"
-                    target="_blank"
-                    rel="noopener noreferrer"
                   >
                     <div className="bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-2xl p-8 shadow-sm border border-slate-100/60 dark:border-slate-700/60 hover:shadow-2xl transition-all duration-500 h-full flex flex-col transform hover:-translate-y-2 hover:scale-105">
                       <div className="flex-1">
