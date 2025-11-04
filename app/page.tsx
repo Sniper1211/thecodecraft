@@ -1,4 +1,5 @@
 import { getPosts } from '@/lib/posts'
+import { buildPostHref } from '@/lib/urls'
 import Link from 'next/link'
 import AdsterraBanner from '@/components/AdsterraBanner'
 
@@ -66,7 +67,7 @@ export default async function Home() {
               <>
                 <article key={post.slug}>
                   <Link
-                    href={`/posts/${encodeURIComponent(post.slug)}/`}
+                    href={buildPostHref(post.slug)}
                     aria-label={post.title}
                     className="group block hover:no-underline focus:outline-none"
                   >
