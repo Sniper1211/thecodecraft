@@ -1,9 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import { remark } from 'remark'
-import remarkHtml from 'remark-html'
-import remarkGfm from 'remark-gfm'
+import MarkdownIt from 'markdown-it'
 
 const postsDirectory = path.join(process.cwd(), '_posts')
 
@@ -108,11 +106,8 @@ export async function getPostBySlug(slugParam: string): Promise<Post | undefined
 
     let contentHtml: string
     try {
-      const processedContent = await remark()
-        .use(remarkGfm)
-        .use(remarkHtml)
-        .process(content)
-      contentHtml = processedContent.toString()
+      const md = new MarkdownIt({ html: true, linkify: true, breaks: true })
+      contentHtml = md.render(content)
     } catch (e) {
       const escaped = content
         .replace(/&/g, '&amp;')
@@ -122,7 +117,7 @@ export async function getPostBySlug(slugParam: string): Promise<Post | undefined
       try {
         fs.appendFileSync(
           path.join(process.cwd(), '.next', 'post-debug.log'),
-          `remark fallback for ${slugParam}: ${String((e as Error).message)}\n`
+          `markdown-it fallback for ${slugParam}: ${String((e as Error).message)}\n`
         )
       } catch {}
     }

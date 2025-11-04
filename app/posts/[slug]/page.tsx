@@ -1,4 +1,5 @@
 import { getPostBySlug, getPosts } from '@/lib/posts'
+import { buildPostUrl } from '@/lib/urls'
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import AdsterraBanner from '@/components/AdsterraBanner'
@@ -6,7 +7,8 @@ import AdsterraBanner from '@/components/AdsterraBanner'
 export async function generateStaticParams() {
   const posts = await getPosts()
   return posts.map((post) => ({
-    slug: post.slug,
+    // 返回已编码的 slug，确保与浏览器/Link 导航时的 URL 编码一致
+    slug: encodeURIComponent(post.slug),
   }))
 }
 
@@ -21,7 +23,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 
   const baseUrl = 'https://www.thecodecraft.site'
-  const postUrl = `${baseUrl}/posts/${encodeURIComponent(post.slug)}/`
+  const postUrl = buildPostUrl(baseUrl, post.slug)
   // 使用更短的页面描述，防止过长
   const metaDescription = post.excerpt
   
@@ -144,7 +146,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
         {/* 文章内容 */}
         <div className="article-content">
           <div 
-            className="prose prose-lg max-w-none prose-headings:font-black prose-p:text-slate-700 dark:prose-p:text-slate-300 prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline prose-strong:font-black prose-code:bg-slate-100 dark:prose-code:bg-slate-800 prose-code:text-slate-800 dark:prose-code:text-slate-200 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-pre:bg-slate-900 prose-pre:text-white prose-blockquote:border-l-blue-500 prose-blockquote:bg-slate-50 dark:prose-blockquote:bg-slate-800 prose-blockquote:italic prose-table:border-slate-200 prose-img:rounded-2xl prose-img:shadow-xl"
+            className="prose prose-lg max-w-none break-words prose-headings:font-black prose-p:text-slate-700 dark:prose-p:text-slate-300 prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline prose-strong:font-black prose-code:bg-slate-100 dark:prose-code:bg-slate-800 prose-code:text-slate-800 dark:prose-code:text-slate-200 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-pre:bg-slate-900 prose-pre:text-white prose-pre:overflow-x-auto prose-pre:whitespace-pre-wrap prose-blockquote:border-l-blue-500 prose-blockquote:bg-slate-50 dark:prose-blockquote:bg-slate-800 prose-blockquote:italic prose-table:border-slate-200 prose-table:table-auto prose-th:text-left prose-img:rounded-2xl prose-img:shadow-xl"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
         </div>
