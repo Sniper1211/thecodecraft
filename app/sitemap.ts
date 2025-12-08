@@ -1,9 +1,13 @@
 import { MetadataRoute } from 'next'
+import { getPosts } from '@/lib/posts'
+import { buildPostUrl } from '@/lib/urls'
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://www.thecodecraft.site'
 
-  return [
+  const posts = await getPosts()
+
+  const baseEntries: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified: new Date(),
@@ -16,23 +20,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-    {
-      url: `${baseUrl}/posts/how-to-build-website-for-free`,
-      lastModified: new Date('2024-01-15'),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/posts/vercel-free-alternatives-for-practice`,
-      lastModified: new Date('2024-01-10'),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/posts/web-basics-for-beginners`,
-      lastModified: new Date('2024-01-05'),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
   ]
+
+  const postEntries: MetadataRoute.Sitemap = posts.map((p) => ({
+    url: buildPostUrl(baseUrl, p.slug),
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }))
+
+  return [...baseEntries, ...postEntries]
 }
