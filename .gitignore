@@ -9,7 +9,6 @@
 
 # Other
 /build
-/.hugo_build.lock
 
 # Test results
 /coverage
