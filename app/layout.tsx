@@ -61,6 +61,7 @@ export default function RootLayout({
   return (
     <html lang="zh-CN" className="scroll-smooth">
       <head>
+          <meta name="google-adsense-account" content="ca-pub-9245714228354292" />
           <Analytics />
           <AdSense />
         </head>
