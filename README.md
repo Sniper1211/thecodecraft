@@ -1,352 +1,81 @@
-[bep]: https://github.com/bep
-[bugs]: https://github.com/gohugoio/hugo/issues?q=is%3Aopen+is%3Aissue+label%3ABug
-[contributing]: CONTRIBUTING.md
-[create a proposal]: https://github.com/gohugoio/hugo/issues/new?labels=Proposal%2C+NeedsTriage&template=feature_request.md
-[documentation repository]: https://github.com/gohugoio/hugoDocs
-[documentation]: https://gohugo.io/documentation
-[dragonfly bsd, freebsd, netbsd, and openbsd]: https://gohugo.io/installation/bsd
-[features]: https://gohugo.io/about/features/
-[forum]: https://discourse.gohugo.io
-[friends]: https://github.com/gohugoio/hugo/graphs/contributors
-[go]: https://go.dev/
-[hugo modules]: https://gohugo.io/hugo-modules/
-[installation]: https://gohugo.io/installation
-[issue queue]: https://github.com/gohugoio/hugo/issues
-[linux]: https://gohugo.io/installation/linux
-[macos]: https://gohugo.io/installation/macos
-[prebuilt binary]: https://github.com/gohugoio/hugo/releases/latest
-[requesting help]: https://discourse.gohugo.io/t/requesting-help/9132
-[spf13]: https://github.com/spf13
-[static site generator]: https://en.wikipedia.org/wiki/Static_site_generator
-[support]: https://discourse.gohugo.io
-[themes]: https://themes.gohugo.io/
-[website]: https://gohugo.io
-[windows]: https://gohugo.io/installation/windows
-
-<a href="https://gohugo.io/"><img src="https://raw.githubusercontent.com/gohugoio/gohugoioTheme/master/static/images/hugo-logo-wide.svg?sanitize=true" alt="Hugo" width="565"></a>
-
-A fast and flexible static site generator built with love by [bep], [spf13], and [friends] in [Go].
-
----
-
-[![GoDoc](https://godoc.org/github.com/gohugoio/hugo?status.svg)](https://godoc.org/github.com/gohugoio/hugo)
-[![Tests on Linux, MacOS and Windows](https://github.com/gohugoio/hugo/workflows/Test/badge.svg)](https://github.com/gohugoio/hugo/actions?query=workflow%3ATest)
-[![Go Report Card](https://goreportcard.com/badge/github.com/gohugoio/hugo)](https://goreportcard.com/report/github.com/gohugoio/hugo)
-
-[Website] | [Installation] | [Documentation] | [Support] | [Contributing] | <a rel="me" href="https://fosstodon.org/@gohugoio">Mastodon</a>
-
-## Overview
-
-Hugo is a [static site generator] written in [Go], optimized for speed and designed for flexibility. With its advanced templating system and fast asset pipelines, Hugo renders a complete site in seconds, often less.
-
-Due to its flexible framework, multilingual support, and powerful taxonomy system, Hugo is widely used to create:
-
-- Corporate, government, nonprofit, education, news, event, and project sites
-- Documentation sites
-- Image portfolios
-- Landing pages
-- Business, professional, and personal blogs
-- Resumes and CVs
-
-Use Hugo's embedded web server during development to instantly see changes to content, structure, behavior, and presentation. Then deploy the site to your host, or push changes to your Git provider for automated builds and deployment.
-
-Hugo's fast asset pipelines include:
-
-- Image processing &ndash; Convert, resize, crop, rotate, adjust colors, apply filters, overlay text and images, and extract EXIF data
-- JavaScript bundling &ndash; Transpile TypeScript and JSX to JavaScript, bundle, tree shake, minify, create source maps, and perform SRI hashing.
-- Sass processing &ndash; Transpile Sass to CSS, bundle, tree shake, minify, create source maps, perform SRI hashing, and integrate with PostCSS
-- Tailwind CSS processing &ndash; Compile Tailwind CSS utility classes into standard CSS, bundle, tree shake, optimize, minify, perform SRI hashing, and integrate with PostCSS
-
-And with [Hugo Modules], you can share content, assets, data, translations, themes, templates, and configuration with other projects via public or private Git repositories.
-
-See the [features] section of the documentation for a comprehensive summary of Hugo's capabilities.
-
-## Sponsors
-
-<p>&nbsp;</p>
-<p float="left">
-  <a href="https://www.linode.com/?utm_campaign=hugosponsor&utm_medium=banner&utm_source=hugogithub" target="_blank"><img src="https://raw.githubusercontent.com/gohugoio/gohugoioTheme/master/assets/images/sponsors/linode-logo_standard_light_medium.png" width="200" alt="Linode"></a>
-&nbsp;&nbsp;&nbsp;
-  <a href="https://www.jetbrains.com/go/?utm_source=OSS&utm_medium=referral&utm_campaign=hugo" target="_blank"><img src="https://raw.githubusercontent.com/gohugoio/gohugoioTheme/master/assets/images/sponsors/goland.svg" width="200" alt="The complete IDE crafted for professional Go developers."></a>
-</p>
-
-## Editions
-
-Hugo is available in three editions: standard, extended, and extended/deploy. While the standard edition provides core functionality, the extended and extended/deploy editions offer advanced features.
-
-Feature|extended edition|extended/deploy edition
-:--|:-:|:-:
-Encode to the WebP format when [processing images]. You can decode WebP images with any edition.|:heavy_check_mark:|:heavy_check_mark:
-[Transpile Sass to CSS] using the embedded LibSass transpiler. You can use the [Dart Sass] transpiler with any edition.|:heavy_check_mark:|:heavy_check_mark:
-Deploy your site directly to a Google Cloud Storage bucket, an AWS S3 bucket, or an Azure Storage container. See&nbsp;[details].|:x:|:heavy_check_mark:
-
-[dart sass]: https://gohugo.io/functions/css/sass/#dart-sass
-[processing images]: https://gohugo.io/content-management/image-processing/
-[transpile sass to css]: https://gohugo.io/functions/css/sass/
-[details]: https://gohugo.io/hosting-and-deployment/hugo-deploy/
-
-Unless your specific deployment needs require the extended/deploy edition, we recommend the extended edition.
-
-## Installation
-
-Install Hugo from a [prebuilt binary], package manager, or package repository. Please see the installation instructions for your operating system:
-
-- [macOS]
-- [Linux]
-- [Windows]
-- [DragonFly BSD, FreeBSD, NetBSD, and OpenBSD]
-
-## Build from source
-
-Prerequisites to build Hugo from source:
-
-- Standard edition: Go 1.23.0 or later
-- Extended edition: Go 1.23.0 or later, and GCC
-- Extended/deploy edition: Go 1.23.0 or later, and GCC
-
-Build the standard edition:
-
-```text
-go install github.com/gohugoio/hugo@latest
-```
-
-Build the extended edition:
-
-```text
-CGO_ENABLED=1 go install -tags extended github.com/gohugoio/hugo@latest
-```
-
-Build the extended/deploy edition:
-
-```text
-CGO_ENABLED=1 go install -tags extended,withdeploy github.com/gohugoio/hugo@latest
-```
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=gohugoio/hugo&type=Timeline)](https://star-history.com/#gohugoio/hugo&Timeline)
-
-## Documentation
-
-Hugo's [documentation] includes installation instructions, a quick start guide, conceptual explanations, reference information, and examples.
-
-Please submit documentation issues and pull requests to the [documentation repository].
-
-## Support
-
-Please **do not use the issue queue** for questions or troubleshooting. Unless you are certain that your issue is a software defect, use the [forum].
-
-Hugo’s [forum] is an active community of users and developers who answer questions, share knowledge, and provide examples. A quick search of over 20,000 topics will often answer your question. Please be sure to read about [requesting help] before asking your first question.
-
-## Contributing
-
-You can contribute to the Hugo project by:
-
-- Answering questions on the [forum]
-- Improving the [documentation]
-- Monitoring the [issue queue]
-- Creating or improving [themes]
-- Squashing [bugs]
-
-Please submit documentation issues and pull requests to the [documentation repository].
-
-If you have an idea for an enhancement or new feature, create a new topic on the [forum] in the "Feature" category. This will help you to:
-
-- Determine if the capability already exists
-- Measure interest
-- Refine the concept
-
-If there is sufficient interest, [create a proposal]. Do not submit a pull request until the project lead accepts the proposal.
-
-For a complete guide to contributing to Hugo, see the [Contribution Guide](CONTRIBUTING.md).
-
-## Dependencies
-
-Hugo stands on the shoulders of great open source libraries. Run `hugo env --logLevel info` to display a list of dependencies.
-
-<details>
-<summary>See current dependencies</summary>
-
-```text
-github.com/BurntSushi/locker="v0.0.0-20171006230638-a6e239ea1c69"
-github.com/PuerkitoBio/goquery="v1.10.1"
-github.com/alecthomas/chroma/v2="v2.15.0"
-github.com/andybalholm/cascadia="v1.3.3"
-github.com/armon/go-radix="v1.0.1-0.20221118154546-54df44f2176c"
-github.com/bep/clocks="v0.5.0"
-github.com/bep/debounce="v1.2.0"
-github.com/bep/gitmap="v1.6.0"
-github.com/bep/goat="v0.5.0"
-github.com/bep/godartsass/v2="v2.3.2"
-github.com/bep/golibsass="v1.2.0"
-github.com/bep/gowebp="v0.3.0"
-github.com/bep/imagemeta="v0.8.4"
-github.com/bep/lazycache="v0.7.0"
-github.com/bep/logg="v0.4.0"
-github.com/bep/mclib="v1.20400.20402"
-github.com/bep/overlayfs="v0.9.2"
-github.com/bep/simplecobra="v0.5.0"
-github.com/bep/tmc="v0.5.1"
-github.com/cespare/xxhash/v2="v2.3.0"
-github.com/clbanning/mxj/v2="v2.7.0"
-github.com/cpuguy83/go-md2man/v2="v2.0.4"
-github.com/disintegration/gift="v1.2.1"
-github.com/dlclark/regexp2="v1.11.5"
-github.com/dop251/goja="v0.0.0-20250125213203-5ef83b82af17"
-github.com/evanw/esbuild="v0.24.2"
-github.com/fatih/color="v1.18.0"
-github.com/frankban/quicktest="v1.14.6"
-github.com/fsnotify/fsnotify="v1.8.0"
-github.com/getkin/kin-openapi="v0.129.0"
-github.com/ghodss/yaml="v1.0.0"
-github.com/go-openapi/jsonpointer="v0.21.0"
-github.com/go-openapi/swag="v0.23.0"
-github.com/go-sourcemap/sourcemap="v2.1.4+incompatible"
-github.com/gobuffalo/flect="v1.0.3"
-github.com/gobwas/glob="v0.2.3"
-github.com/gohugoio/go-i18n/v2="v2.1.3-0.20230805085216-e63c13218d0e"
-github.com/gohugoio/hashstructure="v0.5.0"
-github.com/gohugoio/httpcache="v0.7.0"
-github.com/gohugoio/hugo-goldmark-extensions/extras="v0.2.0"
-github.com/gohugoio/hugo-goldmark-extensions/passthrough="v0.3.0"
-github.com/gohugoio/locales="v0.14.0"
-github.com/gohugoio/localescompressed="v1.0.1"
-github.com/golang/freetype="v0.0.0-20170609003504-e2365dfdc4a0"
-github.com/google/go-cmp="v0.6.0"
-github.com/google/pprof="v0.0.0-20250208200701-d0013a598941"
-github.com/gorilla/websocket="v1.5.3"
-github.com/hairyhenderson/go-codeowners="v0.7.0"
-github.com/hashicorp/golang-lru/v2="v2.0.7"
-github.com/jdkato/prose="v1.2.1"
-github.com/josharian/intern="v1.0.0"
-github.com/kr/pretty="v0.3.1"
-github.com/kr/text="v0.2.0"
-github.com/kyokomi/emoji/v2="v2.2.13"
-github.com/lucasb-eyer/go-colorful="v1.2.0"
-github.com/mailru/easyjson="v0.7.7"
-github.com/makeworld-the-better-one/dither/v2="v2.4.0"
-github.com/marekm4/color-extractor="v1.2.1"
-github.com/mattn/go-colorable="v0.1.13"
-github.com/mattn/go-isatty="v0.0.20"
-github.com/mattn/go-runewidth="v0.0.9"
-github.com/mazznoer/csscolorparser="v0.1.5"
-github.com/mitchellh/mapstructure="v1.5.1-0.20231216201459-8508981c8b6c"
-github.com/mohae/deepcopy="v0.0.0-20170929034955-c48cc78d4826"
-github.com/muesli/smartcrop="v0.3.0"
-github.com/niklasfasching/go-org="v1.7.0"
-github.com/oasdiff/yaml3="v0.0.0-20241210130736-a94c01f36349"
-github.com/oasdiff/yaml="v0.0.0-20241210131133-6b86fb107d80"
-github.com/olekukonko/tablewriter="v0.0.5"
-github.com/pbnjay/memory="v0.0.0-20210728143218-7b4eea64cf58"
-github.com/pelletier/go-toml/v2="v2.2.3"
-github.com/perimeterx/marshmallow="v1.1.5"
-github.com/pkg/browser="v0.0.0-20240102092130-5ac0b6a4141c"
-github.com/pkg/errors="v0.9.1"
-github.com/rivo/uniseg="v0.4.7"
-github.com/rogpeppe/go-internal="v1.13.1"
-github.com/russross/blackfriday/v2="v2.1.0"
-github.com/sass/libsass="3.6.6"
-github.com/spf13/afero="v1.11.0"
-github.com/spf13/cast="v1.7.1"
-github.com/spf13/cobra="v1.8.1"
-github.com/spf13/fsync="v0.10.1"
-github.com/spf13/pflag="v1.0.6"
-github.com/tdewolff/minify/v2="v2.20.37"
-github.com/tdewolff/parse/v2="v2.7.15"
-github.com/tetratelabs/wazero="v1.8.2"
-github.com/webmproject/libwebp="v1.3.2"
-github.com/yuin/goldmark-emoji="v1.0.4"
-github.com/yuin/goldmark="v1.7.8"
-go.uber.org/automaxprocs="v1.5.3"
-golang.org/x/crypto="v0.33.0"
-golang.org/x/exp="v0.0.0-20250210185358-939b2ce775ac"
-golang.org/x/image="v0.24.0"
-golang.org/x/mod="v0.23.0"
-golang.org/x/net="v0.35.0"
-golang.org/x/sync="v0.11.0"
-golang.org/x/sys="v0.30.0"
-golang.org/x/text="v0.22.0"
-golang.org/x/tools="v0.30.0"
-golang.org/x/xerrors="v0.0.0-20240903120638-7835f813f4da"
-gonum.org/v1/plot="v0.15.0"
-google.golang.org/protobuf="v1.36.5"
-gopkg.in/yaml.v2="v2.4.0"
-gopkg.in/yaml.v3="v3.0.1"
-oss.terrastruct.com/d2="v0.6.9"
-oss.terrastruct.com/util-go="v0.0.0-20241005222610-44c011a04896"
-rsc.io/qr="v0.2.0"
-software.sslmate.com/src/go-pkcs12="v0.2.0"
-```
-</details>
 # The Code Craft
 
-基于 Next.js App Router 构建的静态博客站点，支持中文/英文 slug、Markdown 渲染、SEO（sitemap/robots）、以及广告验证（AdSense + ads.txt）。
+一个基于 Next.js App Router 的静态博客项目。功能包括：Markdown 渲染、中文/英文 slug 支持、站点地图与机器人协议（`sitemap`/`robots`）、以及广告与统计集成（AdSense 与 Google Analytics）。
 
 ## 特性
+- 使用 `markdown-it` 在服务端渲染 Markdown 内容。
+- 通过 `lib/posts.ts` 读取 `posts` 目录下的 Markdown 文件，生成文章列表和详情。
+- 统一的 URL 构造工具：`lib/urls.ts` 提供 `buildPostHref` / `buildPostUrl`。
+- SEO 友好：`app/sitemap.ts` 和 `app/robots.ts`，文章页 `generateMetadata` 和 JSON-LD。
+- 统计与广告：`components/Analytics.tsx` 与 `components/AdSense.tsx`，并可在生产环境展示 `AdsterraBanner`。
 
-- 静态导出：`next.config.js` 使用 `output: 'export'` 和 `trailingSlash: true`
-- 文章源：`_posts/*.md`，支持 Front Matter（`title`, `date`, `tags`, `slug`, `draft`）
-- 自定义链接：优先使用 Front Matter 的 `slug`；否则使用文件名（统一 NFC）
-- Markdown 渲染：`markdown-it`（支持 `html`, `linkify`, `breaks`），并统一将 `h1` 转为 `h2`
-- 站点地图与搜索引擎：`app/sitemap.ts`、`app/robots.ts`
-- 广告接入：`components/AdSense.tsx`（生产环境加载）、`public/ads.txt`（根路径）
-- 统计分析：`components/Analytics.tsx`（生产环境加载）
+## 技术栈
+- 框架：`Next.js`（App Router，静态导出）
+- 样式：`Tailwind CSS`
+- Markdown 渲染：`markdown-it`
+- 部署与托管：任意支持静态站点的服务（如 GitHub Pages、Vercel 等）
 
-## 快速开始
+## 目录结构概览
+- `app/`
+  - `layout.tsx`：站点根布局与全局 `<head>`，加载 Analytics 与 AdSense。
+  - `page.tsx`：首页，展示文章列表，使用 `buildPostHref` 构造链接。
+  - `posts/[slug]/page.tsx`：文章详情页，静态生成、SEO 元信息与 JSON-LD。
+  - `sitemap.ts`、`robots.ts`：站点地图与机器人协议。
+  - `globals.css`：全局样式（Tailwind 入口）。
+- `components/`
+  - `Analytics.tsx`：Google Analytics 统计与事件。
+  - `AdSense.tsx`：Google AdSense 代码加载与验证。
+  - `AdsterraBanner.tsx`：生产环境展示的 Adsterra 横幅。
+- `lib/`
+  - `posts.ts`：读取、解析 Markdown，生成 `slug`、`excerpt`、`content` 等。
+  - `urls.ts`：站点 URL/HREF 构造工具。
+- `public/`：静态资源（例如 `ads.txt`）。
 
+## 开发与构建
 - 安装依赖：`npm install`
-- 本地开发：`npm run dev`（访问 `http://localhost:3000`）
-- 构建：`npm run build`
-- 导出静态站点：构建完成后产物在 `.next/`；部署到静态托管时请确保公开根路径文件（如 `ads.txt`）。如需生成纯静态目录，可使用平台提供的导出流程或将 `.next` 转移到托管平台。
+- 本地开发：`npm run dev`
+- 生产构建：`npm run build`
+- 静态导出（如需）：`next.config.js` 可配置输出为静态资源或依托平台部署。
 
-说明：Next.js 14 起官方不推荐 `next export` 命令；本项目已启用 `output: 'export'`，构建将生成可静态托管的产物。
+## 内容写作
+- 在 `posts/` 目录下新增 Markdown 文件（如 `my-post.md`）。
+- 文件名将被规范化为 `slug`，并用于路由：`/posts/[slug]`。
+- `lib/posts.ts` 会生成摘要（`excerpt`）并通过 `markdown-it` 渲染为 HTML。
 
-## 内容结构
+## URL 与 SEO
+- 使用 `lib/urls.ts`：
+  - `buildPostHref(slug)`：在站内生成文章链接（相对路径）。
+  - `buildPostUrl(slug)`：生成完整的文章 URL（含域名），用于 `metadata` 与 JSON-LD。
+- `app/posts/[slug]/page.tsx`：
+  - `generateStaticParams`：预渲染所有文章详情页。
+  - `generateMetadata`：为文章详情页生成标题、描述、OG/Twitter 等。
+  - JSON-LD：包含文章结构化数据，便于搜索引擎理解。
 
-- 文章目录：`_posts/`
-- 示例 Front Matter：
-
-```md
----
-title: "示例标题"
-slug: example-slug
-date: 2025-01-01T12:00:00+08:00
-tags: ["独立开发", "建站"]
-draft: false
----
-
-# 示例标题
-
-正文...
-```
-
-## 路由与编码策略
-
-- 文章详情页：`/posts/[slug]/`
-- 主页链接使用原始 `slug`：`lib/urls.ts -> buildPostHref`
-- 生成静态参数：`app/posts/[slug]/page.tsx -> generateStaticParams()` 返回 `encodeURIComponent(post.slug)`，与浏览器导航一致
-- 页面解码：读取参数时使用 `decodeURIComponent(params.slug)`
-
-## SEO 与验证
-
-- 站点地图：`app/sitemap.ts`
-- robots：`app/robots.ts`
-- AdSense：
-  - 根路径验证：`public/ads.txt`（示例：`google.com, pub-9245714228354292, DIRECT, f08c47fec0942fa0`）
-  - meta 验证：`<meta name="google-adsense-account" content="ca-pub-9245714228354292" />`（位于 `app/layout.tsx`）
+## 统计与广告
+- `components/Analytics.tsx`：
+  - 加载 Google Analytics 并提供 `trackPageView`、`trackEvent`。
+  - 在 `app/layout.tsx` 中集成。
+- `components/AdSense.tsx`：
+  - 加载 AdSense 相关脚本与验证片段。
+  - 在 `app/layout.tsx` 中集成。
+- `components/AdsterraBanner.tsx`：
+  - 仅在生产环境渲染横幅广告。
 
 ## 部署建议
-
-- 静态托管：Vercel、Netlify、Cloudflare Pages 等均可
-- 使用 CDN 时请清理缓存以确保 `ads.txt` 与 sitemap 生效
-- 生产环境会自动加载 Analytics 与 AdSense，开发环境不加载
+- 确认 `sitemap.ts` 与 `robots.ts` 的基础域名与策略正确。
+- 确认 `public/ads.txt` 与各广告平台验证要求一致。
+- 如使用静态托管，确保构建输出与路由配置匹配（App Router 支持静态导出限制请参考 Next.js 文档）。
 
 ## 常见问题
+- Markdown 未高亮：本项目未使用 `rehype-highlight`/`highlight.js`；如需代码高亮，建议统一选择一种方案并在 `markdown-it` 或前端样式层处理。
+- 统计未生效：检查 `Analytics` 的配置与环境变量，确保在生产环境加载。
+- 广告未展示：检查 AdSense/Adsterra 的脚本加载与验证状态，确保域名已授权并且生产环境可访问。
 
-- 中文/特殊字符 slug 报缺参：请确保 `generateStaticParams()` 返回编码后的 slug；页面端使用 `decodeURIComponent`
-- sitemap 未包含新文章：当前 `app/sitemap.ts` 对文章链接为静态列举，建议后续改为从 `_posts/` 自动生成
-- Markdown 渲染样式：已使用 `markdown-it` 并增强排版（表格、代码块、引用等）；若需进一步自定义可调整 `prose` 类或引入插件
+## 维护
+- 依赖清理：已移除未用的 `remark`/`rehype` 系列与 `highlight.js`、`http-server`。
+- 文档与忽略：已移除 Hugo 遗留项（例如 `.hugo_build.lock`）。
+- 如需调整站点基础 URL（影响 `sitemap`/`buildPostUrl`），请同步更新相关常量或环境配置。
 
-## 许可
+---
 
-MIT
+本 README 已更新为纯 Next.js 项目文档，不再包含 Hugo 相关内容。
