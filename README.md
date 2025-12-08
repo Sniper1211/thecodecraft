@@ -278,3 +278,75 @@ rsc.io/qr="v0.2.0"
 software.sslmate.com/src/go-pkcs12="v0.2.0"
 ```
 </details>
+# The Code Craft
+
+基于 Next.js App Router 构建的静态博客站点，支持中文/英文 slug、Markdown 渲染、SEO（sitemap/robots）、以及广告验证（AdSense + ads.txt）。
+
+## 特性
+
+- 静态导出：`next.config.js` 使用 `output: 'export'` 和 `trailingSlash: true`
+- 文章源：`_posts/*.md`，支持 Front Matter（`title`, `date`, `tags`, `slug`, `draft`）
+- 自定义链接：优先使用 Front Matter 的 `slug`；否则使用文件名（统一 NFC）
+- Markdown 渲染：`markdown-it`（支持 `html`, `linkify`, `breaks`），并统一将 `h1` 转为 `h2`
+- 站点地图与搜索引擎：`app/sitemap.ts`、`app/robots.ts`
+- 广告接入：`components/AdSense.tsx`（生产环境加载）、`public/ads.txt`（根路径）
+- 统计分析：`components/Analytics.tsx`（生产环境加载）
+
+## 快速开始
+
+- 安装依赖：`npm install`
+- 本地开发：`npm run dev`（访问 `http://localhost:3000`）
+- 构建：`npm run build`
+- 导出静态站点：构建完成后产物在 `.next/`；部署到静态托管时请确保公开根路径文件（如 `ads.txt`）。如需生成纯静态目录，可使用平台提供的导出流程或将 `.next` 转移到托管平台。
+
+说明：Next.js 14 起官方不推荐 `next export` 命令；本项目已启用 `output: 'export'`，构建将生成可静态托管的产物。
+
+## 内容结构
+
+- 文章目录：`_posts/`
+- 示例 Front Matter：
+
+```md
+---
+title: "示例标题"
+slug: example-slug
+date: 2025-01-01T12:00:00+08:00
+tags: ["独立开发", "建站"]
+draft: false
+---
+
+# 示例标题
+
+正文...
+```
+
+## 路由与编码策略
+
+- 文章详情页：`/posts/[slug]/`
+- 主页链接使用原始 `slug`：`lib/urls.ts -> buildPostHref`
+- 生成静态参数：`app/posts/[slug]/page.tsx -> generateStaticParams()` 返回 `encodeURIComponent(post.slug)`，与浏览器导航一致
+- 页面解码：读取参数时使用 `decodeURIComponent(params.slug)`
+
+## SEO 与验证
+
+- 站点地图：`app/sitemap.ts`
+- robots：`app/robots.ts`
+- AdSense：
+  - 根路径验证：`public/ads.txt`（示例：`google.com, pub-9245714228354292, DIRECT, f08c47fec0942fa0`）
+  - meta 验证：`<meta name="google-adsense-account" content="ca-pub-9245714228354292" />`（位于 `app/layout.tsx`）
+
+## 部署建议
+
+- 静态托管：Vercel、Netlify、Cloudflare Pages 等均可
+- 使用 CDN 时请清理缓存以确保 `ads.txt` 与 sitemap 生效
+- 生产环境会自动加载 Analytics 与 AdSense，开发环境不加载
+
+## 常见问题
+
+- 中文/特殊字符 slug 报缺参：请确保 `generateStaticParams()` 返回编码后的 slug；页面端使用 `decodeURIComponent`
+- sitemap 未包含新文章：当前 `app/sitemap.ts` 对文章链接为静态列举，建议后续改为从 `_posts/` 自动生成
+- Markdown 渲染样式：已使用 `markdown-it` 并增强排版（表格、代码块、引用等）；若需进一步自定义可调整 `prose` 类或引入插件
+
+## 许可
+
+MIT
