@@ -88,30 +88,54 @@ export default async function PostPage({ params }: { params: { slug: string } })
   // 结构化数据
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: post.title,
-    description: metaDescription,
-    author: {
-      '@type': 'Person',
-      name: 'The Code Craft',
-      url: baseUrl,
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'The Code Craft',
-      url: baseUrl,
-    },
-    datePublished: post.date,
-    dateModified: post.date,
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': postUrl,
-    },
-    url: postUrl,
-    keywords: (post.tags || []).join(', '),
-    articleSection: 'Technology',
-    inLanguage: 'zh-CN',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': '首页',
+            'item': baseUrl,
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': post.title,
+            'item': postUrl,
+          },
+        ],
+      },
+      {
+        '@type': 'Article',
+        headline: post.title,
+        description: metaDescription,
+        image: [
+          `${baseUrl}/opengraph-image`, // 使用默认生成的 OG 图片作为文章图片备选
+        ],
+        datePublished: new Date(post.date).toISOString(),
+        dateModified: new Date(post.date).toISOString(), // 暂时使用发布时间
+        author: {
+          '@type': 'Person',
+          name: 'The Code Craft',
+          url: baseUrl,
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'The Code Craft',
+          logo: {
+            '@type': 'ImageObject',
+            url: `${baseUrl}/icon.png`,
+          },
+        },
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': postUrl,
+        },
+      },
+    ],
   }
+
 
   return (
     <>
