@@ -4,6 +4,8 @@ import Script from 'next/script'
 import Analytics from '@/components/Analytics'
 import AdSense from '@/components/AdSense'
 
+import Copyright from '@/components/Copyright'
+
 export const metadata: Metadata = {
   title: {
     default: 'The Code Craft - 技术博客与独立开发',
