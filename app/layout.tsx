@@ -115,7 +115,7 @@ export default function RootLayout({
                 
                 <div className="border-t border-slate-200/60 pt-16">
                   <p className="text-slate-500 text-sm font-medium">
-                    © 2025 The Code Craft. 基于 Next.js 构建
+                    © {new Date().getFullYear()} The Code Craft. 基于 Next.js 构建
                   </p>
                 </div>
               </div>
