@@ -11,7 +11,7 @@ export default function Copyright() {
   }, [])
 
   return (
-    <span suppressHydrationWarning>
+    <span suppressHydrationWarning className="copyright-year">
       {year}
     </span>
   )
