@@ -11,7 +11,7 @@ export default async function Home() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'The Code Craft',
-    description: '探索编程艺术，分享技术实践，记录独立开发旅程',
+    description: '专注于全栈开发技术分享、独立开发实践经验、SEO优化技巧以及数字游民生活方式。',
     url: 'https://www.thecodecraft.site',
     author: {
       '@type': 'Person',

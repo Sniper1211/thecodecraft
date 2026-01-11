@@ -8,11 +8,11 @@ import Copyright from '@/components/Copyright'
 
 export const metadata: Metadata = {
   title: {
-    default: 'The Code Craft - 技术博客与独立开发',
+    default: 'The Code Craft - 全栈开发与数字游民指南',
     template: '%s | The Code Craft'
   },
-  description: '探索编程艺术，分享技术实践，记录独立开发旅程。提供前端开发、全栈开发、建站教程等高质量技术内容。',
-  keywords: ['编程', '技术博客', '独立开发', '前端开发', '全栈开发', 'Next.js', 'React', 'JavaScript', 'TypeScript', 'Vercel', '建站教程'],
+  description: '专注于全栈开发技术分享、独立开发实践经验、SEO优化技巧以及数字游民生活方式。提供高质量的编程教程、建站资源和实用工具推荐。',
+  keywords: ['编程', '技术博客', '独立开发', '全栈开发', 'Next.js', 'React', 'TypeScript', 'SEO优化', '数字游民', '建站教程', '域名优惠', 'Spaceship'],
   authors: [{ name: 'The Code Craft' }],
   creator: 'The Code Craft',
   publisher: 'The Code Craft',
@@ -30,13 +30,13 @@ export const metadata: Metadata = {
     locale: 'zh_CN',
     url: 'https://www.thecodecraft.site',
     siteName: 'The Code Craft',
-    title: 'The Code Craft - 技术博客与独立开发',
-    description: '探索编程艺术，分享技术实践，记录独立开发旅程。提供前端开发、全栈开发、建站教程等高质量技术内容。',
+    title: 'The Code Craft - 全栈开发与数字游民指南',
+    description: '专注于全栈开发技术分享、独立开发实践经验、SEO优化技巧以及数字游民生活方式。',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'The Code Craft - 技术博客与独立开发',
-    description: '探索编程艺术，分享技术实践，记录独立开发旅程',
+    title: 'The Code Craft - 全栈开发与数字游民指南',
+    description: '专注于全栈开发技术分享、独立开发实践经验、SEO优化技巧以及数字游民生活方式。',
     creator: '@thecodecraft',
   },
   robots: {

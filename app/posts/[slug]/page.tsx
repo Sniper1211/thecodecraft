@@ -25,12 +25,12 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const baseUrl = 'https://www.thecodecraft.site'
   const postUrl = buildPostUrl(baseUrl, post.slug)
   // 使用更短的页面描述，防止过长
-  const metaDescription = post.excerpt
+  const metaDescription = post.excerpt || `阅读关于 ${post.title} 的详细内容。The Code Craft 提供高质量的技术文章和独立开发经验分享。`
   
   return {
-    title: `${post.title} - The Code Craft`,
+    title: post.title,
     description: metaDescription,
-    keywords: post.tags && post.tags.length ? post.tags : ['编程', '技术博客', '独立开发', '前端开发', '全栈开发', '建站教程'],
+    keywords: post.tags && post.tags.length ? [...post.tags, '技术博客', '独立开发', 'The Code Craft'] : ['编程', '技术博客', '独立开发', '前端开发', '全栈开发', '建站教程'],
     authors: [{ name: 'The Code Craft' }],
     creator: 'The Code Craft',
     publisher: 'The Code Craft',

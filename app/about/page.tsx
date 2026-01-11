@@ -1,3 +1,10 @@
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: '关于本站',
+  description: 'The Code Craft 是一个专注于技术分享和个人成长的现代化博客平台。了解我们的使命、核心特色以及所使用的技术栈。',
+}
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/20 dark:from-slate-900 dark:via-slate-800 dark:to-blue-900/10">
