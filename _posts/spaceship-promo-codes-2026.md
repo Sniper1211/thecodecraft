@@ -5,7 +5,7 @@ tags: ['域名', '建站', '优惠码', 'Spaceship']
 slug: 'spaceship-promo-codes-2026'
 ---
 
-以下表格基于官网促销页（spaceship.com/promos）、NamePros、DomainOffer、TLD-List、Domnest、CouponFollow 等权威站点及X平台实时讨论整理。**所有码限新用户首年注册1个域名/账户**，续费正常价（.com约$9.98-$10.18 + ICANN费$0.18-$0.20）。价格含税前，汇率约1 USD ≈ 7.2 RMB。**建议立即测试，码可能随时过期或限量**。
+以下表格基于[官网促销页](https://www.spaceship.com/promos/)、[NamePros](https://www.namepros.com/)、[DomainOffer](https://domainoffer.net/)、[TLD-List](https://tld-list.com/)、[Domnest](https://www.domnest.com/)、[CouponFollow](https://couponfollow.com/) 等权威站点及[X平台](https://x.com/)实时讨论整理。**所有码限新用户首年注册1个域名/账户**，续费正常价（.com约$9.98-$10.18 + ICANN费$0.18-$0.20）。价格含税前，汇率约1 USD ≈ 7.2 RMB。**建议立即测试，码可能随时过期或限量**。
 
 | **优惠码** | **适用后缀** | **首年折扣价（USD）** | **原价（USD）** | **折扣力度** | **限制/备注** | **来源验证** |
 |------------|--------------|-----------------------|-----------------|--------------|---------------|--------------|
