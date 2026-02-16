@@ -83,6 +83,27 @@ export default function RootLayout({
                 <nav className="flex items-center space-x-16">
                   <a href="/" className="nav-link text-xl font-semibold">首页</a>
                   <a href="/about" className="nav-link text-xl font-semibold">关于</a>
+                  <div className="relative group">
+                    <button className="nav-link text-xl font-semibold flex items-center">
+                      分类
+                      <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    <div className="absolute top-full left-0 mt-2 w-48 bg-white/95 dark:bg-slate-800/95 backdrop-blur-2xl rounded-xl shadow-2xl border border-slate-200/60 dark:border-slate-700/60 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                      <div className="py-2">
+                        <a href="/posts?category=technical" className="block px-4 py-3 text-slate-700 dark:text-slate-300 hover:bg-slate-100/50 dark:hover:bg-slate-700/50 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                          技术教程
+                        </a>
+                        <a href="/posts?category=indie" className="block px-4 py-3 text-slate-700 dark:text-slate-300 hover:bg-slate-100/50 dark:hover:bg-slate-700/50 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                          独立开发
+                        </a>
+                        <a href="/posts?category=nomad" className="block px-4 py-3 text-slate-700 dark:text-slate-300 hover:bg-slate-100/50 dark:hover:bg-slate-700/50 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                          数字游民
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </nav>
               </div>
             </div>
@@ -113,12 +134,19 @@ export default function RootLayout({
                 <div className="flex justify-center space-x-20 mb-16">
                   <a href="/" className="nav-link text-lg font-medium">首页</a>
                   <a href="/about" className="nav-link text-lg font-medium">关于</a>
+                  <a href="/privacy" className="nav-link text-lg font-medium">隐私政策</a>
+                  <a href="/contact" className="nav-link text-lg font-medium">联系我们</a>
                 </div>
                 
                 <div className="border-t border-slate-200/60 pt-16">
                   <p className="text-slate-500 text-sm font-medium">
                     © <Copyright /> The Code Craft. 基于 Next.js 构建
                   </p>
+                  <div className="mt-4 flex justify-center space-x-8">
+                    <a href="/about" className="text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 text-sm font-medium transition-colors">关于</a>
+                    <a href="/privacy" className="text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 text-sm font-medium transition-colors">隐私政策</a>
+                    <a href="/contact" className="text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 text-sm font-medium transition-colors">联系我们</a>
+                  </div>
                 </div>
               </div>
             </div>

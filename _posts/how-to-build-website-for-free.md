@@ -29,8 +29,8 @@ tags: ["建站", "免费方案", "GitHub Pages", "Vercel", "静态站点", "新�
     <title>我的免费网站</title>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>由GitHub+Vercel驱动</p>
+    <h1>欢迎来到我的免费网站</h1>
+    <p>这是一个由GitHub+Vercel驱动的现代化个人网站</p>
 </body>
 </html>
 ```
