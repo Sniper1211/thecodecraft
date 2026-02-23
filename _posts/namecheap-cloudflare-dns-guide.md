@@ -2,6 +2,7 @@
 title: "Namecheap域名托管Cloudflare保姆级教程"
 date: 2025-05-06T22:03:00+08:00  
 tags: ["Namecheap", "Cloudflare", "静态站点"]
+categories: ["技术教程"]
 draft: false
 ---
 

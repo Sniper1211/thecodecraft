@@ -69,13 +69,46 @@ export async function getPosts(): Promise<Post[]> {
 
 export async function getPostsByCategory(category: string): Promise<Post[]> {
   const allPosts = await getPosts()
-  return allPosts.filter(post => 
-    post.categories && post.categories.some(cat => 
-      cat.toLowerCase() === category.toLowerCase() || 
-      cat.includes(category) || 
-      category.includes(cat)
+  return allPosts.filter(post => {
+    // 安全地处理categories字段，确保它是数组
+    const categories = post.categories
+    
+    // 如果categories不存在或为空，返回false
+    if (!categories) return false
+    
+    // 处理不同类型的categories字段
+    let categoriesArray: string[] = []
+    
+    if (Array.isArray(categories)) {
+      // 已经是数组，直接使用
+      categoriesArray = categories
+    } else if (typeof categories === 'string') {
+      // 如果是字符串，转换为数组
+      categoriesArray = [categories]
+    } else {
+      // 其他类型，尝试转换为字符串数组
+      try {
+        categoriesArray = Array.from(categories as any).map(String)
+      } catch {
+        // 转换失败，返回空数组
+        categoriesArray = []
+      }
+    }
+    
+    // 过滤空值并转换为小写进行比较
+    const normalizedCategories = categoriesArray
+      .filter(cat => cat && typeof cat === 'string')
+      .map(cat => cat.toLowerCase().trim())
+    
+    const normalizedTarget = category.toLowerCase().trim()
+    
+    // 检查是否匹配
+    return normalizedCategories.some(cat => 
+      cat === normalizedTarget || 
+      cat.includes(normalizedTarget) || 
+      normalizedTarget.includes(cat)
     )
-  )
+  })
 }
 
 export async function getPostBySlug(slugParam: string): Promise<Post | undefined> {

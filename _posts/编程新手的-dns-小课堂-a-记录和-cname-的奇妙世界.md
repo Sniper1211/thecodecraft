@@ -2,7 +2,7 @@
 title: 编程新手的 DNS 小课堂：A 记录和 CNAME 的奇妙世界
 date: 2025-05-23 00:40:00
 tags: [dns, a记录, cname记录, 域名, 配置]
-categories: 技术科普
+categories: ["技术教程"]
 ---
 
 刚刚拥有了一个酷酷的域名，是不是会遇到一些听起来"高大上"的名词，比如 DNS、A记录、CNAME？
