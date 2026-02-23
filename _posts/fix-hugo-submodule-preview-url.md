@@ -2,6 +2,7 @@
 title: "解决Hugo子模块路径配置错误，导致的预览URL出错"
 date: 2025-05-11T01:26:04+08:00
 tags: ["Hugo", "Git Submodule", "静态站点"]
+categories: ["技术教程"]
 draft: false
 ---
 部署这个网站的时候遇到了一个问题，本地测试的时候文章都是正常的，但是部署到 vercel 之后，页面的URL出错。

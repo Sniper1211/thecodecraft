@@ -92,13 +92,13 @@ export default function RootLayout({
                     </button>
                     <div className="absolute top-full left-0 mt-2 w-48 bg-space-900/95 dark:bg-space-800/95 backdrop-blur-2xl rounded-xl shadow-tech-xl border border-space-800/60 dark:border-space-700/60 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                       <div className="py-2">
-                        <a href="/posts?category=technical" className="block px-4 py-3 text-space-300 dark:text-space-300 hover:bg-space-800/50 dark:hover:bg-space-700/50 hover:text-neon-500 dark:hover:text-neon-400 transition-colors">
+                        <a href="/categories/technical" className="block px-4 py-3 text-space-300 dark:text-space-300 hover:bg-space-800/50 dark:hover:bg-space-700/50 hover:text-neon-500 dark:hover:text-neon-400 transition-colors">
                           技术教程
                         </a>
-                        <a href="/posts?category=indie" className="block px-4 py-3 text-space-300 dark:text-space-300 hover:bg-space-800/50 dark:hover:bg-space-700/50 hover:text-neon-500 dark:hover:text-neon-400 transition-colors">
+                        <a href="/categories/indie" className="block px-4 py-3 text-space-300 dark:text-space-300 hover:bg-space-800/50 dark:hover:bg-space-700/50 hover:text-neon-500 dark:hover:text-neon-400 transition-colors">
                           独立开发
                         </a>
-                        <a href="/posts?category=nomad" className="block px-4 py-3 text-space-300 dark:text-space-300 hover:bg-space-800/50 dark:hover:bg-space-700/50 hover:text-neon-500 dark:hover:text-neon-400 transition-colors">
+                        <a href="/categories/nomad" className="block px-4 py-3 text-space-300 dark:text-space-300 hover:bg-space-800/50 dark:hover:bg-space-700/50 hover:text-neon-500 dark:hover:text-neon-400 transition-colors">
                           数字游民
                         </a>
                       </div>

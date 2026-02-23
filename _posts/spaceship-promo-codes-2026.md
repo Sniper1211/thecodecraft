@@ -2,6 +2,7 @@
 title: '如何选择高性价比域名注册商：Spaceship.com 深度分析与使用指南'
 date: '2026-01-11'
 tags: ['域名', '建站', '域名注册', '技术指南']
+categories: ['技术教程']
 slug: 'spaceship-promo-codes-2026'
 ---
 

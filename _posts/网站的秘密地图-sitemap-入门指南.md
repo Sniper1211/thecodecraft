@@ -2,7 +2,7 @@
 title: "网站的秘密地图-sitemap-入门指南"
 date: 2025-05-26 01:49:00
 tags: ["sitemap", "SEO", "搜索引擎优化", "技术指南"]
-categories: 技术实践
+categories: ["技术教程"]
 ---
 
 # 网站的秘密地图-sitemap-入门指南

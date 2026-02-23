@@ -6,6 +6,7 @@ tags:
   - Chrome扩展
   - 竞争分析
   - 技术工具
+categories: ["技术教程"]
 draft: true
 ---
 

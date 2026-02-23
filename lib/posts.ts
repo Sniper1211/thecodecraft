@@ -10,6 +10,7 @@ export interface Post {
   title: string
   date: string
   tags: string[]
+  categories: string[]
   content: string
   excerpt: string
 }
@@ -52,6 +53,7 @@ export async function getPosts(): Promise<Post[]> {
         title: data.title || '无标题',
         date: data.date ? new Date(data.date).toLocaleDateString('zh-CN') : '未知日期',
         tags: data.tags || [],
+        categories: data.categories || [],
         content,
         excerpt
       }
@@ -63,6 +65,17 @@ export async function getPosts(): Promise<Post[]> {
   return items
     .sort((a, b) => b.publishedAt - a.publishedAt)
     .map(({ post }) => post)
+}
+
+export async function getPostsByCategory(category: string): Promise<Post[]> {
+  const allPosts = await getPosts()
+  return allPosts.filter(post => 
+    post.categories && post.categories.some(cat => 
+      cat.toLowerCase() === category.toLowerCase() || 
+      cat.includes(category) || 
+      category.includes(cat)
+    )
+  )
 }
 
 export async function getPostBySlug(slugParam: string): Promise<Post | undefined> {
@@ -130,6 +143,7 @@ export async function getPostBySlug(slugParam: string): Promise<Post | undefined
       title: data.title || '无标题',
       date: data.date ? new Date(data.date).toLocaleDateString('zh-CN') : '未知日期',
       tags: data.tags || [],
+      categories: data.categories || [],
       content: contentHtml,
       excerpt: makeExcerpt(content, 150)
     }

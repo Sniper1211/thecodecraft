@@ -78,7 +78,7 @@ export default async function Home() {
                     className="group block hover:no-underline focus:outline-none fade-in-up"
                     style={{animationDelay: `${index * 0.1}s`}}
                   >
-                    <div className="bg-space-900/95 backdrop-blur-sm rounded-2xl p-8 shadow-tech border border-space-800/60 hover:shadow-tech-lg transition-all duration-300 h-full flex flex-col transform hover:-translate-y-1 hover:scale-105 float">
+                    <div className="bg-space-900/95 backdrop-blur-sm rounded-2xl p-8 shadow-tech border border-space-800/60 hover:shadow-tech-lg transition-all duration-300 h-full flex flex-col transform hover:-translate-y-1 hover:scale-105">
                       <div className="flex-1">
                         <h3 className="text-xl font-bold text-white mb-4 group-hover:text-neon-500 transition-colors line-clamp-2 leading-relaxed tracking-tight">
                           {post.title}
