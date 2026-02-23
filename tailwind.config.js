@@ -9,87 +9,85 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // 高级灰 - 更柔和的现代配色
-        stone: {
-          50: '#fafaf9',
-          100: '#f5f5f4',
-          200: '#e7e5e4',
-          300: '#d6d3d1',
-          400: '#a8a29e',
-          500: '#78716c',
-          600: '#57534e',
-          700: '#44403c',
-          800: '#292524',
-          900: '#1c1917',
-          950: '#0c0a09',
+        // 深空蓝黑系列 - 科技感背景色
+        space: {
+          50: '#f8f9fa',
+          100: '#e9ecef',
+          200: '#dee2e6',
+          300: '#ced4da',
+          400: '#adb5bd',
+          500: '#6c757d',
+          600: '#495057',
+          700: '#343a40',
+          800: '#212529',
+          900: '#12121a',
+          950: '#0a0a0f',
         },
-        // 精致蓝 - 更柔和的蓝色调
-        sky: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
-          950: '#082f49',
+        // 霓虹蓝系列 - 主要科技感颜色
+        neon: {
+          50: '#e6ffff',
+          100: '#b3ffff',
+          200: '#80ffff',
+          300: '#4dffff',
+          400: '#1affff',
+          500: '#00f5ff', // 主要霓虹蓝
+          600: '#00ccd6',
+          700: '#00a3ad',
+          800: '#007a84',
+          900: '#00515b',
         },
-        // 精致紫 - 更柔和的紫色调
-        violet: {
-          50: '#faf5ff',
-          100: '#f3e8ff',
-          200: '#e9d5ff',
-          300: '#d8b4fe',
-          400: '#c084fc',
-          500: '#a855f7',
-          600: '#9333ea',
-          700: '#7c3aed',
-          800: '#6b21a8',
-          900: '#581c87',
-          950: '#3b0764',
+        // 霓虹绿系列 - 次要科技感颜色
+        neonGreen: {
+          50: '#e6fff5',
+          100: '#b3ffdf',
+          200: '#80ffc9',
+          300: '#4dffb3',
+          400: '#1aff9d',
+          500: '#00ff9d', // 主要霓虹绿
+          600: '#00d684',
+          700: '#00ad6b',
+          800: '#008452',
+          900: '#005b39',
         },
-        // 精致绿 - 柔和的绿色调
-        emerald: {
-          50: '#ecfdf5',
-          100: '#d1fae5',
-          200: '#a7f3d0',
-          300: '#6ee7b7',
-          400: '#34d399',
-          500: '#10b981',
-          600: '#059669',
-          700: '#047857',
-          800: '#065f46',
-          900: '#064e3b',
-          950: '#022c22',
+        // 科技灰系列 - 中性色
+        techGray: {
+          50: '#fafafa',
+          100: '#f5f5f5',
+          200: '#e5e5e5',
+          300: '#d4d4d4',
+          400: '#a3a3a3',
+          500: '#737373',
+          600: '#525252',
+          700: '#404040',
+          800: '#262626',
+          900: '#171717',
+          950: '#0a0a0a',
         },
+        // 主色调 - 霓虹蓝
         primary: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
-          950: '#082f49',
+          50: '#e6ffff',
+          100: '#b3ffff',
+          200: '#80ffff',
+          300: '#4dffff',
+          400: '#1affff',
+          500: '#00f5ff', // 霓虹蓝
+          600: '#00ccd6',
+          700: '#00a3ad',
+          800: '#007a84',
+          900: '#00515b',
         },
+        // 强调色 - 霓虹绿
         accent: {
-          50: '#faf5ff',
-          100: '#f3e8ff',
-          200: '#e9d5ff',
-          300: '#d8b4fe',
-          400: '#c084fc',
-          500: '#a855f7',
-          600: '#9333ea',
-          700: '#7c3aed',
-          800: '#6b21a8',
-          900: '#581c87',
-          950: '#3b0764',
+          50: '#e6fff5',
+          100: '#b3ffdf',
+          200: '#80ffc9',
+          300: '#4dffb3',
+          400: '#1aff9d',
+          500: '#00ff9d', // 霓虹绿
+          600: '#00d684',
+          700: '#00ad6b',
+          800: '#008452',
+          900: '#005b39',
         },
       },
       fontFamily: {
@@ -119,22 +117,26 @@ module.exports = {
         '144': '36rem',
       },
       boxShadow: {
-        sm: '0 1px 2px 0 rgb(0 0 0 / 0.02)',
-        DEFAULT: '0 1px 3px 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.05)',
-        md: '0 4px 6px -1px rgb(0 0 0 / 0.03), 0 2px 4px -2px rgb(0 0 0 / 0.03)',
-        lg: '0 10px 15px -3px rgb(0 0 0 / 0.02), 0 4px 6px -4px rgb(0 0 0 / 0.02)',
-        xl: '0 20px 25px -5px rgb(0 0 0 / 0.02), 0 8px 10px -6px rgb(0 0 0 / 0.02)',
-        '2xl': '0 25px 50px -12px rgb(0 0 0 / 0.08)',
-        '3xl': '0 35px 60px -15px rgb(0 0 0 / 0.06)',
-        inner: 'inset 0 2px 4px 0 rgb(0 0 0 / 0.02)',
+        sm: '0 1px 2px 0 rgb(0 0 0 / 0.05)',
+        DEFAULT: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
+        md: '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
+        lg: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
+        xl: '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
+        '2xl': '0 25px 50px -12px rgb(0 0 0 / 0.25)',
+        '3xl': '0 35px 60px -15px rgb(0 0 0 / 0.3)',
+        inner: 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)',
         none: 'none',
-        // 精致阴影 - 更柔和的效果
-        'elegant': '0 8px 40px rgba(0, 0, 0, 0.04)',
-        'elegant-lg': '0 16px 60px rgba(0, 0, 0, 0.06)',
-        'elegant-xl': '0 24px 80px rgba(0, 0, 0, 0.08)',
-        // 精致发光效果
-        'glow': '0 0 40px rgba(14, 165, 233, 0.1)',
-        'glow-lg': '0 0 60px rgba(168, 85, 247, 0.15)',
+        // 科技感阴影 - 锐利效果
+        'tech': '0 4px 20px rgba(0, 245, 255, 0.1), 0 2px 8px rgba(0, 255, 157, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
+        'tech-lg': '0 8px 40px rgba(0, 245, 255, 0.15), 0 4px 16px rgba(0, 255, 157, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.15)',
+        'tech-xl': '0 16px 60px rgba(0, 245, 255, 0.2), 0 8px 32px rgba(0, 255, 157, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.2)',
+        // 科技感发光效果
+        'glow-tech': '0 0 20px rgba(0, 245, 255, 0.3), 0 0 40px rgba(0, 245, 255, 0.1)',
+        'glow-tech-lg': '0 0 40px rgba(0, 245, 255, 0.5), 0 0 80px rgba(0, 245, 255, 0.2)',
+        'glow-tech-xl': '0 0 60px rgba(0, 245, 255, 0.7), 0 0 120px rgba(0, 245, 255, 0.3)',
+        // 霓虹绿发光效果
+        'glow-green': '0 0 20px rgba(0, 255, 157, 0.3), 0 0 40px rgba(0, 255, 157, 0.1)',
+        'glow-green-lg': '0 0 40px rgba(0, 255, 157, 0.5), 0 0 80px rgba(0, 255, 157, 0.2)',
       },
       borderRadius: {
         sm: '0.25rem',
@@ -151,34 +153,34 @@ module.exports = {
         DEFAULT: {
           css: {
             maxWidth: '70ch',
-            color: theme('colors.stone.700'),
+            color: theme('colors.space.300'),
             lineHeight: '1.75',
             '[class~="lead"]': {
-              color: theme('colors.stone.600'),
+              color: theme('colors.space.400'),
               fontSize: '1.25em',
               lineHeight: '1.6',
             },
             a: {
-              color: theme('colors.sky.600'),
+              color: theme('colors.neon.500'),
               textDecoration: 'none',
               fontWeight: '500',
               '&:hover': {
-                color: theme('colors.sky.700'),
+                color: theme('colors.neon.400'),
                 textDecoration: 'underline',
               },
             },
             strong: {
-              color: theme('colors.stone.900'),
+              color: theme('colors.space.100'),
               fontWeight: '600',
             },
             'ol > li::marker': {
-              color: theme('colors.stone.500'),
+              color: theme('colors.space.500'),
             },
             'ul > li::marker': {
-              color: theme('colors.stone.500'),
+              color: theme('colors.space.500'),
             },
             hr: {
-              borderColor: theme('colors.stone.200'),
+              borderColor: theme('colors.space.700'),
               borderTopWidth: '1px',
               marginTop: '3em',
               marginBottom: '3em',
@@ -186,15 +188,15 @@ module.exports = {
             blockquote: {
               fontWeight: '500',
               fontStyle: 'italic',
-              color: theme('colors.stone.800'),
+              color: theme('colors.space.200'),
               borderLeftWidth: '0.25rem',
-              borderLeftColor: theme('colors.stone.300'),
+              borderLeftColor: theme('colors.neon.500'),
               quotes: '"\\201C""\\201D""\\2018""\\2019"',
               marginTop: '2em',
               marginBottom: '2em',
               paddingLeft: '1.5em',
               paddingRight: '1em',
-              backgroundColor: theme('colors.stone.50'),
+              backgroundColor: theme('colors.space.800'),
               borderRadius: '0.5rem',
             },
             'blockquote p:first-of-type::before': {
@@ -204,7 +206,7 @@ module.exports = {
               content: 'close-quote',
             },
             h1: {
-              color: theme('colors.stone.900'),
+              color: theme('colors.space.100'),
               fontWeight: '800',
               fontSize: '2.5em',
               marginTop: '0',
@@ -213,7 +215,7 @@ module.exports = {
               letterSpacing: '-0.025em',
             },
             h2: {
-              color: theme('colors.stone.900'),
+              color: theme('colors.space.100'),
               fontWeight: '700',
               fontSize: '1.8em',
               marginTop: '2.5em',
@@ -222,7 +224,7 @@ module.exports = {
               letterSpacing: '-0.02em',
             },
             h3: {
-              color: theme('colors.stone.900'),
+              color: theme('colors.space.100'),
               fontWeight: '600',
               fontSize: '1.4em',
               marginTop: '2em',
@@ -231,21 +233,21 @@ module.exports = {
               letterSpacing: '-0.015em',
             },
             h4: {
-              color: theme('colors.stone.900'),
+              color: theme('colors.space.100'),
               fontWeight: '600',
               marginTop: '1.8em',
               marginBottom: '0.6em',
               lineHeight: '1.4',
             },
             code: {
-              color: theme('colors.stone.900'),
+              color: theme('colors.space.100'),
               fontWeight: '500',
-              backgroundColor: theme('colors.stone.100'),
+              backgroundColor: theme('colors.space.800'),
               padding: '0.25em 0.5em',
               borderRadius: '0.375rem',
               fontSize: '0.9em',
               border: '1px solid',
-              borderColor: theme('colors.stone.200'),
+              borderColor: theme('colors.space.700'),
             },
             'code::before': {
               content: '""',
@@ -254,8 +256,8 @@ module.exports = {
               content: '""',
             },
             pre: {
-              backgroundColor: theme('colors.stone.900'),
-              color: theme('colors.stone.50'),
+              backgroundColor: theme('colors.space.900'),
+              color: theme('colors.space.100'),
               borderRadius: '1rem',
               padding: '1.5rem',
               overflowX: 'auto',
@@ -263,7 +265,7 @@ module.exports = {
               lineHeight: '1.6',
               marginTop: '2em',
               marginBottom: '2em',
-              boxShadow: '0 8px 40px rgba(0, 0, 0, 0.1)',
+              boxShadow: '0 8px 40px rgba(0, 0, 0, 0.3)',
             },
             'pre code': {
               backgroundColor: 'transparent',
@@ -292,10 +294,10 @@ module.exports = {
               lineHeight: '1.6',
             },
             thead: {
-              color: theme('colors.stone.900'),
+              color: theme('colors.space.100'),
               fontWeight: '600',
               borderBottomWidth: '2px',
-              borderBottomColor: theme('colors.stone.200'),
+              borderBottomColor: theme('colors.space.700'),
             },
             'thead th': {
               verticalAlign: 'bottom',
@@ -303,7 +305,7 @@ module.exports = {
             },
             'tbody tr': {
               borderBottomWidth: '1px',
-              borderBottomColor: theme('colors.stone.100'),
+              borderBottomColor: theme('colors.space.800'),
             },
             'tbody tr:last-child': {
               borderBottomWidth: '0',
@@ -316,59 +318,59 @@ module.exports = {
         },
         dark: {
           css: {
-            color: theme('colors.stone.300'),
+            color: theme('colors.space.300'),
             '[class~="lead"]': {
-              color: theme('colors.stone.400'),
+              color: theme('colors.space.400'),
             },
             a: {
-              color: theme('colors.sky.400'),
+              color: theme('colors.neon.400'),
               '&:hover': {
-                color: theme('colors.sky.300'),
+                color: theme('colors.neon.300'),
               },
             },
             strong: {
-              color: theme('colors.stone.100'),
+              color: theme('colors.space.100'),
             },
             'ol > li::marker': {
-              color: theme('colors.stone.400'),
+              color: theme('colors.space.400'),
             },
             'ul > li::marker': {
-              color: theme('colors.stone.400'),
+              color: theme('colors.space.400'),
             },
             hr: {
-              borderColor: theme('colors.stone.700'),
+              borderColor: theme('colors.space.700'),
             },
             blockquote: {
-              color: theme('colors.stone.100'),
-              borderLeftColor: theme('colors.stone.600'),
-              backgroundColor: theme('colors.stone.800'),
+              color: theme('colors.space.100'),
+              borderLeftColor: theme('colors.neon.500'),
+              backgroundColor: theme('colors.space.800'),
             },
             h1: {
-              color: theme('colors.stone.100'),
+              color: theme('colors.space.100'),
             },
             h2: {
-              color: theme('colors.stone.100'),
+              color: theme('colors.space.100'),
             },
             h3: {
-              color: theme('colors.stone.100'),
+              color: theme('colors.space.100'),
             },
             h4: {
-              color: theme('colors.stone.100'),
+              color: theme('colors.space.100'),
             },
             code: {
-              color: theme('colors.stone.100'),
-              backgroundColor: theme('colors.stone.800'),
-              borderColor: theme('colors.stone.700'),
+              color: theme('colors.space.100'),
+              backgroundColor: theme('colors.space.800'),
+              borderColor: theme('colors.space.700'),
             },
             pre: {
-              backgroundColor: theme('colors.stone.900'),
+              backgroundColor: theme('colors.space.900'),
             },
             thead: {
-              color: theme('colors.stone.100'),
-              borderBottomColor: theme('colors.stone.700'),
+              color: theme('colors.space.100'),
+              borderBottomColor: theme('colors.space.700'),
             },
             'tbody tr': {
-              borderBottomColor: theme('colors.stone.800'),
+              borderBottomColor: theme('colors.space.800'),
             },
           },
         },
